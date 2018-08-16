@@ -150,7 +150,6 @@
     @yield('content')
     
 
-    
 
 
 
