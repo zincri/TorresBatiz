@@ -98,7 +98,7 @@
                      <div id="navbar_menu">
                         <ul class="first-ul">
                            <li>
-                              <a class="active" href="/">Inicio</a>
+                              <a href="/">Inicio</a>
                            </li>
                            <li><a  href="/nosotros">Nosotros</a></li>
                            <li>
@@ -106,25 +106,25 @@
                               
                            </li>
                            <li>
-                              <a href="Arrendamiento.html">Arrendamiento</a>
+                              <a href="/arrendamiento">Arrendamiento</a>
                               
                            </li>
                            <li>
-                              <a href="Soporte.html">Soporte</a>
+                              <a href="/soporte">Soporte</a>
                            </li>
                            <li>
-                              <a href="Consumibles.html">Consumibles</a>
+                              <a href="/consumibles">Consumibles</a>
                               
                            </li>
                            <li>
-                              <a href="sucursales.html">Sucursales</a>
+                              <a href="/sucursales">Sucursales</a>
                               
                            </li>
                            <li>
                               <a href="/noticias">Noticias</a>
                               
                            </li>
-                           <li><a href="contact.html">Contacto</a></li>
+                           <li><a href="/contacto">Contacto</a></li>
                         </ul>
                      </div>
                      <div class="search_icon">
@@ -185,11 +185,11 @@
                         <h2>Links de interes</h2>
                      </div>
                      <ul class="footer-menu">
-                        <li><a href="about.html"><i class="fa fa-angle-right"></i>Nosotros</a></li>
-                        <li><a href="Arrendamiento.html"><i class="fa fa-angle-right"></i>Arrendamiento</a></li>
-                        <li><a href="sucursales.html"><i class="fa fa-angle-right"></i>Nuestras Sucursales</a></li>
-                        <li><a href="service.html"><i class="fa fa-angle-right"></i>Categorias</a></li>
-                        <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contacto Directo</a></li>
+                        <li><a href="/nosotros"><i class="fa fa-angle-right"></i>Nosotros</a></li>
+                        <li><a href="/arrendamiento"><i class="fa fa-angle-right"></i>Arrendamiento</a></li>
+                        <li><a href="/sucursales"><i class="fa fa-angle-right"></i>Nuestras Sucursales</a></li>
+                        <li><a href="/productos"><i class="fa fa-angle-right"></i>Catalogos</a></li>
+                        <li><a href="/contacto"><i class="fa fa-angle-right"></i>Contacto Directo</a></li>
                      </ul>
                   </div>
                   <div class="col-md-4">
