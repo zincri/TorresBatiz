@@ -569,7 +569,7 @@
                      <img class="img-responsive1" src="images/torresimages/ventaalquiler.jpg" alt="#" />
                   </div>
                   <div class="service_head">
-                     <h5><a href="Arrendamiento.html">Arrendamiento de Multifuncionales</a></h5>
+                     <h5><a href="/arrendamiento">Arrendamiento de Multifuncionales</a></h5>
                   </div>
                </div>
             </div>
@@ -579,7 +579,7 @@
                      <img class="img-responsive1" src="images/torresimages/gi-sd-maint-serv-call-center.jpg" alt="#" />
                   </div>
                   <div class="service_head">
-                     <h5><a href="Soporte.html">Soporte y Servicios</a></h5>
+                     <h5><a href="/soporte">Soporte y Servicios</a></h5>
                   </div>
                </div>
             </div>
@@ -589,7 +589,7 @@
                      <img class="img-responsive1" src="images/torresimages/toner.jpg" alt="#" />
                   </div>
                   <div class="service_head">
-                     <h5><a href="Consumibles.html">Consumibles y Refacciones</a></h5>
+                     <h5><a href="/consumibles">Consumibles y Refacciones</a></h5>
                   </div>
                </div>
             </div>
