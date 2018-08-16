@@ -856,16 +856,10 @@
       </div>
       <!-- End Model search bar -->
       <!-- map -->
-      <div class="map-container column-map left-pos-map">
-      
       <div class="map_section">
-      <div id="map"></div>
-            </div>  
+         <div id="map"></div>
       </div>
       <!-- end map -->
 
 
 @endsection
-@push('script') 
-      <script type="text/javascript" src="{{asset('js/mapa_inicio.js')}}"></script>  
-@endpush

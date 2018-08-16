@@ -145,7 +145,7 @@
     <!--***************************************************************************************-->
 
 
-    @yield('content')
+    
     
 
     
@@ -258,18 +258,26 @@
    <script src="css/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
    <script src="css/revolution/js/extensions/revolution.extension.video.min.js"></script>
    <!-- map js -->
-   <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo"></script>
-   <!--script>
+   <script>
          // This example adds a marker to indicate the position of Bondi Beach in Sydney,
          // Australia.
-         AQUI IBA
-        
-    </script>-->
-
+         function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 19,
+           center: {lat: 16.756454, lng: -93.119989},
+           
+        });
+          
+          var image = 'images/layout_img/location_icon_map_cont.png';
+          var beachMarker = new google.maps.Marker({
+           position: {lat: 16.756454, lng: -93.119989},
+           map: map,
+           icon: image
+        });
+       }
+    </script>
     <!-- google map js -->
-    @stack('script')
-    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
     <!-- end google map js -->
  </body>
  </html>

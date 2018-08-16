@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/','InicioController@Index');
+Route::get('/', function () {
+    return view('navbar.inicio');
+});
