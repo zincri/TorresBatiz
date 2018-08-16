@@ -14,6 +14,7 @@
 Route::get('/','InicioController@Index');
 Route::get('/nosotros','NosotrosController@Index');
 Route::get('/productos','ProductosController@Index');
+Route::get('/noticias','NoticiasController@Index');
 Route::get('/arrendamiento','ArrendamientoController@Index');
 Route::get('/soporte','SoporteController@Index');
 Route::get('/consumibles','ConsumiblesController@Index');

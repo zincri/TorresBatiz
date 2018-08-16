@@ -121,7 +121,7 @@
                               
                            </li>
                            <li>
-                              <a href="blog_detail.html">Noticias</a>
+                              <a href="/noticias">Noticias</a>
                               
                            </li>
                            <li><a href="/contacto">Contacto</a></li>
