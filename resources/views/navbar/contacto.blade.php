@@ -2,18 +2,55 @@
 
 @section ('content')
 
-<div id="inner_banner" class="section inner_banner_section">
+        <!-- map -->
+
+      <div class="map-container column-map left-pos-map">
+      
+      <div class="map_section">
+      <div id="map"></div>
+            </div>  
+      </div>
+      <!-- end map -->
+	  <!-- section -->
+      <div class="section padding_layout_1">
          <div class="container">
-            <div class="row">
-               <div class="col-md-12">
+            <div class="row"> 
+			    <div class="col-md-12">
                   <div class="full">
-                     <div class="title-holder">
-                        <div class="title-holder-cell text-left">
-                           <h1 class="page-title">Nosotros</h1>
-                           <ol class="breadcrumb">
-                              <li><a href="/">Inicio</a></li>
-                              <li class="active">Nosotros</li>
-                           </ol>
+                     <div class="main_heading text_align_center">
+                        <h2><span>Mantente en contacto</span></h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
+               <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                  <div class="row">
+                     <div class="full">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
+                           <div class="form_section">
+                              <form class="form_contant" action="contact.php">
+                                 <fieldset>
+                                    <div class="row">
+                                       <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                          <input class="field_custom" placeholder="Nombre" type="text" required />
+                                       </div>
+									   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                          <input class="field_custom" placeholder="Email" type="email" required />
+                                       </div>
+                                       <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                          <input class="field_custom" placeholder="Asunto" type="text" required />
+                                       </div>
+                                       <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                          <input class="field_custom" placeholder="Número telefonico" type="text" required />
+                                       </div>
+                                       <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                          <textarea class="field_custom" placeholder="Mensaje"></textarea>
+                                       </div>
+                                       <div class="center" style="margin-bottom: 2%"><input type="submit" value="Enviar" class="btn main_bt" href="#"></div>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -21,47 +58,7 @@
             </div>
          </div>
       </div>
-      <!-- end inner page banner -->
-    
-      <!-- section -->
-      <div class="section padding_layout_1 light_silver gross_layout right_gross_layout">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="full">
-                     <div class="main_headingr text_align_center">
-                        <h2><span>29 años comprometidos con la <br>calidad y el servicio</span></h2>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-12">
-                  <div class="full">
-                     <div class="main_heading text_align_right">
-                        <h2>Misión</h2>
-                        <p class="large"></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-4"></div>
-               <div class="col-md-12 col-lg-8 text-align_right">
-                  <div class="full large_cont_p">
-                     <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes. <br> <br>
-                     </p>
-                     <h2 class="main_heading text_align_right">Visión</h2>
-                     <p>
-                        Ser la empresa lider en el mercado, con un atractivo irresistible para nuestros clientes. <br> <br>
-                     </p>
-                     <h2 class="main_heading text_align_right">Objetivos</h2>
-                     <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes. </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end section -->	
- 
+	  <!-- end section -->
       <!-- section -->
       <div class="section padding_layout_1 testmonial_section white_fonts">
          <div class="container">
@@ -142,5 +139,9 @@
          </div>
       </div>
    </div>
+      <!-- End Model search bar -->
 
 @endsection
+@push('script') 
+      <script type="text/javascript" src="{{asset('js/mapa_inicio.js')}}"></script>  
+@endpush
