@@ -12,6 +12,8 @@
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
+   <!-- circle Animation css -->
+   <link rel="stylesheet" href="css/animation.css">
    <!-- site icons -->
    <link rel="icon" href="images/favicon.ico" type="image/gif" />
    <!-- bootstrap css -->
@@ -89,7 +91,7 @@
             <div class="row">
                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12">
                   <!-- logo start -->
-                  <div class="logo"><a href="home1.html"><img src="images/logos/logo.svg" alt="logo" /></a></div>
+                  <div class="logo"><a href="/"><img src="images/logos/logo.svg" alt="logo" /></a></div>
                   <!-- logo end -->
                </div>
                <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12">
@@ -268,6 +270,15 @@
 
     <!-- google map js -->
     @stack('script')
+    <script src="js/custom.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/TimelineMax.min.js"></script>
+    <script src="js/ScrollMagic.js"></script>
+    <script src="js/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="js/layoutAnimate.js"></script>
+    <script type="text/javascript" src="js/media.js"></script>
+
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
     -->
     <!-- end google map js -->
