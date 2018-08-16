@@ -8,7 +8,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Torres Batiz - Principal</title>
+   <title>Torres Batiz</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -98,11 +98,11 @@
                      <div id="navbar_menu">
                         <ul class="first-ul">
                            <li>
-                              <a class="active" href="home1.html">Inicio</a>
+                              <a class="active" href="/">Inicio</a>
                            </li>
-                           <li><a  href="about.html">Nosotros</a></li>
+                           <li><a  href="/nosotros">Nosotros</a></li>
                            <li>
-                              <a href="service.html">Catálogo de productos</a>
+                              <a href="/productos">Catálogo de productos</a>
                               
                            </li>
                            <li>

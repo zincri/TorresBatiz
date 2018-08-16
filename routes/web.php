@@ -12,3 +12,5 @@
 */
 
 Route::get('/','InicioController@Index');
+Route::get('/nosotros','NosotrosController@Index');
+Route::get('/productos','ProductosController@Index');
