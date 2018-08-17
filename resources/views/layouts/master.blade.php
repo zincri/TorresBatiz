@@ -216,16 +216,7 @@
                         <span style="font-size:18px;"><a href="tel:+9711330256">+971 133 0256</a></span><br>
                         <span style="font-size:18px;"><a href="tel:+9931310472">+993 131 0472</a></span>
                      </p>
-                     <div class="footer_mail-section">
-                        <form>
-                           <fieldset>
-                              <div class="field">
-                                 <input placeholder="contacto@torresBatiz.com" type="text">
-                                 <button class="button_custom"><i class="fa fa-envelope" aria-hidden="true"></i></button>
-                              </div>
-                           </fieldset>
-                        </form>
-                     </div>
+                     
                   </div>
                </div>
             </div>

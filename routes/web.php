@@ -24,3 +24,4 @@ Route::get('/cart','CartController@Index');
 Route::get('/productostodos','productosTodosController@Index');
 Route::get('/productostodosdetalle','ProductosTodosDetalleController@Index');
 
+

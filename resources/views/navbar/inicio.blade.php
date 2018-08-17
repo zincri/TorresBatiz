@@ -631,13 +631,13 @@
                </div>
             </div>
          </div>
-         <div class="row">
+         <div class="row promocionesSection">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
                <div class="product_list">
                   <div class="product_img"> <img class="img-responsive1" src="images/layout_img/Ricoh MP 305SPF Base Unit.JPG" alt=""> </div>
                   <div class="product_detail_btm">
                      <div class="center">
-                        <h4><a href="shop_detail.html">Product 1</a></h4>
+                        <h4>Product 1</h4>
                      </div>
                      <div class="product_price">
                         <p><span class="new_price">Promoción de Agosto</span></p>
@@ -650,7 +650,7 @@
                   <div class="product_img"> <img class="img-responsive1" src="images/layout_img/RICOH MP-501SPF.JPG" alt=""> </div>
                   <div class="product_detail_btm">
                      <div class="center">
-                        <h4><a href="shop_detail.html">Product 2</a></h4>
+                        <h4>Product 2</h4>
                      </div>
                      <div class="product_price">
                         <p><span class="new_price">Promoción Diciembre</span></p>
@@ -663,7 +663,7 @@
                   <div class="product_img"> <img class="img-responsive1" src="images/layout_img/RICOH MP-2555.JPG" alt=""> </div>
                   <div class="product_detail_btm">
                      <div class="center">
-                        <h4><a href="shop_detail.html">Product 3</a></h4>
+                        <h4>Product 3</h4>
                      </div>
                      <div class="product_price">
                         <p><span class="new_price">Promoción 13 Abril</span></p>
@@ -676,7 +676,7 @@
                   <div class="product_img"> <img class="img-responsive1" src="images/layout_img/RICOH SP-377.jpg" alt=""> </div>
                   <div class="product_detail_btm">
                      <div class="center">
-                        <h4><a href="shop_detail.html">Product 4</a></h4>
+                        <h4>Product 4</h4>
                      </div>
                      <div class="product_price">
                         <p><span class="new_price">Promoción Noviembre 15</span></p>
@@ -727,7 +727,7 @@
                   <div class="full blog_colum">
                      <div class="blog_feature_img"> <img class="img-responsive3" src="images/layout_img/CONJUNTO DANES ZAMOFI.jpg" alt="#" /> </div>
                      <div class="post_time">
-                        <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
+                        
                      </div>
                      <div class="blog_feature_head">
                         <h4>Itaque earum rerum hic tenetur</h4>
@@ -741,7 +741,7 @@
                   <div class="full blog_colum">
                      <div class="blog_feature_img"> <img class="img-responsive3" src="images/layout_img/CONJUNTO CEO BENTO.png" alt="#" /> </div>
                      <div class="post_time">
-                        <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
+                        
                      </div>
                      <div class="blog_feature_head">
                         <h4>Praesentium  Tips To Computer Repair</h4>
@@ -755,7 +755,7 @@
                   <div class="full blog_colum">
                      <div class="blog_feature_img"> <img class="img-responsive3" src="images/layout_img/CONFIGURACION E-LINK.png" alt="#" /> </div>
                      <div class="post_time">
-                        <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
+                        
                      </div>
                      <div class="blog_feature_head">
                         <h4>sapiente earum rerum hic tenetur</h4>
