@@ -66,7 +66,16 @@
                      <div class="service_head">
                         <h5><a href="#">Tuxtla Gutiérrez, Chiapas
                         5ta Poniente Norte #342</a></h5>
-                        <h6><a href="#">961-613-5390 • 961-612-3294 • 961-613-8467 • 961-613-4095 • 961-613-4132 • 961-613-4184</a></h6>
+                        <h6>
+                          <ul class="torresList">
+                            <li>961-613-5390</li>
+                            <li>961-612-3294</li>
+                            <li>961-613-8467</li>
+                            <li>961-613-4095</li>
+                            <li>961-613-4132</li>
+                            <li>961-613-4184</li>
+                          </ul>
+                            </h6>
                      </div>
                   </div>
                </div>
@@ -82,7 +91,12 @@
                      <div class="service_head">
                         <h5><a href="#">San Cristobal de las Casas,
                         Calle Guadalupe Victoria #3 Colonia Centro</a></h5>
-                        <h6><a href="#">967-116-0576 • 967-116-1013</a></h6>
+                        <h6>
+                          <ul class="torresList">
+                            <li>967-116-0576</li>
+                            <li>967-116-1013</li>
+                          </ul>
+                        </h6>
                      </div>
                   </div>
                </div>
@@ -99,7 +113,11 @@
                      <div class="service_head">
                         <h5><a href="#">Salina Cruz, Oaxaca
                         Calle obrero, colonia Barrio Espinal, Salina Cruz Oaxaca c.p. 70600</a></h5>
-                        <h6><a href="#">971-133-0256</a></h6>
+                        <h6>
+                          <ul class="torresList">
+                            <li>971-133-0256</li>
+                          </ul>
+                        </h6>
                      </div>
                   </div>
                </div>
@@ -114,7 +132,12 @@
                      </div>
                      <div class="service_head">
                         <h5><a href="#">Villahermosa, Tabasco, Av. Gregorio Méndez No.1510 Planta Baja Col. Florida CP. 86040</a></h5>
-                        <h6><a href="#">01-993-312-5744 • 01-993-131-0472</a></h6>
+                        <h6>
+                          <ul class="torresList">
+                            <li>01-993-312-5744</li>
+                            <li>01-993-131-0472</li>
+                          </ul>
+                          </h6>
                      </div>
                   </div>
                </div>
@@ -129,7 +152,11 @@
                      </div>
                      <div class="service_head">
                         <h5><a href="#">Belisario Domínguez núm. 608-E, col. Reforma</a></h5>
-                        <h6><a href="#">01-951-515-7746 • 01-951-232-6006</a></h6>
+                        <h6>
+                          <ul class="torresList">
+                            <li>01-951-515-7746</li>
+                            <li>01-951-232-6006</li>
+                          </ul></h6>
                      </div>
                   </div>
                </div>
