@@ -20,9 +20,8 @@ Route::get('/soporte','SoporteController@Index');
 Route::get('/consumibles','ConsumiblesController@Index');
 Route::get('/sucursales','SucursalesController@Index');
 Route::get('/contacto','ContactoController@Index');
-
-
-
-
+Route::get('/cart','CartController@Index');
+Route::get('/productostodos','productosTodosController@Index');
+Route::get('/productostodosdetalle','ProductosTodosDetalleController@Index');
 
 

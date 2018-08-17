@@ -28,6 +28,8 @@
    <link rel="stylesheet" href="css/custom.css" />
    <!-- wow Animation css -->
    <link rel="stylesheet" href="css/animate.css" />
+  <!-- zoom effect -->
+   <link rel='stylesheet' href='css/hizoom.css'>
    <!-- revolution slider css -->
    <link rel="stylesheet" type="text/css" href="css/revolution/css/settings.css" />
    <link rel="stylesheet" type="text/css" href="css/revolution/css/layers.css" />
@@ -74,7 +76,7 @@
                            <li><a class="fa fa-linkedin" href="https://www.linkedin.com" title="LinkedIn" target="_blank"></a></li>
                            <li><a class="fa fa-instagram" href="https://www.instagram.com" title="Instagram" target="_blank"></a></li>
                            <li class="shoppingCartItem">
-                              <a href="cart.html"><i class="fa fa-shopping-cart"></i><span>2</span></a>
+                              <a href="/cart"><i class="fa fa-shopping-cart"></i><span>2</span></a>
                            </li>
                         </ul>
                      </div>
