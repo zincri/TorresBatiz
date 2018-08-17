@@ -113,42 +113,7 @@
                   </ul>
                </div>
             </div>
-            <div class="side_bar_blog">
-               <h4>CATEGORÍAS</h4>
-               <div class="categary">
-                  <ul>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> Creative (8)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> Fashion (5)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> Image (4)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> Travel (8)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> Videos (1) </a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="side_bar_blog">
-               <h4>TAG</h4>
-               <div class="tags">
-                  <ul>
-                     <li><a href="#">Bootstrap</a></li>
-                     <li><a href="#">HTML5</a></li>
-                     <li><a href="#">Wordpress</a></li>
-                     <li><a href="#">Bootstrap</a></li>
-                     <li><a href="#">HTML5</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="side_bar_blog">
-               <h4>FILTRO DE FECHA</h4>
-               <div class="categary">
-                  <ul>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> June (12)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> January (12)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> March (12)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> November (12)</a></li>
-                     <li><a href="#"><i class="fa fa-caret-right"></i> December (12)</a></li>
-                  </ul>
-               </div>
-            </div>
+            
          </div>
       </div>
    </div>

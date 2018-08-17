@@ -75,6 +75,7 @@
 
                               Contamos con personal certificado para acesorarte en los equipos multifuncionales de acuerdo a tus necesidades
                            </p>
+                           <div class="row">
                            <div class="bt_cont col-md-8">
                               <div class="formularioArrendatario">
                                  <p class="tituloFormulario">SOLICITUD DE ARRENDAMIENTO</p>
@@ -125,6 +126,30 @@
                                  </form>
                               </div>
                            </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+         <div class="side_bar">
+            <div class="side_bar_blog">
+               <h4>Noticias recientes</h4>
+               <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis<br><br> 
+                  asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit
+               </p>
+               <p class="enlaceBlog"><a href="blog_detail.html" >Ver más</a></p>
+            </div>
+            <div class="side_bar_blog">
+               <h4>Vídeos Destacados</h4>
+               <div class="recent_post">
+                  <ul>
+                     <li>
+                        <p class="post_head"><a href="#">RICOH</a></p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
                         </div>
                      </div>
                   </div>

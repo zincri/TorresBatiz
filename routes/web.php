@@ -20,3 +20,9 @@ Route::get('/soporte','SoporteController@Index');
 Route::get('/consumibles','ConsumiblesController@Index');
 Route::get('/sucursales','SucursalesController@Index');
 Route::get('/contacto','ContactoController@Index');
+
+
+
+
+
+
