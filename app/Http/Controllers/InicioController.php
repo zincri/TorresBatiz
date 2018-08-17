@@ -14,7 +14,9 @@ class InicioController extends Controller
     public function index()
     {
         //
-        return view('navbar.inicio');
+        //$informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        //return view('navbar.inicio',["informacion"=>$informaciongeneral]);
+        return view('navbar.incio');
     }
 
     /**
