@@ -637,7 +637,7 @@
                   <div class="product_img"> <img class="img-responsive1" src="images/layout_img/Ricoh MP 305SPF Base Unit.JPG" alt=""> </div>
                   <div class="product_detail_btm">
                      <div class="center">
-                        <h4><a href="shop_detail.html">Product 1</a></h4>
+                        <h4><a href="">Product 1</a></h4>
                      </div>
                      <div class="product_price">
                         <p><span class="new_price">Promoción de Agosto</span></p>
