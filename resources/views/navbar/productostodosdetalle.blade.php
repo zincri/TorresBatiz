@@ -61,7 +61,7 @@
                         <button  type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
                      </form>
                   </div>
-                  <a href="cart.html"><button type="button" class="btn sqaure_bt">Ver carrito</button></a>
+                  <a href="/cart"><button type="button" class="btn sqaure_bt">Ver carrito</button></a>
                   <div class="share-post">
                      <a href="#" class="share-text">Compartir</a>
                      <ul class="social_icons">

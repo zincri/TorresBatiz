@@ -5041,5 +5041,28 @@ galeriaProducto figure {
     cursor: pointer;
 }
 
+.btnEnviarCotizacion {
+    background-color: #f89c35;
+    display: block;
+    margin: auto;
+    color: #fff;
+    padding: 1%;
+    width: 30%;
+    border: none;
+    margin-bottom: 2%;
+    transition: ease all 0.2s;
+}
+
+.btnEnviarCotizacion:hover {
+    background-color: #386060;
+    cursor: pointer;
+}
+
+#mensajeCotizacion {
+    resize: none;
+    width: 100%;
+    padding: 1%;
+}
+
 
 /*End classes*/

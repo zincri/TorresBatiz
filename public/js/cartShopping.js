@@ -10,6 +10,14 @@ $(".addToCart").click(() => {
     $(".shoppingCartItem span").text(compras += 1);
 });
 
+// btnEnviarCotizacion
+$(".btnEnviarCotizacion").click(() => {
+    $(".btnEnviarCotizacion").prop("disabled", true);
+    $(".notificacionAddCart").css("top", "1%");
+    setTimeout(() => {
+        $(".notificacionAddCart").css("top", "-35%");
+    }, 10000);
+});
 
 
 $("#galeriaProducto img").on("click", function() {

@@ -46,7 +46,7 @@
     })(document);
  </script>
 </head>
-<body id="default_theme" class="home_1">
+<body id="default_theme" class="home_1 shopping-cart">
    <!-- loader -->
    <div class="bg_load"> <img class="loader_animation" src="images/logoTorres.png" alt="#" /> </div>
    <!-- end loader -->
