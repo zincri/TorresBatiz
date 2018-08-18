@@ -5005,5 +5005,64 @@ i.fa-shopping-cart:hover {
     color: #fff;
 }
 
+.productosList h4 {
+    color: #fff;
+}
+
+.paginationPart {
+    margin-bottom: 2%;
+}
+
+.paginationPart ul {
+    display: block;
+    margin: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.paginationPart li a {
+    border-radius: 10px;
+}
+
+galeriaProducto figure {
+    width: 100%;
+}
+
+#galeriaProducto img {
+    width: 100%;
+    transition: ease all 0.2s;
+}
+
+#galeriaProducto img:hover {
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.btnEnviarCotizacion {
+    background-color: #f89c35;
+    display: block;
+    margin: auto;
+    color: #fff;
+    padding: 1%;
+    width: 30%;
+    border: none;
+    margin-bottom: 2%;
+    transition: ease all 0.2s;
+}
+
+.btnEnviarCotizacion:hover {
+    background-color: #386060;
+    cursor: pointer;
+}
+
+#mensajeCotizacion {
+    resize: none;
+    width: 100%;
+    padding: 1%;
+}
+
 
 /*End classes*/

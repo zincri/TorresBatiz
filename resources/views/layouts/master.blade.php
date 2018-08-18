@@ -46,7 +46,7 @@
     })(document);
  </script>
 </head>
-<body id="default_theme" class="home_1">
+<body id="default_theme" class="home_1 shopping-cart">
    <!-- loader -->
    <div class="bg_load"> <img class="loader_animation" src="images/logoTorres.png" alt="#" /> </div>
    <!-- end loader -->
@@ -268,6 +268,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="js/layoutAnimate.js"></script>
     <script type="text/javascript" src="js/media.js"></script>
+    @stack('zoomScript_js')
+    
 
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
     -->

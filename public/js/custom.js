@@ -223,6 +223,12 @@ tpj(document).ready(function() {
 
 /**===== End slider =====**/
 
+// Cambiar imagenes de Galeria
+
+// galeriaProducto
+
+
+
 
 /** header fixed js **/
 
