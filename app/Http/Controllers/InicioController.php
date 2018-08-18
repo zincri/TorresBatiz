@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class InicioController extends Controller
 {
     /**
@@ -14,9 +14,9 @@ class InicioController extends Controller
     public function index()
     {
         //
-        //$informaciongeneral = DB::table('tbl_informaciongeneral')->first();
-        //return view('navbar.inicio',["informacion"=>$informaciongeneral]);
-        return view('navbar.inicio');
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        session(['informacion' => $informaciongeneral]);
+        return view('navbar.inicio',["informacionDE"=>$informaciongeneral]);
     }
 
     /**

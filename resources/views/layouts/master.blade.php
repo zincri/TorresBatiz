@@ -60,8 +60,8 @@
                   <div class="full">
                      <div class="topbar-left">
                         <ul class="list-inline">
-                           <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">5TA PONIENTE NORTE # 342 </span> </li>
-                           <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:contacto@torresBatiz.com">contacto@torresBatiz.com</a></span> </li>
+                           <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">{{session('informacion')->direccion}}</span> </li>
+                           <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:contacto@torresBatiz.com">{{session('informacion')->email}}</a></span> </li>
                         </ul>
                      </div>
                   </div>
@@ -164,7 +164,7 @@
                <div class="main-heading left_text">
                   <h2>Torres Batiz</h2>
                </div>
-               <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes.</p>
+               <p>{{session('informacion')->descripcion}}</p>
                <p>
                   •  Servicio técnico Ricoh <br>
                   •  Servicios técnico Preventivo y Correctivo <br>
