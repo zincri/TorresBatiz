@@ -60,8 +60,8 @@
                   <div class="full">
                      <div class="topbar-left">
                         <ul class="list-inline">
-                           <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">5TA PONIENTE NORTE # 342 </span> </li>
-                           <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:contacto@torresBatiz.com">contacto@torresBatiz.com</a></span> </li>
+                           <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">{{session('informacion')->direccion}}</span> </li>
+                           <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:{{session('informacion')->email}}">{{session('informacion')->email}}</a></span> </li>
                         </ul>
                      </div>
                   </div>
@@ -164,6 +164,7 @@
                <div class="main-heading left_text">
                   <h2>Torres Batiz</h2>
                </div>
+
                <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes.</p>
                <ul class="torresListFooter">
                 <li>Servicio ténico Ricoh</li>
@@ -173,6 +174,16 @@
                 <li>Precio del servicio</li>
                </ul>
                
+               <p>{{session('informacion')->descripcion}}</p>
+               <p>
+                  •  Servicio técnico Ricoh <br>
+                  •  Servicios técnico Preventivo y Correctivo <br>
+                  •  Instalación y capacitación. <br>
+                  •  Imágenes de los servicios técnicos <br>
+                  •  Precio del servicio <br>
+
+               </p>
+
                <ul class="social_icons">
                   <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                   <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -193,6 +204,7 @@
                         <li><a href="/contacto"><i class="fa fa-angle-right"></i>Contacto Directo</a></li>
                      </ul>
                   </div>
+<!-- Esto es lo que yisus puso -->
                   <div class="col-md-6">
                      <div class="main-heading left_text">
                         <h2>Contactos Torres Batiz</h2>
@@ -205,7 +217,20 @@
                         <li><i class="fa fa-angle-right"></i>Villahermosa< - 993 131 0472</li>
                      </ul>
                   </div>
-                  
+<!-- Esto es lo que yisus puso -->
+<!-- Esto es lo que yo tenia -->
+                  <div class="col-md-4">
+                     <div class="main-heading left_text">
+                        <h2>Contactanos</h2>
+                     </div>
+                     <p>
+                     @foreach(session('telefonos') as $item)
+                        <span style="font-size:18px;"><a href="tel:{{$item->telefono}}">{{$item->telefono}}</a></span><br>
+                     @endforeach
+                     </p>
+                     
+                  </div>
+<!-- Esto es lo que yo tenia -->
                </div>
             </div>
             
