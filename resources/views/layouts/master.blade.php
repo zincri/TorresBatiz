@@ -165,14 +165,14 @@
                   <h2>Torres Batiz</h2>
                </div>
                <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes.</p>
-               <p>
-                  •  Servicio técnico Ricoh <br>
-                  •  Servicios técnico Preventivo y Correctivo <br>
-                  •  Instalación y capacitación. <br>
-                  •  Imágenes de los servicios técnicos <br>
-                  •  Precio del servicio <br>
-
-               </p>
+               <ul class="torresListFooter">
+                <li>Servicio ténico Ricoh</li>
+                <li>Servicios técnico Preventivo y Correctivo</li>
+                <li>Instalación y capacitación</li>
+                <li>Imágenes de los servicios técnicos</li>
+                <li>Precio del servicio</li>
+               </ul>
+               
                <ul class="social_icons">
                   <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                   <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -193,31 +193,19 @@
                         <li><a href="/contacto"><i class="fa fa-angle-right"></i>Contacto Directo</a></li>
                      </ul>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                      <div class="main-heading left_text">
-                        <h2>Tu Torres Batiz más cercano</h2>
+                        <h2>Contactos Torres Batiz</h2>
                      </div>
                      <ul class="footer-menu">
-                        <li><a href="#"><i class="fa fa-angle-right"></i>Tuxtla Gutierrez</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i>San Cristobal de las Casas</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i>Oaxaca</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i>Salina Cruz</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i>Villahermosa</a></li>
+                        <li><i class="fa fa-angle-right"></i>Tuxtla Gutierrez - 961 613 5390</li>
+                        <li><i class="fa fa-angle-right"></i>San Cristobal de las Casas - 967 116 0576</li>
+                        <li><i class="fa fa-angle-right"></i>Oaxaca - 951 132 6006</li>
+                        <li><i class="fa fa-angle-right"></i>Salina Cruz - 971 133 0256</li>
+                        <li><i class="fa fa-angle-right"></i>Villahermosa< - 993 131 0472</li>
                      </ul>
                   </div>
-                  <div class="col-md-4">
-                     <div class="main-heading left_text">
-                        <h2>Contactanos</h2>
-                     </div>
-                     <p>
-                        <span style="font-size:18px;"><a href="tel:+9616135390">+961 613 5390</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9671160576">+967 116 0576</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9511326006">+951 132 6006</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9711330256">+971 133 0256</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9931310472">+993 131 0472</a></span>
-                     </p>
-                     
-                  </div>
+                  
                </div>
             </div>
             

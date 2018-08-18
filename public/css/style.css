@@ -5064,5 +5064,17 @@ galeriaProducto figure {
     padding: 1%;
 }
 
+.torresListFooter li {
+    color: #fff;
+    position: relative;
+}
+
+.torresListFooter li:before {
+    content: '-';
+    position: absolute;
+    left: -5%;
+    top: 10%;
+}
+
 
 /*End classes*/
