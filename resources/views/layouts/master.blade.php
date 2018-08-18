@@ -210,11 +210,9 @@
                         <h2>Contactanos</h2>
                      </div>
                      <p>
-                        <span style="font-size:18px;"><a href="tel:+9616135390">+961 613 5390</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9671160576">+967 116 0576</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9511326006">+951 132 6006</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9711330256">+971 133 0256</a></span><br>
-                        <span style="font-size:18px;"><a href="tel:+9931310472">+993 131 0472</a></span>
+                     @foreach(session('telefonos') as $item)
+                        <span style="font-size:18px;"><a href="tel:{{$item->telefono}}">{{$item->telefono}}</a></span><br>
+                     @endforeach
                      </p>
                      
                   </div>

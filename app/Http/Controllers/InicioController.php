@@ -15,8 +15,10 @@ class InicioController extends Controller
     {
         //
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $telefonos = DB::table('tbl_cattelefonos')->where('activo','=',1)->where('idinformaciongeneral','=',1)->get();
         session(['informacion' => $informaciongeneral]);
-        return view('navbar.inicio',["informacionDE"=>$informaciongeneral]);
+        session(['telefonos' => $telefonos]);
+        return view('navbar.inicio',["informaciongeneral"=>$informaciongeneral]);
     }
 
     /**
