@@ -15,10 +15,26 @@ class InicioController extends Controller
     {
         //
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
-        $telefonos = DB::table('tbl_cattelefonos')->where('activo','=',1)->where('idinformaciongeneral','=',1)->get();
+        $sucursales = DB::table('tbl_sucursal')->where('activo','=',1)->get();
+        $servicios = DB::table('tbl_serviciosinformacion')->where('activo','=',1)->get();
+        $redes = DB::table('tbl_catredessociales')->where('activo','=',1)->get();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $serviciosprincipal = DB::table('tbl_nuestrosservicios')->where('activo','=',1)->get();
+        $proyectosrealizados = DB::table('tbl_proyectosrealizados')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        $slider = DB::table('tbl_slider')->where('activo','=',1)->get();
         session(['informacion' => $informaciongeneral]);
-        session(['telefonos' => $telefonos]);
-        return view('navbar.inicio',["informaciongeneral"=>$informaciongeneral]);
+        session(['sucursales' => $sucursales]);
+        session(['servicios' => $servicios]);
+        session(['redes' => $redes]);
+        
+        
+        return view('navbar.inicio',["informaciongeneral"=>$informaciongeneral,
+                                     "marcas"=>$marcas,
+                                     "serviciosprincipal"=>$serviciosprincipal,
+                                     "proyectosrealizados"=>$proyectosrealizados,
+                                     "videos"=>$videos,
+                                     "slider"=>$slider]);
     }
 
     /**

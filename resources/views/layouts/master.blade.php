@@ -70,11 +70,11 @@
                   <div class="float-right">
                      <div class="social_icon">
                         <ul class="list-inline">
-                           <li><a class="fa fa-facebook" href="https://www.facebook.com/" title="Facebook" target="_blank"></a></li>
-                           <li><a class="fa fa-google-plus" href="https://plus.google.com/" title="Google+" target="_blank"></a></li>
-                           <li><a class="fa fa-twitter" href="https://twitter.com" title="Twitter" target="_blank"></a></li>
-                           <li><a class="fa fa-linkedin" href="https://www.linkedin.com" title="LinkedIn" target="_blank"></a></li>
-                           <li><a class="fa fa-instagram" href="https://www.instagram.com" title="Instagram" target="_blank"></a></li>
+                        <!--Controlar que no se desborde de redes sociales -->
+                           @foreach(session('redes') as $item)
+                           <li><a class="{{$item->icono}}" href="{{$item->url}}" title="{{$item->nombre}}" target="_blank"></a></li>
+                           @endforeach
+                        <!--Controlar que no se desborde de redes sociales -->
                            <li class="shoppingCartItem">
                               <a href="/cart"><i class="fa fa-shopping-cart"></i><span>2</span></a>
                            </li>
@@ -164,26 +164,14 @@
                <div class="main-heading left_text">
                   <h2>Torres Batiz</h2>
                </div>
-
-               <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes.</p>
-               <ul class="torresListFooter">
-                <li>Servicio ténico Ricoh</li>
-                <li>Servicios técnico Preventivo y Correctivo</li>
-                <li>Instalación y capacitación</li>
-                <li>Imágenes de los servicios técnicos</li>
-                <li>Precio del servicio</li>
-               </ul>
-               
                <p>{{session('informacion')->descripcion}}</p>
-               <p>
-                  •  Servicio técnico Ricoh <br>
-                  •  Servicios técnico Preventivo y Correctivo <br>
-                  •  Instalación y capacitación. <br>
-                  •  Imágenes de los servicios técnicos <br>
-                  •  Precio del servicio <br>
-
-               </p>
-
+               <!-- Controlar que no se desborde el foreach -->
+               <ul class="torresListFooter">
+               @foreach(session('servicios') as $item)
+                <li>{{$item->servicio}}</li>
+               @endforeach
+               </ul>
+               <!-- Controlar que no se desborde el foreach -->
                <ul class="social_icons">
                   <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                   <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -204,33 +192,22 @@
                         <li><a href="/contacto"><i class="fa fa-angle-right"></i>Contacto Directo</a></li>
                      </ul>
                   </div>
-<!-- Esto es lo que yisus puso -->
+<!-- Controlar que no se desborde el foreach -->
                   <div class="col-md-6">
                      <div class="main-heading left_text">
                         <h2>Contactos Torres Batiz</h2>
                      </div>
                      <ul class="footer-menu">
-                        <li><i class="fa fa-angle-right"></i>Tuxtla Gutierrez - 961 613 5390</li>
-                        <li><i class="fa fa-angle-right"></i>San Cristobal de las Casas - 967 116 0576</li>
-                        <li><i class="fa fa-angle-right"></i>Oaxaca - 951 132 6006</li>
-                        <li><i class="fa fa-angle-right"></i>Salina Cruz - 971 133 0256</li>
-                        <li><i class="fa fa-angle-right"></i>Villahermosa< - 993 131 0472</li>
+                     @foreach(session('sucursales') as $item)
+                        <li><i class="fa fa-angle-right"></i>
+                        {{$item->nombre}} - 
+                        <span style="font-size:18px;"><a href="tel:{{$item->telefono}}">{{$item->telefono}}</a></span><br>
+                        </li>
+                     @endforeach
                      </ul>
                   </div>
-<!-- Esto es lo que yisus puso -->
-<!-- Esto es lo que yo tenia -->
-                  <div class="col-md-4">
-                     <div class="main-heading left_text">
-                        <h2>Contactanos</h2>
-                     </div>
-                     <p>
-                     @foreach(session('telefonos') as $item)
-                        <span style="font-size:18px;"><a href="tel:{{$item->telefono}}">{{$item->telefono}}</a></span><br>
-                     @endforeach
-                     </p>
-                     
-                  </div>
-<!-- Esto es lo que yo tenia -->
+<!-- Controlar que no se desborde el foreach -->
+
                </div>
             </div>
             
