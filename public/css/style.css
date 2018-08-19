@@ -1502,9 +1502,9 @@ footer,
 -------------------------------------------------------------------*/
 
 .padding_layout_1 {
-    padding-top: 75px;
-    /*    padding-bottom: 75px;
-*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 20px;
 }
 
 .padding_layout_1_small {
@@ -1706,26 +1706,24 @@ section.dottad_star_bg {
 }
 
 #testimonial_slider {
-    padding-right: 70px;
+    /* padding-right: 70px; */
 }
 
 #testimonial_slider .carousel-indicators {
     position: absolute;
     right: 0;
     bottom: -45px;
-    left: 530px;
+    left: 0px;
     z-index: 15;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
     list-style: none;
-    margin-bottom: 0;
+    margin: auto;
 }
 
 .team_info h4 {
@@ -3344,10 +3342,10 @@ span.skill {
 .testmonial_section {
     background-image: url('../images/torresimages/hero-eqp-pc.jpg');
     background-size: cover;
-    padding-bottom: 185px;
+    padding-bottom: 70px;
     background-position: center bottom;
     position: relative;
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
 }
 
@@ -3691,7 +3689,7 @@ footer ul.social_icons {
 
 .contact_us_section {
     padding: 40px 50px;
-    margin-top: -75px;
+    margin-top: 50px;
     float: left;
     width: 100%;
 }
@@ -5074,6 +5072,16 @@ galeriaProducto figure {
     position: absolute;
     left: -5%;
     top: 10%;
+}
+
+#testimonial_slider iframe {
+    display: block;
+    margin: auto;
+}
+
+.formCotizacion p.small {
+    font-size: 65% !important;
+    line-height: 1.1;
 }
 
 

@@ -50,7 +50,7 @@
                               </div>
                            </div>
                         </td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="email">
+                        <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="text">
                         </td>
                         <td class="col-sm-1 col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
                      </tr>
@@ -64,7 +64,7 @@
                               </div>
                            </div>
                         </td>
-                        <td class="col-md-1" style="text-align: center"><input class="form-control" value="2" type="email">
+                        <td class="col-md-1" style="text-align: center"><input class="form-control" value="2" type="text">
                         </td>
                         <td class="col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
                      </tr>
@@ -78,7 +78,7 @@
                               </div>
                            </div>
                         </td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="email">
+                        <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="text">
                         </td>
                         <td class="col-sm-1 col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
                      </tr>
@@ -92,34 +92,37 @@
                               </div>
                            </div>
                         </td>
-                        <td class="col-md-1" style="text-align: center"><input class="form-control" value="2" type="email">
+                        <td class="col-md-1" style="text-align: center"><input class="form-control" value="2" type="text">
                         </td>
                         <td class="col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
                      </tr>
                   </tbody>
                </table>
-               <div class="row">
+               <div class="row formCotizacion">
                   <div class="col-md-6">
-                     <div class="form-group">
+                     <div class="form-group groupCorreo">
                         <input class="form-control" type="email" placeholder="Ingrese su correo" name="correo">
+                        <p class="small">*Es necesario llenar este campo.</p>
                      </div>
-                     <div class="form-group">
+                     <div class="form-group groupNombre">
                         <input class="form-control" type="text" placeholder="Ingrese su nombre" name="nombre">
+                        <p class="small">*Es necesario llenar este campo.</p>
                      </div>
-                     <div class="form-group">
+                     <div class="form-group groupTelefono">
                         <input class="form-control" type="text" placeholder="Ingrese su teléfono" name="tel">
+                        <p class="small">*Es necesario llenar este campo.</p>
                      </div>
                   </div>
                   <div class="col-md-6">
                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Ingrese su empresa (Opcional)" name="empresa">
-                        <p class="small">Si no cuenta con una empresa, puede dejar el espacio en blanco y especificarlo en el mensaje.</p>
+                        <input aria-describedby="info" class="form-control" type="text" placeholder="Ingrese su empresa (Opcional)" name="empresa">
+                        <p id="info" class="small">Si no cuenta con una empresa, puede dejar el espacio en blanco y especificarlo en el mensaje.</p>
                      </div>
                      <div class="form-group">
                         <textarea class="form-control" name="mensajeCotizacion" id="mensajeCotizacion" placeholder="Mensaje (Opcional)"></textarea>
                      </div>
                   </div>
-                  <button class="btnEnviarCotizacion" type="submit">Enviar para cotizar</button>
+                  <button class="btnEnviarCotizacion" type="button">Enviar para cotizar</button>
                </div>
             </div>
             
