@@ -30,7 +30,7 @@
                <div class="col-md-12">
                   <div class="full">
                      <div class="main_headingr text_align_center">
-                        <h2><span>29 años comprometidos con la <br>calidad y el servicio</span></h2>
+                        <h2><span>Torres Batiz</span></h2>
                      </div>
                   </div>
                </div>
@@ -47,14 +47,13 @@
                <div class="col-md-4"></div>
                <div class="col-md-12 col-lg-8 text-align_right">
                   <div class="full large_cont_p">
-                     <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes. <br> <br>
+                     <p>{{$informaciongeneral->mision}}<br> <br>
                      </p>
                      <h2 class="main_heading text_align_right">Visión</h2>
-                     <p>
-                        Ser la empresa lider en el mercado, con un atractivo irresistible para nuestros clientes. <br> <br>
+                     <p>{{$informaciongeneral->vision}}
                      </p>
                      <h2 class="main_heading text_align_right">Objetivos</h2>
-                     <p>En Torres Batiz estámos comprometidos con la excelencia, para proveer los mejores productos y con ellos eficientar la calidad de vida de nuestros clientes. </p>
+                     <p>{{$informaciongeneral->objetivos}}</p>
                   </div>
                </div>
             </div>
@@ -78,26 +77,26 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                            <div class="carousel-item active">
-                              <div class="testimonial-container"><iframe width="100%" height="315" src="https://www.youtube.com/embed/t5qGCgXihAY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                               </div>
                            </div>
+                           @foreach($videos as $item)
                            <div class="carousel-item">
                               <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 <iframe width="100%" height="315" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                  <div class="testimonial-content">
                                  </div>
                               </div>
                            </div>
-                           <div class="carousel-item">
-                              <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/pdXXq8zEFDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                              </div>
-                           </div>
+                           @endforeach
+                           
                         </div>
                      </div>
                   </div>
                </div>
-               
+               <div class="col-sm-5">
+                  <div class="full"> </div>
+               </div>
             </div>
          </div>
       </div>
@@ -112,7 +111,7 @@
                         <div class="call_icon"> <img src="images/layout_img/phone_icon.png" alt="#" /> </div>
                         <div class="inner_cont">
                            <h2>Si tiene alguna duda, contáctenos</h2>
-                           <p>Puede comunicarse con nosotros al teléfono <strong>961 613 5390</strong>. O llene una solicitud dando click en Contáctenos</p>
+                           <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
                         </div>
                         <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="/contacto">Contáctenos</a> </div>
                      </div>
@@ -128,17 +127,17 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="full">
-                    <ul class="brand_list">
-                     <li><img class="img-responsive2" src="images/layout_img/marca1.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca2.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca3.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca4.png" alt="#" /></li>
-
-                  </ul>
+                     <ul class="brand_list">
+                        @foreach($marcas as $item)
+                        <li><img class="img-responsive2" src="{{$item->imagen}}" alt="#" /></li>
+                        @endforeach
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
       </div>
+      <!-- end section -->
    </div>
 
 @endsection

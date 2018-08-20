@@ -10,18 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*VISTAS*/
+Route::resource('/','InicioController');
+Route::resource('/nosotros','NosotrosController');
+Route::resource('/productos','ProductosController');
+Route::resource('/noticias','NoticiasController');
+Route::resource('/arrendamiento','ArrendamientoController');
+Route::resource('/soporte','SoporteController');
+Route::resource('/consumibles','ConsumiblesController');
+Route::resource('/sucursales','SucursalesController');
+Route::resource('/contacto','ContactoController');
+Route::resource('/cart','CartController');
+Route::resource('/productostodos','productosTodosController');
+Route::resource('/productostodosdetalle{id}','ProductosTodosDetalleController');
 
-Route::get('/','InicioController@Index');
-Route::get('/nosotros','NosotrosController@Index');
-Route::get('/productos','ProductosController@Index');
-Route::get('/noticias','NoticiasController@Index');
-Route::get('/arrendamiento','ArrendamientoController@Index');
-Route::get('/soporte','SoporteController@Index');
-Route::get('/consumibles','ConsumiblesController@Index');
-Route::get('/sucursales','SucursalesController@Index');
-Route::get('/contacto','ContactoController@Index');
-Route::get('/cart','CartController@Index');
-Route::get('/productostodos','productosTodosController@Index');
-Route::get('/productostodosdetalle','ProductosTodosDetalleController@Index');
-
+/*FORMULARIOS*/
 

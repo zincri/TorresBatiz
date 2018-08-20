@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class NosotrosController extends Controller
 {
     /**
@@ -14,7 +14,12 @@ class NosotrosController extends Controller
     public function index()
     {
         //
-        return view('navbar.nosotros');
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        return view('navbar.nosotros',["informaciongeneral"=>$informaciongeneral,
+                                       "marcas"=>$marcas,
+                                       "videos"=>$videos]);
     }
 
     /**

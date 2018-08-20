@@ -75,19 +75,24 @@
 
                               Contamos con personal certificado para acesorarte en los equipos multifuncionales de acuerdo a tus necesidades
                            </p>
+
                            <div class="row">
+                           <!--FORMULARIO-->
                            <div class="bt_cont col-md-8">
+
                               <div class="formularioArrendatario">
                                  <p class="tituloFormulario">SOLICITUD DE ARRENDAMIENTO</p>
                                  <p class="descArrendamiento">Si usted desea obtener más información sobre nuestros planes de arrendamientos, porfavor llene el siguiente formulario.</p>
+                                 
                                  <form>
                                     <div class="groupForm">
                                        <label for="nombre">Nombre:</label>
                                        <input required type="text" name="nombre" placeholder="Ingrese su nombre aquí">
+                                               
                                     </div>
                                     <div class="groupForm">
                                        <label for="nombremp">Empresa:</label>
-                                       <input required type="text" name="nombremp" placeholder="Ingrese el nombre de su empresa">
+                                       <input required type="text" name="nombreempresa" placeholder="Ingrese el nombre de su empresa">
                                     </div>
                                     <div class="groupForm">
                                        <label for="telefono">Teléfono:</label>
@@ -123,33 +128,37 @@
                                        <textarea required placeholder="Ingrese su mensaje aquí"></textarea>
                                     </div>
                                     <button type="submit">Enviar formulario</button>
-                                 </form>
+                                  </form>
+                                  
                               </div>
                            </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
-         <div class="side_bar">
-            <div class="side_bar_blog">
-               <h4>Noticias recientes</h4>
-               <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis<br><br> 
-                  asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit
-               </p>
-               <p class="enlaceBlog"><a href="blog_detail.html" >Ver más</a></p>
-            </div>
-            <div class="side_bar_blog">
-               <h4>Vídeos Destacados</h4>
-               <div class="recent_post">
-                  <ul>
-                     <li>
-                        <p class="post_head"><a href="#">RICOH</a></p>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      </div>
+                           <!--FIN FORMULARIO-->
+                           <!--- SECCION NOTICIAS -->
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                              <div class="side_bar">
+                                  <div class="side_bar_blog">
+                                    <h4>Noticias recientes</h4>
+                                    <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis<br><br> 
+                                        asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit
+                                    </p>
+                                    <p class="enlaceBlog"><a href="blog_detail.html" >Ver más</a></p>
+                                  </div>
+                                    <div class="side_bar_blog">
+                                      <h4>Vídeos Destacados</h4>
+                                      <div class="recent_post">
+                                          <ul>
+                                            <li>
+                                                <p class="post_head"><a href="#">RICOH</a></p>
+                                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                            </li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          <!--- SECCION NOTICIAS -->
                         </div>
                      </div>
                   </div>
@@ -176,8 +185,9 @@
          </div>
       </div>
       <!-- end section -->
-      <!-- section -->
-      <div class="section padding_layout_1 testmonial_section white_fonts">
+    
+    <!-- section -->
+    <div class="section padding_layout_1 testmonial_section white_fonts">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
@@ -192,21 +202,19 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                            <div class="carousel-item active">
-                              <div class="testimonial-container"><iframe width="100%" height="315" src="https://www.youtube.com/embed/t5qGCgXihAY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                               </div>
                            </div>
+                           @foreach($videos as $item)
                            <div class="carousel-item">
                               <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 <iframe width="100%" height="315" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                  <div class="testimonial-content">
                                  </div>
                               </div>
                            </div>
-                           <div class="carousel-item">
-                              <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/pdXXq8zEFDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                              </div>
-                           </div>
+                           @endforeach
+                           
                         </div>
                      </div>
                   </div>
@@ -228,9 +236,9 @@
                         <div class="call_icon"> <img src="images/layout_img/phone_icon.png" alt="#" /> </div>
                         <div class="inner_cont">
                            <h2>Si tiene alguna duda, contáctenos</h2>
-                           <p>Puede comunicarse con nosotros al teléfono <strong>961 613 5390</strong>. O llene una solicitud dando click en Contáctenos</p>
+                           <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
                         </div>
-                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact.html">Contáctenos</a> </div>
+                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="/contacto">Contáctenos</a> </div>
                      </div>
                   </div>
                </div>
@@ -244,21 +252,17 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="full">
-                    <ul class="brand_list">
-                     <li><img class="img-responsive2" src="images/layout_img/marca1.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca2.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca3.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca4.png" alt="#" /></li>
-
-                  </ul>
+                     <ul class="brand_list">
+                        @foreach($marcas as $item)
+                        <li><img class="img-responsive2" src="{{$item->imagen}}" alt="#" /></li>
+                        @endforeach
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-   <!-- end section -->
-   <!-- Modal -->
+      <!-- end section -->
    
-   <!-- End Model search bar -->
    
 @endsection

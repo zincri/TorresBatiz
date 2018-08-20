@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class productosTodosController extends Controller
 {
     /**
@@ -13,7 +13,15 @@ class productosTodosController extends Controller
      */
     public function index()
     {
-        return view ('navbar.productostodos');
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        $productos = DB::table('tbl_productogeneral')->where('activo','=',1)->get();
+        return view('navbar.productostodos',["informaciongeneral"=>$informaciongeneral,
+                                                "marcas"=>$marcas,
+                                                "videos"=>$videos,
+                                                "productos"=>$productos]);
+                    
     }
 
     /**

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\SolicitudArrendamientoRequest;
+use DB;
 class ArrendamientoController extends Controller
 {
     /**
@@ -13,8 +14,13 @@ class ArrendamientoController extends Controller
      */
     public function index()
     {
-        //
-        return view('navbar.arrendamiento');
+
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        return view('navbar.arrendamiento',["informaciongeneral"=>$informaciongeneral,
+                                            "marcas"=>$marcas,
+                                            "videos"=>$videos]);
     }
 
     /**
@@ -33,9 +39,10 @@ class ArrendamientoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SolicitudArrendamientoRequest $request)
     {
         //
+        echo "a";
     }
 
     /**
