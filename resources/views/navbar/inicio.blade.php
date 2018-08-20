@@ -11,7 +11,7 @@
                <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
                   <ul>
                   @foreach($slider as $item)
-                  <li data-index="rs-181" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="{{$item->imagen}}"  data-rotate="0"  data-saveperformance="off"  data-title="{{$item->tituloglobo}}" data-description="">
+                  <li data-index="{{$item->id}}" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="{{$item->imagen}}"  data-rotate="0"  data-saveperformance="off"  data-title="{{$item->tituloglobo}}" data-description="">
                         <!-- MAIN IMAGE -->
                         <img src="{{$item->imagen}}"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
@@ -133,7 +133,7 @@
          <div class="row">
             <div class="col-md-6">
                <div class="full">
-                  <h4>{{$informaciongeneral->titulohistoria}}</h4>
+                  <h3>{{$informaciongeneral->titulohistoria}}</h3>
                </div>
             </div>
             <div class="col-md-6">
@@ -220,7 +220,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="full">
-                     <h4>{{$informaciongeneral->tituloresena}}</h4>
+                     <h3>{{$informaciongeneral->tituloresena}}</h3>
                   </div>
                </div>
                <div class="col-md-6">
@@ -282,15 +282,13 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                            <div class="carousel-item active">
-                              <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              <div class="testimonial-container"><iframe width="100%" height="400" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                               </div>
                            </div>
                            @foreach($videos as $item)
                            <div class="carousel-item">
                               <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                 <div class="testimonial-content">
-                                 </div>
+                                 <iframe width="100%" height="400" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                               </div>
                            </div>
                            @endforeach
@@ -299,9 +297,7 @@
                      </div>
                   </div>
                </div>
-               <div class="col-sm-5">
-                  <div class="full"> </div>
-               </div>
+               
             </div>
          </div>
       </div>
@@ -324,29 +320,7 @@
       </div>
       <!-- end section -->
       <!-- Modal -->
-      <div class="modal fade" id="search_bar" role="dialog">
-         <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
-               </div>
-               <div class="modal-body">
-                  <div class="row">
-                     <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
-                        <div class="navbar-search">
-                           <form action="#" method="get" id="search-global-form" class="search-global">
-                              <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value="" class="search-global__input">
-                              <button class="search-global__btn"><i class="fa fa-search"></i></button>
-                              <div class="search-global__note">Begin typing your search above and press return to search.</div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+</div>
       <!-- End Model search bar -->
       <!-- map -->
       <div class="map-container column-map left-pos-map">
