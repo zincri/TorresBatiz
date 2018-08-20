@@ -108,18 +108,12 @@
                                     <div class="groupInputs">
                                        <p>Usted desea incluir:</p>
                                        <div class="groupFormRadio">
-                                          <p class="titleInput">Blanco y negro</p>
-                                          <label for="fotocopiadora">Si</label>
-                                          <input type="radio" name="fotocopiadora">
-                                          <label for="fotocopiadora">No</label>
-                                          <input checked type="radio" name="fotocopiadora">
+                                          <p class="titleInput">Incluir Blanco y negro</p>
+                                          <input type="checkbox" name="fotocopiadora">
                                        </div>
                                        <div class="groupFormRadio">
-                                          <p class="titleInput">Color</p>
-                                          <label for="Impresora">Si</label>
-                                          <input type="radio" name="Impresora">
-                                          <label for="Impresora">No</label>
-                                          <input checked type="radio" name="Impresora">
+                                          <p class="titleInput">Incluir Color</p>
+                                          <input checked type="checkbox" name="Impresora">
                                        </div>
                                        <div class="grupoFormularioVolumen">
                                           <p class="titleInput">Volumen</p>
