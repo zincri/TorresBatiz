@@ -556,7 +556,7 @@ a:focus {
 
 .full {
     width: 100%;
-    float: left;
+    float: right;
     margin: 0;
     padding: 0;
 }
@@ -835,7 +835,7 @@ hr.dottad_border {
 
 .main_headingr h2 span {
     position: relative;
-    left: 200px;
+    /* left: 200px; */
 }
 
 .main_headingr h2 span::before {
@@ -3538,6 +3538,16 @@ footer ul.social_icons li {
     display: inline;
 }
 
+.social_icons {
+    display: block;
+    margin: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
 footer ul.social_icons li a {
     float: left;
     margin-right: 15px;
@@ -5083,6 +5093,77 @@ galeriaProducto figure {
     font-size: 65% !important;
     line-height: 1.1;
 }
+
+.contactosFooter button {
+    background-color: #0e7;
+    border: none;
+    border-radius: 5px;
+    padding: 5%;
+    color: #fff;
+    transition: ease all 0.2s;
+}
+
+.contactosFooter button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #306868;
+}
+
+.tituloNosotros h1 {
+    /* font-size: 35px; */
+    width: 60%;
+    float: right;
+    /* color: #306868; */
+    font-size: 42px;
+    color: #062c4c;
+    line-height: 36px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .tituloNosotros h1 {
+        /* font-size: 35px; */
+        width: 100%;
+        float: none;
+        /* color: #306868; */
+        font-size: 35px;
+        color: #062c4c;
+        line-height: 36px;
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    .tituloNosotros h1 {
+        /* font-size: 35px; */
+        width: 100%;
+        float: none;
+        /* color: #306868; */
+        font-size: 35px;
+        color: #062c4c;
+        line-height: 36px;
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}
+
+
+/* @media (min-width: 1024px) {
+    .col-md-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} */
 
 
 /*End classes*/
