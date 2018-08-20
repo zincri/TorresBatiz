@@ -41,8 +41,17 @@ class ArrendamientoController extends Controller
      */
     public function store(SolicitudArrendamientoRequest $request)
     {
+        echo "si paso";
+        //return Redirect::to('/arrendamiento');
         //
-        echo "a";
+        
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        return view('navbar.arrendamiento',["informaciongeneral"=>$informaciongeneral,
+                                            "marcas"=>$marcas,
+                                            "videos"=>$videos]);
+
     }
 
     /**

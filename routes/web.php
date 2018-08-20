@@ -25,4 +25,4 @@ Route::resource('/productostodos','productosTodosController');
 Route::resource('/productostodosdetalle{id}','ProductosTodosDetalleController');
 
 /*FORMULARIOS*/
-
+//Route::resource('/arrendamientoform','ArrendamientoController@Store');

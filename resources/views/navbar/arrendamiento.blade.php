@@ -31,8 +31,7 @@
                   <div class="full">
                      <div class="service_img"> <!-- <img class="img-responsive" src="images/torresimages/Eqp-MP-6055-40.jpg" alt="#"> --> 
                         <figure id="imagenMultifuncional">
-                           <svg xmlns="http://www.
-                           w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 974.33 487.34"><defs><style>.cls-1,.cls-12,.cls-4{fill:none;}.cls-2{fill:#4bb597;}.cls-3{font-size:20px;}.cls-3,.cls-9{font-family:MicrosoftSansSerif, Microsoft Sans Serif;}.cls-4{stroke:#3d995e;stroke-linecap:round;stroke-width:2px;stroke-dasharray:1 6;}.cls-10,.cls-11,.cls-12,.cls-4,.cls-8{stroke-miterlimit:10;}.cls-5{fill:#237a40;}.cls-6{clip-path:url(#clip-path);}.cls-7{fill:#4bb56e;}.cls-8{fill:#211915;}.cls-12,.cls-8{stroke:#211915;}.cls-9{font-size:12px;fill:#fff;}.cls-10{fill:#020201;}.cls-10,.cls-11{stroke:#020302;}.cls-11{fill:#020302;}</style><clipPath id="clip-path"><rect class="cls-1" x="420.3" y="213.26" width="146.46" height="207.37"/></clipPath></defs><title>Animate</title><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 974.33 487.34"><defs><style>.cls-1,.cls-12,.cls-4{fill:none;}.cls-2{fill:#4bb597;}.cls-3{font-size:20px;}.cls-3,.cls-9{font-family:MicrosoftSansSerif, Microsoft Sans Serif;}.cls-4{stroke:#3d995e;stroke-linecap:round;stroke-width:2px;stroke-dasharray:1 6;}.cls-10,.cls-11,.cls-12,.cls-4,.cls-8{stroke-miterlimit:10;}.cls-5{fill:#237a40;}.cls-6{clip-path:url(#clip-path);}.cls-7{fill:#4bb56e;}.cls-8{fill:#211915;}.cls-12,.cls-8{stroke:#211915;}.cls-9{font-size:12px;fill:#fff;}.cls-10{fill:#020201;}.cls-10,.cls-11{stroke:#020302;}.cls-11{fill:#020302;}</style><clipPath id="clip-path"><rect class="cls-1" x="420.3" y="213.26" width="146.46" height="207.37"/></clipPath></defs><title>Animate</title><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1">
 
                               <rect class="cls-2 cuadroMonitoreo" x="129.03" y="353.08" width="127.61" height="43.17" rx="10" ry="10"/><rect class="cls-2 cuadroTotalgreen" x="866" y="361.26" width="108.33" height="43.17" rx="10" ry="10"/>
                               <rect class="cls-2 cuadroFacilidad" x="842.33" y="162.47" width="127.67" height="51" rx="10" ry="10"/>
@@ -84,11 +83,15 @@
                                  <p class="tituloFormulario">SOLICITUD DE ARRENDAMIENTO</p>
                                  <p class="descArrendamiento">Si usted desea obtener más información sobre nuestros planes de arrendamientos, porfavor llene el siguiente formulario.</p>
                                  
-                                 <form>
+                                 {!! Form::open(['url' => '/arrendamiento', 'method'=>'POST']) !!}
                                     <div class="groupForm">
                                        <label for="nombre">Nombre:</label>
                                        <input required type="text" name="nombre" placeholder="Ingrese su nombre aquí">
-                                               
+                                       @if($errors->has('nombre'))
+                                            <span class="help-block"> 
+                                                <strong>El campo nombre problem</strong> 
+                                            </span>
+                                            @endif      
                                     </div>
                                     <div class="groupForm">
                                        <label for="nombremp">Empresa:</label>
@@ -128,7 +131,7 @@
                                        <textarea required placeholder="Ingrese su mensaje aquí"></textarea>
                                     </div>
                                     <button type="submit">Enviar formulario</button>
-                                  </form>
+                                    {!! Form::close() !!}
                                   
                               </div>
                            </div>
