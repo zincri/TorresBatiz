@@ -110,11 +110,11 @@
                                        <p>Usted desea incluir:</p>
                                        <div class="groupFormRadio">
                                           <p class="titleInput">Incluir Blanco y negro</p>
-                                          <input type="checkbox" name="fotocopiadora">
+                                          <input id="fotocopiadora" type="checkbox" name="fotocopiadora">
                                        </div>
                                        <div class="groupFormRadio">
                                           <p class="titleInput">Incluir Color</p>
-                                          <input checked type="checkbox" name="Impresora">
+                                          <input checked id="Impresora" type="checkbox" name="Impresora">
                                        </div>
                                        <div class="grupoFormularioVolumen">
                                           <p class="titleInput">Volumen</p>
@@ -125,7 +125,7 @@
                                     </div>
                                     <div class="groupInputs">
                                        <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted. (Campo obligatorio)</p>
-                                       <textarea id="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
+                                       <textarea id="mensaje" name="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
                                        <span id="mensajeOK" style="color:red" class="help-block"></span>
                                     </div>
                                     <button type="submit">Enviar formulario</button>

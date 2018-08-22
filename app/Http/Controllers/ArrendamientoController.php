@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Http\Requests\SolicitudArrendamientoRequest;
 use DB;
@@ -42,44 +42,60 @@ class ArrendamientoController extends Controller
      */
     public function store(SolicitudArrendamientoRequest $request)
     {
-        return $request->get('fotocopiadora');
-        /*$opcion=1;
+       
+
+        
+        $opcion=1;
         $nombre=$request->get('nombre');
         $nombreempresa=$request->get('nombreempresa');
-        if($nombreempresa == ""){
+        if(empty($nombreempresa)){
             $nombreempresa='Sin empresa';
         }
         $telefono=$request->get('telefono');
         $email=$request->get('email');
-        $fotocopiadora=$request->get('fotocopiadora');
-        if($fotocopiadora == "on"){
-            $fotocopiadora=1;
+        $blanconegro=$request->get('fotocopiadora');
+        if($blanconegro === "on"){
+            $blanconegro=1;
         }else{
-            $fotocopiadora=0;
+            $blanconegro=0;
         }
-        $Impresora=$request->get('Impresora');
-        if($Impresora == "on"){
-            $Impresora=1;
+        $color=$request->get('Impresora');
+        if($color === "on"){
+            $color=1;
         }else{
-            $Impresora=0;
+            $color=0;
         }
         $volumen=$request->get('volumen');
         $mensaje=$request->get('mensaje');
-        $nombre=2;
-*/
-        return $nombreempresa." y ".$fotocopiadora." y ".$Impresora;
-        //echo "STORE";
-        //return Redirect::to('/arrendamiento');
-        //
-        /*
-        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
-        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
-        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
-        return view('navbar.arrendamiento',["informaciongeneral"=>$informaciongeneral,
-                                            "marcas"=>$marcas,
-                                            "videos"=>$videos]);
-                                            */
+        $usuario=2;
 
+        
+        
+        $sql_solicitud = "call sp_setSolicitudArrendamiento
+        (
+            '".$opcion."',
+            '".$nombre."',
+            '".$nombreempresa."',
+            '".$telefono."',
+            '".$email."',
+            '".$blanconegro."',
+            '".$color."',
+            '".$volumen."',
+            '".$mensaje."',
+            '".$usuario."'
+            
+        )";
+        $datos_solicitud = DB::select($sql_solicitud,array(1,10));
+
+        if($datos_solicitud != null)
+        {
+            return Redirect::to('/arrendamiento');
+        }
+        else
+        {
+            return "fue null";
+        }  
+        
     }
 
     /**
