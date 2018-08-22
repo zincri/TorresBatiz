@@ -254,7 +254,7 @@
 <script src="css/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="css/revolution/js/extensions/revolution.extension.video.min.js"></script>
 <!-- map js -->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ"></script>
    <!--script>
          // This example adds a marker to indicate the position of Bondi Beach in Sydney,
          // Australia.
