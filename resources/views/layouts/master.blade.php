@@ -262,18 +262,18 @@
         
        </script>-->
 
-       <!-- google map js -->
-       @stack('script')
-       <script src="js/custom.js"></script>
-       <script src="js/TweenMax.min.js"></script>
-       <script src="js/TimelineMax.min.js"></script>
-       <script src="js/ScrollMagic.js"></script>
-       <script src="js/DrawSVGPlugin.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-       <script src="js/layoutAnimate.js"></script>
-       <script type="text/javascript" src="js/media.js"></script>
-       @stack('zoomScript_js')
-       
+    <!-- google map js -->
+    @stack('script')
+    <script src="js/custom.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/TimelineMax.min.js"></script>
+    <script src="js/ScrollMagic.js"></script>
+    <script src="js/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="js/layoutAnimate.js"></script>
+    <script type="text/javascript" src="js/media.js"></script>
+    @stack('zoomScript_js')
+    @stack('validacion')
 
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
     -->

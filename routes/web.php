@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*VISTAS*/
 Route::resource('/','InicioController');
 Route::resource('/nosotros','NosotrosController');
 Route::resource('/productos','ProductosController');
@@ -24,5 +23,3 @@ Route::resource('/cart','CartController');
 Route::resource('/productostodos','productosTodosController');
 Route::resource('/productostodosdetalle{id}','ProductosTodosDetalleController');
 
-/*FORMULARIOS*/
-//Route::resource('/arrendamientoform','ArrendamientoController@Store');
