@@ -83,27 +83,28 @@
                                  <p class="tituloFormulario">SOLICITUD DE ARRENDAMIENTO</p>
                                  <p class="descArrendamiento">Si usted desea obtener más información sobre nuestros planes de arrendamientos, porfavor llene el siguiente formulario.</p>
                                  
-                                 {!! Form::open(['url' => '/arrendamiento', 'method'=>'POST']) !!}
+                                 {!! Form::open(array('url' => 'arrendamiento','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
+                                 {{Form::token()}}
                                     <div class="groupForm">
                                        <label for="nombre">Nombre:</label>
-                                       <input required type="text" name="nombre" placeholder="Ingrese su nombre aquí">
-                                       @if($errors->has('nombre'))
-                                            <span class="help-block"> 
-                                                <strong>El campo nombre problem</strong> 
-                                            </span>
-                                            @endif      
+                                       <input  type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
+                                       <span id="nombreOK" style="color:red" class="help-block"></span>
                                     </div>
                                     <div class="groupForm">
-                                       <label for="nombremp">Empresa:</label>
-                                       <input required type="text" name="nombreempresa" placeholder="Ingrese el nombre de su empresa">
+                                       <label for="nombreempresa">Empresa:</label>
+                                       <input type="text" name="nombreempresa" placeholder="Ingrese el nombre de su empresa. (Campo opcional)">
                                     </div>
                                     <div class="groupForm">
                                        <label for="telefono">Teléfono:</label>
-                                       <input required type="text" name="telefono" placeholder="Ingrese su número telefónico">
+                                       <input  type="text" id="telefono" name="telefono" placeholder="Ingrese su número telefónico (Campo obligatorio)">
+                                       <span id="telefonoOK" style="color:red" class="help-block"></span>
                                     </div>
                                     <div class="groupForm">
                                        <label for="email">Correo electrónico:</label>
-                                       <input required type="email" name="email" placeholder="ejemplo@dominio.com">
+                                       <input  type="email"  id="email" name="email" placeholder="ejemplo@dominio.com (Campo obligatorio)">
+                                       <span id="emailOK" style="color:red" class="help-block"></span>
+                                            
+                                      
                                     </div>
                                     <div class="groupInputs">
                                        <p>Usted desea incluir:</p>
@@ -123,12 +124,15 @@
                                        </div>
                                        <div class="grupoFormularioVolumen">
                                           <p class="titleInput">Volumen</p>
-                                          <input required type="text" name="volumen" placeholder="Ingrese volumen">
+                                          <input id="volumen" type="text" name="volumen" placeholder="Ingrese volumen">
+                                          <span id="volumenOK" style="color:red" class="help-block"></span>
+                                       
                                        </div>
                                     </div>
                                     <div class="groupInputs">
-                                       <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted.</p>
-                                       <textarea required placeholder="Ingrese su mensaje aquí"></textarea>
+                                       <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted. (Campo obligatorio)</p>
+                                       <textarea id="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
+                                       <span id="mensajeOK" style="color:red" class="help-block"></span>
                                     </div>
                                     <button type="submit">Enviar formulario</button>
                                     {!! Form::close() !!}
@@ -269,3 +273,6 @@
    
    
 @endsection
+@push('validacion')
+<script type="text/javascript" src="{{ asset('js/validarsolicitud.js') }}"></script>
+@endpush

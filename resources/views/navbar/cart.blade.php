@@ -214,6 +214,5 @@
 <!-- End Model search bar -->
 @endsection
 @push('zoomScript_js')
-
 <script type="text/javascript" src="{{ asset('js/cartShopping.js') }}"></script>
 @endpush

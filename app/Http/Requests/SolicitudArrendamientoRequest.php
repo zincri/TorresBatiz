@@ -23,10 +23,13 @@ class SolicitudArrendamientoRequest extends FormRequest
      */
     public function rules()
     {
+        
         return [
             
-            'nombre' => 'required|max:2',
-            'empresa' => 'required'
+            'nombre' => 'required|string|max:100',
+            'telefono' => 'required|string|max:30',
+            'email' => 'required|max:50|string|email'
+            
         ];
     }
 }

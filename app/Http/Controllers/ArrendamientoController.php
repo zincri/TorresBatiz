@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\SolicitudArrendamientoRequest;
 use DB;
+
 class ArrendamientoController extends Controller
 {
     /**
@@ -41,16 +42,43 @@ class ArrendamientoController extends Controller
      */
     public function store(SolicitudArrendamientoRequest $request)
     {
-        echo "si paso";
+        return $request->get('fotocopiadora');
+        /*$opcion=1;
+        $nombre=$request->get('nombre');
+        $nombreempresa=$request->get('nombreempresa');
+        if($nombreempresa == ""){
+            $nombreempresa='Sin empresa';
+        }
+        $telefono=$request->get('telefono');
+        $email=$request->get('email');
+        $fotocopiadora=$request->get('fotocopiadora');
+        if($fotocopiadora == "on"){
+            $fotocopiadora=1;
+        }else{
+            $fotocopiadora=0;
+        }
+        $Impresora=$request->get('Impresora');
+        if($Impresora == "on"){
+            $Impresora=1;
+        }else{
+            $Impresora=0;
+        }
+        $volumen=$request->get('volumen');
+        $mensaje=$request->get('mensaje');
+        $nombre=2;
+*/
+        return $nombreempresa." y ".$fotocopiadora." y ".$Impresora;
+        //echo "STORE";
         //return Redirect::to('/arrendamiento');
         //
-        
+        /*
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
         return view('navbar.arrendamiento',["informaciongeneral"=>$informaciongeneral,
                                             "marcas"=>$marcas,
                                             "videos"=>$videos]);
+                                            */
 
     }
 
