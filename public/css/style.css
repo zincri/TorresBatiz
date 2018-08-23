@@ -5166,4 +5166,43 @@ galeriaProducto figure {
 } */
 
 
+/* Validación Solicitudes */
+
+.formularioArrendatario span {
+    position: relative;
+}
+
+.inputValido input,
+.inputValido textarea {
+    border-color: #38e71f !important;
+    box-shadow: 0px 0px 10px 0px #38e71f !important;
+}
+
+.inputValido span:after {
+    position: absolute;
+    content: '\f00c';
+    font-family: "FontAwesome";
+    color: #38e71f;
+    z-index: 100;
+    font-size: 180%;
+    top: 15%;
+}
+
+.inputInvalido input,
+.inputInvalido textarea {
+    border-color: #e9311d !important;
+    box-shadow: 0px 0px 10px 0px #e9311d !important;
+}
+
+.inputInvalido span:after {
+    position: absolute;
+    content: '\f00d';
+    font-family: "FontAwesome";
+    color: #e9311d;
+    z-index: 100;
+    font-size: 180%;
+    top: 15%;
+}
+
+
 /*End classes*/

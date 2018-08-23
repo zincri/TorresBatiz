@@ -27,7 +27,7 @@
       <div class="container">
          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left">
             <div class="row">
-               <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0;">
+               <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0; overflow: visible">
                   <div class="full">
                      <div class="service_img"> <!-- <img class="img-responsive" src="images/torresimages/Eqp-MP-6055-40.jpg" alt="#"> --> 
                         <figure id="imagenMultifuncional">
@@ -87,22 +87,31 @@
                                  {{Form::token()}}
                                     <div class="groupForm">
                                        <label for="nombre">Nombre:</label>
-                                       <input  type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
-                                       <span id="nombreOK" style="color:red" class="help-block"></span>
+                                       <div class="input-group nombreGroup">
+                                        <input type="text" id="nombre" name="nombre" max="48" min="1" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
+                                        <span id="nombreOK" style="color:red" class="help-block"></span>
+                                       </div>
+                                       
                                     </div>
                                     <div class="groupForm">
-                                       <label for="nombreempresa">Empresa:</label>
-                                       <input type="text" name="nombreempresa" placeholder="Ingrese el nombre de su empresa. (Campo opcional)">
+                                      <div class="input-group empresaGroup">
+                                        <label for="nombreempresa">Empresa:</label>
+                                        <input type="text" name="nombreempresa" max="40" placeholder="Ingrese el nombre de su empresa. (Campo opcional)">
+                                       </div>
                                     </div>
                                     <div class="groupForm">
+                                      <div class="input-group telefonoGroup">
                                        <label for="telefono">Teléfono:</label>
-                                       <input  type="text" id="telefono" name="telefono" placeholder="Ingrese su número telefónico (Campo obligatorio)">
-                                       <span id="telefonoOK" style="color:red" class="help-block"></span>
+                                        <input  type="text" id="telefono" name="telefono" max="20" placeholder="Ingrese su número telefónico (Campo obligatorio)">
+                                        <span id="telefonoOK" style="color:red" class="help-block"></span>
+                                       </div>
                                     </div>
                                     <div class="groupForm">
+                                      <div class="input-group correoGroup">
                                        <label for="email">Correo electrónico:</label>
-                                       <input  type="email"  id="email" name="email" placeholder="ejemplo@dominio.com (Campo obligatorio)">
-                                       <span id="emailOK" style="color:red" class="help-block"></span>
+                                        <input  type="email"  id="email" name="email" max="48" placeholder="ejemplo@dominio.com (Campo obligatorio)">
+                                        <span id="emailOK" style="color:red" class="help-block"></span>
+                                       </div>
                                             
                                       
                                     </div>
@@ -118,15 +127,21 @@
                                        </div>
                                        <div class="grupoFormularioVolumen">
                                           <p class="titleInput">Volumen</p>
-                                          <input id="volumen" type="text" name="volumen" placeholder="Ingrese volumen">
-                                          <span id="volumenOK" style="color:red" class="help-block"></span>
+                                          <div class="input-group volumenGroup">
+                                            <input id="volumen" max="7" type="text" name="volumen" placeholder="Ingrese volumen">
+                                            <span id="volumenOK" style="color:red" class="help-block"></span>
+                                          </div>
                                        
                                        </div>
                                     </div>
                                     <div class="groupInputs">
                                        <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted. (Campo obligatorio)</p>
-                                       <textarea id="mensaje" name="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
-                                       <span id="mensajeOK" style="color:red" class="help-block"></span>
+                                       <div class="input-group ">
+                                         <div class="input-group mensajeGroup">
+                                          <textarea id="mensaje" name="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
+                                          <span id="mensajeOK" style="color:red" class="help-block"></span>
+                                        </div>
+                                       </div>
                                     </div>
                                     <button type="submit">Enviar formulario</button>
                                     {!! Form::close() !!}
@@ -163,24 +178,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-md-6 service_blog margin_bottom_50">
-                     <div class="full">
-                        <div class="service_img"> <img class="img-responsive" src="images/torresimages/mp-c2004ex-metis-bottom-middle.png" alt="#"> </div>
-                        <div class="service_cont">
-                           <h3 class="service_head"><a href="#">Furniture</a></h3>
-                           <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-6 service_blog margin_bottom_50">
-                     <div class="full">
-                        <div class="service_img"> <img class="img-responsive" src="images/torresimages/mp-c2004ex-metis-top-right.png" alt="#"> </div>
-                        <div class="service_cont">
-                           <h3 class="service_head"><a href="#">childroom Furniture</a></h3>
-                           <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                     </div>
-                  </div>
+                  
                </div>
             </div>
          </div>
@@ -197,8 +195,11 @@
                         <!-- Indicators -->
                         <ul class="carousel-indicators">
                            <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
-                           <li data-target="#testimonial_slider" data-slide-to="1"></li>
-                           <li data-target="#testimonial_slider" data-slide-to="2"></li>
+                           @foreach($videos as $item)
+                            <li data-target="#testimonial_slider" data-slide-to="{{$item->id}}"></li>
+                           @endforeach
+                           <!-- <li data-target="#testimonial_slider" data-slide-to="1"></li>
+                           <li data-target="#testimonial_slider" data-slide-to="2"></li> -->
                         </ul>
                         <!-- The slideshow -->
                         <div class="carousel-inner">
