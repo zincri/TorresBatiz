@@ -28,28 +28,33 @@
                      <div class="full">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
                            <div class="form_section">
-                              <form class="form_contant" action="contact.php">
+                             
                                  <fieldset>
                                     <div class="row">
                                        <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Nombre" type="text" required />
+                                          <input class="field_custom" placeholder="Nombre" id="nombre" type="text"  />
+                                          <span id="nombreOK" style="color:red" class="help-block"></span>
                                        </div>
-									   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Email" type="email" required />
+						      <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                          <input class="field_custom" placeholder="Email" id="email" type="email"  />
+                                          <span id="emailOK" style="color:red" class="help-block"></span>
                                        </div>
                                        <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Asunto" type="text" required />
+                                          <input class="field_custom" placeholder="Asunto" id= "asunto" type="text"  />
+                                          <span id="asuntoOK" style="color:red" class="help-block"></span>
                                        </div>
                                        <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Número telefonico" type="text" required />
+                                          <input class="field_custom" placeholder="Número telefonico" id="telefono" type="text" />
+                                          <span id="telefonoOK" style="color:red" class="help-block"></span>
                                        </div>
                                        <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                          <textarea class="field_custom" placeholder="Mensaje"></textarea>
+                                          <textarea class="field_custom" placeholder="Mensaje" id="mensaje"></textarea>
+                                          <span id="mensajeOK" style="color:red" class="help-block"></span>
                                        </div>
-                                       <div class="center" style="margin-bottom: 2%"><input type="submit" value="Enviar" class="btn main_bt" href="#"></div>
+                                       <div class="center" style="margin-bottom: 2%"><input type="submit" value="Enviar" class="btn main_bt" id= "enviar"></div>
                                     </div>
                                  </fieldset>
-                              </form>
+                             
                            </div>
                         </div>
                      </div>
@@ -142,6 +147,6 @@
       <!-- End Model search bar -->
 
 @endsection
-@push('script') 
-      <script type="text/javascript" src="{{asset('js/mapa_inicio.js')}}"></script>  
+@push('validacion')
+<script type="text/javascript" src="{{ asset('js/validarcontacto.js') }}"></script>
 @endpush
