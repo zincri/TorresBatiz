@@ -67,11 +67,12 @@ class ArrendamientoController extends Controller
         }
         $volumen=$request->get('volumen');
         $mensaje=$request->get('mensaje');
+        $modelo="ninguno";
         $usuario=2;
-
         
         
-        $sql_solicitud = "call sp_setSolicitudArrendamiento
+        
+        $sql_solicitud = "call sp_setSolicitud
         (
             '".$opcion."',
             '".$nombre."',
@@ -82,6 +83,7 @@ class ArrendamientoController extends Controller
             '".$color."',
             '".$volumen."',
             '".$mensaje."',
+            '".$modelo."',
             '".$usuario."'
             
         )";
