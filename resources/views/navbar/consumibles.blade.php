@@ -28,7 +28,7 @@
       <div class="container">
          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-left">
             <div class="row">
-               <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0;">
+               <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0; overflow: visible">
                   <div class="full">
                      <div class="service_img"> <img class="img-responsive" src="images/torresimages/img-consumibles.jpg" alt="#"> </div>
                      <div class="service_cont">
@@ -44,33 +44,46 @@
                               {{Form::token()}}
                                  <div class="groupForm">
                                     <label for="nombre">Nombre:</label>
+                                    <div class="input-group nombreGroup">
                                     <input id="nombre" type="text" name="nombre" placeholder="Ingrese su nombre aquí">
                                     <span id="nombreOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
+                                       
                                     <label for="empresa">Empresa:</label>
+                                    <div class="input-group empresaGroup">
                                     <input id="empresa" type="text" name="empresa" placeholder="Ingrese el nombre de su empresa">
                                     <span id="empresaOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
                                     <label for="telefono">Teléfono:</label>
+                                    <div class="input-group telefonoGroup">
                                     <input id="telefono" type="text" name="telefono" placeholder="Ingrese su número telefónico">
                                     <span id="telefonoOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
                                     <label for="email">Correo electrónico:</label>
+                                    <div class="input-group correoGroup">
                                     <input id="email" type="email" name="email" placeholder="ejemplo@dominio.com">
                                     <span id="emailOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
                                     <label for="modelo">Modelo de equipo:</label>
+                                    <div class="input-group modeloGroup">
                                     <input id="modelo" type="text" name="modelo" placeholder="Ingrese modelo de equipo">
                                     <span id="modeloOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                               <div class="groupInputs">
                                  <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted.</p>
+                                 <div class="input-group mensajeGroup">
                                  <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje aquí"></textarea>
                                  <span id="mensajeOK" style="color:red" class="help-block"></span>
+                                 </div>
                               </div>
                               <button type="submit">Enviar formulario</button>
                               {!! Form::close() !!}
@@ -79,24 +92,7 @@
                   </div>
                </div>
             </div>
-            <div class="col-md-6 service_blog margin_bottom_50">
-               <div class="full">
-                  <div class="service_img"> <img class="img-responsive" src="images/layout_img/post-03.jpg" alt="#"> </div>
-                  <div class="service_cont">
-                     <h3 class="service_head"><a href="#">Furniture</a></h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-6 service_blog margin_bottom_50">
-               <div class="full">
-                  <div class="service_img"> <img class="img-responsive" src="images/layout_img/post-04.jpg" alt="#"> </div>
-                  <div class="service_cont">
-                     <h3 class="service_head"><a href="#">childroom Furniture</a></h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                  </div>
-               </div>
-            </div>
+           
          </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
