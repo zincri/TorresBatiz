@@ -14,7 +14,17 @@ class ContactoController extends Controller
     public function index()
     {
         //
-        return view('navbar.contacto');
+   
+        $noticia = DB::table('tbl_noticias')->where('activo','=',1)->orderBy('fecha_ins','desc')->first();
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        $video=$videos->first();
+        return view('navbar.contacto',["informaciongeneral"=>$informaciongeneral,
+                                            "marcas"=>$marcas,
+                                          "videos"=>$videos,
+                                          "video"=>$video,
+                                          "noticia"=>$noticia]);
     }
 
     /**

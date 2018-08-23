@@ -29,7 +29,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
                            <div class="form_section">
                              
-                                 <fieldset>
+                                 
                                     <div class="row">
                                        <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                           <input class="field_custom" placeholder="Nombre" id="nombre" type="text"  />
@@ -53,7 +53,7 @@
                                        </div>
                                        <div class="center" style="margin-bottom: 2%"><input type="submit" value="Enviar" class="btn main_bt" id= "enviar"></div>
                                     </div>
-                                 </fieldset>
+                                 
                              
                            </div>
                         </div>
@@ -65,7 +65,7 @@
       </div>
 	  <!-- end section -->
       <!-- section -->
-      <div class="section padding_layout_1 testmonial_section white_fonts">
+    <div class="section padding_layout_1 testmonial_section white_fonts">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
@@ -74,27 +74,28 @@
                         <!-- Indicators -->
                         <ul class="carousel-indicators">
                            <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
-                           <li data-target="#testimonial_slider" data-slide-to="1"></li>
-                           <li data-target="#testimonial_slider" data-slide-to="2"></li>
+                           @foreach($videos as $item)
+                            <li data-target="#testimonial_slider" data-slide-to="{{$item->id}}"></li>
+                           @endforeach
+                           <!-- <li data-target="#testimonial_slider" data-slide-to="1"></li>
+                           <li data-target="#testimonial_slider" data-slide-to="2"></li> -->
                         </ul>
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                            <div class="carousel-item active">
-                              <div class="testimonial-container"><iframe width="100%" height="315" src="https://www.youtube.com/embed/t5qGCgXihAY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                               </div>
                            </div>
+                           @foreach($videos as $item)
                            <div class="carousel-item">
                               <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 <iframe width="100%" height="315" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                  <div class="testimonial-content">
                                  </div>
                               </div>
                            </div>
-                           <div class="carousel-item">
-                              <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/pdXXq8zEFDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                              </div>
-                           </div>
+                           @endforeach
+                           
                         </div>
                      </div>
                   </div>
@@ -116,9 +117,9 @@
                         <div class="call_icon"> <img src="images/layout_img/phone_icon.png" alt="#" /> </div>
                         <div class="inner_cont">
                            <h2>Si tiene alguna duda, contáctenos</h2>
-                           <p>Puede comunicarse con nosotros al teléfono <strong>961 613 5390</strong>. O llene una solicitud dando click en Contáctenos</p>
+                           <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
                         </div>
-                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact.html">Contáctenos</a> </div>
+                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="/contacto">Contáctenos</a> </div>
                      </div>
                   </div>
                </div>
@@ -132,19 +133,19 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="full">
-                    <ul class="brand_list">
-                     <li><img class="img-responsive2" src="images/layout_img/marca1.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca2.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca3.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca4.png" alt="#" /></li>
-
-                  </ul>
+                     <ul class="brand_list">
+                        @foreach($marcas as $item)
+                        <li><img class="img-responsive2" src="{{$item->imagen}}" alt="#" /></li>
+                        @endforeach
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-      <!-- End Model search bar -->
+      <!-- end section -->
+   
+   
 
 @endsection
 @push('script') 
