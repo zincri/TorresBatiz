@@ -28,7 +28,7 @@
       <div class="container">
          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-left">
             <div class="row">
-               <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0;">
+               <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0; overflow: visible">
                   <div class="full">
                      <div class="service_img"> <img class="img-responsive" src="images/torresimages/img-consumibles.jpg" alt="#"> </div>
                      <div class="service_cont">
@@ -40,75 +40,76 @@
                            <div class="formularioArrendatario">
                               <p class="tituloFormulario">SOLICITUD DE CONSUMIBLES</p>
                               <p class="descArrendamiento">Porfavor, llene el siguiente formulario</p>
-                              <form>
+                              {!! Form::open(array('url' => 'consumibles','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
+                              {{Form::token()}}
                                  <div class="groupForm">
                                     <label for="nombre">Nombre:</label>
-                                    <input required type="text" name="nombre" placeholder="Ingrese su nombre aquí">
+                                    <div class="input-group nombreGroup">
+                                    <input id="nombre" type="text" name="nombre" placeholder="Ingrese su nombre aquí">
+                                    <span id="nombreOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
-                                    <label for="nombremp">Empresa:</label>
-                                    <input required type="text" name="nombremp" placeholder="Ingrese el nombre de su empresa">
+                                       
+                                    <label for="empresa">Empresa:</label>
+                                    <div class="input-group empresaGroup">
+                                    <input id="empresa" type="text" name="empresa" placeholder="Ingrese el nombre de su empresa">
+                                    <span id="empresaOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
                                     <label for="telefono">Teléfono:</label>
-                                    <input required type="text" name="telefono" placeholder="Ingrese su número telefónico">
+                                    <div class="input-group telefonoGroup">
+                                    <input id="telefono" type="text" name="telefono" placeholder="Ingrese su número telefónico">
+                                    <span id="telefonoOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
                                     <label for="email">Correo electrónico:</label>
-                                    <input required type="email" name="email" placeholder="ejemplo@dominio.com">
+                                    <div class="input-group correoGroup">
+                                    <input id="email" type="email" name="email" placeholder="ejemplo@dominio.com">
+                                    <span id="emailOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                                  <div class="groupForm">
                                     <label for="modelo">Modelo de equipo:</label>
-                                    <input required type="text" name="modelo" placeholder="Ingrese modelo de equipo">
+                                    <div class="input-group modeloGroup">
+                                    <input id="modelo" type="text" name="modelo" placeholder="Ingrese modelo de equipo">
+                                    <span id="modeloOK" style="color:red" class="help-block"></span>
+                                    </div>
                                  </div>
                               <div class="groupInputs">
                                  <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted.</p>
-                                 <textarea required placeholder="Ingrese su mensaje aquí"></textarea>
+                                 <div class="input-group mensajeGroup">
+                                 <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje aquí"></textarea>
+                                 <span id="mensajeOK" style="color:red" class="help-block"></span>
+                                 </div>
                               </div>
                               <button type="submit">Enviar formulario</button>
-                           </form>
+                              {!! Form::close() !!}
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="col-md-6 service_blog margin_bottom_50">
-               <div class="full">
-                  <div class="service_img"> <img class="img-responsive" src="images/layout_img/post-03.jpg" alt="#"> </div>
-                  <div class="service_cont">
-                     <h3 class="service_head"><a href="#">Furniture</a></h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-6 service_blog margin_bottom_50">
-               <div class="full">
-                  <div class="service_img"> <img class="img-responsive" src="images/layout_img/post-04.jpg" alt="#"> </div>
-                  <div class="service_cont">
-                     <h3 class="service_head"><a href="#">childroom Furniture</a></h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                  </div>
-               </div>
-            </div>
+           
          </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
          <div class="side_bar">
             <div class="side_bar_blog">
                <h4>Noticias recientes</h4>
-               <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis<br><br> 
-                  asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit
+               <p>{{$noticia->descripcion}}
                </p>
-               <p class="enlaceBlog"><a href="blog_detail.html" >Ver más</a></p>
+               <p class="enlaceBlog"><a href="/noticias" >Ver más</a></p>
             </div>
             <div class="side_bar_blog">
                <h4>Vídeos Destacados</h4>
                <div class="recent_post">
                   <ul>
                      <li>
-                        <p class="post_head"><a href="#">RICOH</a></p>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p class="post_head"><a href="#">Video</a></p>
+                        <iframe width="100%" height="315" src="{{$video->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                      </li>
                   </ul>
                </div>
@@ -120,7 +121,7 @@
 </div>
 <!-- end section -->
 <!-- section -->
- <div class="section padding_layout_1 testmonial_section white_fonts">
+<div class="section padding_layout_1 testmonial_section white_fonts">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
@@ -135,21 +136,19 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                            <div class="carousel-item active">
-                              <div class="testimonial-container"><iframe width="100%" height="315" src="https://www.youtube.com/embed/t5qGCgXihAY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                               </div>
                            </div>
+                           @foreach($videos as $item)
                            <div class="carousel-item">
                               <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                 <iframe width="100%" height="315" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                  <div class="testimonial-content">
                                  </div>
                               </div>
                            </div>
-                           <div class="carousel-item">
-                              <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/pdXXq8zEFDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                              </div>
-                           </div>
+                           @endforeach
+                           
                         </div>
                      </div>
                   </div>
@@ -171,9 +170,9 @@
                         <div class="call_icon"> <img src="images/layout_img/phone_icon.png" alt="#" /> </div>
                         <div class="inner_cont">
                            <h2>Si tiene alguna duda, contáctenos</h2>
-                           <p>Puede comunicarse con nosotros al teléfono <strong>961 613 5390</strong>. O llene una solicitud dando click en Contáctenos</p>
+                           <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
                         </div>
-                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact.html">Contáctenos</a> </div>
+                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="/contacto">Contáctenos</a> </div>
                      </div>
                   </div>
                </div>
@@ -187,18 +186,19 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="full">
-                    <ul class="brand_list">
-                     <li><img class="img-responsive2" src="images/layout_img/marca1.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca2.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca3.png" alt="#" /></li>
-                     <li><img class="img-responsive2" src="images/layout_img/marca4.png" alt="#" /></li>
-
-                  </ul>
+                     <ul class="brand_list">
+                        @foreach($marcas as $item)
+                        <li><img class="img-responsive2" src="{{$item->imagen}}" alt="#" /></li>
+                        @endforeach
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-<!-- End Model search bar -->
+      <!-- end section -->
 
 @endsection
+@push('validacionconsumibles')
+<script type="text/javascript" src="{{ asset('js/validarsolicitudconsumibles.js') }}"></script>
+@endpush

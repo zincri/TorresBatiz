@@ -1,4 +1,4 @@
-var bn, bt, be, bm;
+var bn, bt, be, bm, bmod;
 
 function validar() {
 
@@ -7,10 +7,11 @@ function validar() {
     /**Validacion nombre */
     document.getElementById('nombre').addEventListener('input', function() {
         campo = event.target;
+        valido = document.getElementById('nombreOK');
 
         nombreRegex = /[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+/i;
 
-        if (nombreRegex.test(campo.value) && campo.value.length < 49) {
+        if (nombreRegex.test(campo.value) && campo.value.length < 50) {
             $(".nombreGroup").addClass("inputValido");
             $(".nombreGroup").removeClass("inputInvalido");
             bn = true;
@@ -21,10 +22,28 @@ function validar() {
         }
     });
 
+    /**Validacion modelo */
+    document.getElementById('modelo').addEventListener('input', function() {
+        campo = event.target;
+        valido = document.getElementById('modeloOK');
+
+        nombreRegex = /[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+/i;
+
+        if (nombreRegex.test(campo.value) && campo.value.length < 99) {
+            $(".modeloGroup").addClass("inputValido");
+            $(".modeloGroup").removeClass("inputInvalido");
+            bmod = true;
+        } else {
+            $(".modeloGroup").removeClass("inputValido");
+            $(".modeloGroup").addClass("inputInvalido");
+            bmod = false;
+        }
+    });
 
     /** Validacion mensaje */
     document.getElementById('mensaje').addEventListener('input', function() {
         campo = event.target;
+        valido = document.getElementById('mensajeOK');
 
         mensajeRegex = /[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+/i;
 
@@ -76,30 +95,14 @@ function validar() {
         }
     });
 
-    /* validar VOLUMEN*/
-    document.getElementById('volumen').addEventListener('input', function() {
-        campo = event.target;
 
-
-        volumenRegex = /^\d*$/i;
-
-        if (volumenRegex.test(campo.value) && campo.value.length > 0 && campo.value.length < 8 && campo.value != "") {
-            $(".volumenGroup").addClass("inputValido");
-            $(".volumenGroup").removeClass("inputInvalido");
-            bv = true;
-        } else {
-            $(".volumenGroup").removeClass("inputValido");
-            $(".volumenGroup").addClass("inputInvalido");
-            bv = false;
-        }
-    });
 
 }
 validar();
 
 /*****************************************/
 function validarsend() {
-    if (bn === true && bt === true && be === true && bm === true && bv === true) {
+    if (bn === true && bt === true && be === true && bm === true && bmod === true) {
         return true;
 
     } else {

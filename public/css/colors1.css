@@ -253,6 +253,7 @@ a.btn.white_btn:hover {
 
 .formularioArrendatario form {
     padding-top: 5%;
+    font-size: 15px !important
 }
 
 .formularioArrendatario .tituloFormulario {
@@ -263,7 +264,7 @@ a.btn.white_btn:hover {
 }
 
 .formularioArrendatario form .groupForm input {
-    width: 100%;
+    width: 95%;
     padding: 2%;
     border-radius: 10px;
     border: 1px solid #ccc;
@@ -307,7 +308,7 @@ a.btn.white_btn:hover {
 }
 
 .formularioArrendatario .groupInputs textarea {
-    width: 100%;
+    width: 95%;
     display: block;
     margin: auto;
     resize: none;

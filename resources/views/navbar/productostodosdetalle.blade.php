@@ -57,7 +57,7 @@
                         <div class="quantity">
                            <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                         </div>
-                        <button  type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
+                        <button  href="cart" type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
                      </form>
                   </div>
                   <a href="/cart"><button type="button" class="btn sqaure_bt">Ver carrito</button></a>
