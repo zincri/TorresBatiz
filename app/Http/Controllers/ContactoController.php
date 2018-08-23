@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\SolicitudContactoRequest;
+use DB;
 
 class ContactoController extends Controller
 {
@@ -43,9 +45,11 @@ class ContactoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SolicitudContactoRequest $request)
     {
         //
+        echo "si paso";
+        
     }
 
     /**

@@ -29,41 +29,41 @@
                         <!--FORMULARIO-->
                         <div class="bt_cont col-md-12">
 
-    <div class="formularioArrendatario">
+                        <div class="formularioArrendatario">
 
 
-       {!! Form::open(array('url' => 'arrendamiento','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
-       {{Form::token()}}
-          <div class="groupForm">
-             <label for="nombre">Nombre:</label>
-             <input  type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
-             <span id="nombreOK" style="color:red" class="help-block"></span>
-          </div>
+                              {!! Form::open(array('url' => 'contacto','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
+                              {{Form::token()}}
+                              <div class="groupForm">
+                                    <label for="nombre">Nombre:</label>
+                                    <input  type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
+                                    <span id="nombreOK" style="color:red" class="help-block"></span>
+                              </div>
 
-          <div class="groupForm">
-             <label for="asunto">Asunto:</label>
-             <input  type="text" id="asunto" name="asunto" placeholder="Ingrese su asunto(Campo obligatorio)">
-             <span id="asuntoOk" style="color:red" class="help-block"></span>
-          </div>
-          <div class="groupForm">
-             <label for="telefono">Teléfono:</label>
-             <input  type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono aquí. (Campo obligatorio)">
-             <span id="telefonoOK" style="color:red" class="help-block"></span>
-          </div>
-          <div class="groupForm">
-             <label for="email">Correo electrónico:</label>
-             <input  type="email"  id="email" name="email" placeholder="ejemplo@dominio.com (Campo obligatorio)">
-             <span id="emailOK" style="color:red" class="help-block"></span>
+                              <div class="groupForm">
+                                    <label for="asunto">Asunto:</label>
+                                    <input  type="text" id="asunto" name="asunto" placeholder="Ingrese su asunto(Campo obligatorio)">
+                                    <span id="asuntoOk" style="color:red" class="help-block"></span>
+                              </div>
+                              <div class="groupForm">
+                                    <label for="telefono">Teléfono:</label>
+                                    <input  type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono aquí. (Campo obligatorio)">
+                                    <span id="telefonoOK" style="color:red" class="help-block"></span>
+                              </div>
+                              <div class="groupForm">
+                                    <label for="email">Correo electrónico:</label>
+                                    <input  type="email"  id="email" name="email" placeholder="ejemplo@dominio.com (Campo obligatorio)">
+                                    <span id="emailOK" style="color:red" class="help-block"></span>
 
 
-          </div>
+                              </div>
 
-          <div class="groupInputs">
-             <textarea id="mensaje" name="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
-             <span id="mensajeOK" style="color:red" class="help-block"></span>
-          </div>
-          <button type="submit">Enviar</button>
-          {!! Form::close() !!}
+                              <div class="groupInputs">
+                                    <textarea id="mensaje" name="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
+                                    <span id="mensajeOK" style="color:red" class="help-block"></span>
+                              </div>
+                              <button type="submit">Enviar</button>
+                              {!! Form::close() !!}
 
     </div>
     </div>
