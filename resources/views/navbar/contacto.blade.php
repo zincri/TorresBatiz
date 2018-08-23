@@ -26,37 +26,49 @@
                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
                      <div class="full">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
-                           <div class="form_section">
-                             
-                                 
-                                    <div class="row">
-                                       <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Nombre" id="nombre" type="text"  />
-                                          <span id="nombreOK" style="color:red" class="help-block"></span>
-                                       </div>
-						      <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Email" id="email" type="email"  />
-                                          <span id="emailOK" style="color:red" class="help-block"></span>
-                                       </div>
-                                       <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Asunto" id= "asunto" type="text"  />
-                                          <span id="asuntoOK" style="color:red" class="help-block"></span>
-                                       </div>
-                                       <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                          <input class="field_custom" placeholder="Número telefonico" id="telefono" type="text" />
-                                          <span id="telefonoOK" style="color:red" class="help-block"></span>
-                                       </div>
-                                       <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                          <textarea class="field_custom" placeholder="Mensaje" id="mensaje"></textarea>
-                                          <span id="mensajeOK" style="color:red" class="help-block"></span>
-                                       </div>
-                                       <div class="center" style="margin-bottom: 2%"><input type="submit" value="Enviar" class="btn main_bt" id= "enviar"></div>
-                                    </div>
-                                 
-                             
-                           </div>
-                        </div>
+                        <!--FORMULARIO-->
+                        <div class="bt_cont col-md-12">
+
+    <div class="formularioArrendatario">
+
+
+       {!! Form::open(array('url' => 'arrendamiento','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
+       {{Form::token()}}
+          <div class="groupForm">
+             <label for="nombre">Nombre:</label>
+             <input  type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
+             <span id="nombreOK" style="color:red" class="help-block"></span>
+          </div>
+
+          <div class="groupForm">
+             <label for="asunto">Asunto:</label>
+             <input  type="text" id="asunto" name="asunto" placeholder="Ingrese su asunto(Campo obligatorio)">
+             <span id="asuntoOk" style="color:red" class="help-block"></span>
+          </div>
+          <div class="groupForm">
+             <label for="telefono">Teléfono:</label>
+             <input  type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono aquí. (Campo obligatorio)">
+             <span id="telefonoOK" style="color:red" class="help-block"></span>
+          </div>
+          <div class="groupForm">
+             <label for="email">Correo electrónico:</label>
+             <input  type="email"  id="email" name="email" placeholder="ejemplo@dominio.com (Campo obligatorio)">
+             <span id="emailOK" style="color:red" class="help-block"></span>
+
+
+          </div>
+
+          <div class="groupInputs">
+             <textarea id="mensaje" name="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
+             <span id="mensajeOK" style="color:red" class="help-block"></span>
+          </div>
+          <button type="submit">Enviar</button>
+          {!! Form::close() !!}
+
+    </div>
+    </div>
+    <!--FIN FORMULARIO-->
+
                      </div>
                   </div>
                </div>
