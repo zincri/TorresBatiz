@@ -147,6 +147,9 @@
       <!-- End Model search bar -->
 
 @endsection
+@push('script') 
+      <script type="text/javascript" src="{{asset('js/mapa_inicio.js')}}"></script>  
+@endpush
 @push('validacion')
 <script type="text/javascript" src="{{ asset('js/validarcontacto.js') }}"></script>
 @endpush
