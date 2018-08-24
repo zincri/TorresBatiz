@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Input;
 class CartController extends Controller
 {
     public function __construct()
@@ -57,6 +58,7 @@ class CartController extends Controller
     {
         //
         dd(\Session::get('cart'));
+        
     }
 
     /**
@@ -72,6 +74,10 @@ class CartController extends Controller
 
     public function add($id, $cantidad)
     {
+        //$var = Request::input('quantity');
+        //Input::get('quantity');
+        dd($var);
+        /*
         $a=DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
         $a->cantidad=$cantidad;
         $cart=\Session::get('cart');
@@ -79,6 +85,7 @@ class CartController extends Controller
 
         \Session::put('cart',$cart);
         return redirect()->route('cart-show');
+        */
     }
 
     /**

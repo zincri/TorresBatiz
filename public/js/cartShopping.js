@@ -1,6 +1,6 @@
 var compras = 0;
 $(".addToCart").click(() => {
-    $(".addToCart").prop("disabled", true);
+    //$(".addToCart").prop("disabled", true);
     $(".notificacionAddCart").css("top", "1%");
     setTimeout(() => {
         $(".notificacionAddCart").css("top", "-35%");
@@ -8,6 +8,10 @@ $(".addToCart").click(() => {
     $(".shoppingCartItem span").css("visibility", "visible");
 
     $(".shoppingCartItem span").text(compras += 1);
+    
+    var cantidad=$('input[name="quantity"]').val();
+    console.log(cantidad);
+
 });
 
 // btnEnviarCotizacion

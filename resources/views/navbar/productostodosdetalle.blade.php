@@ -1,5 +1,8 @@
-@extends ('layouts.master') @section ('content')
+@extends ('layouts.master') 
+@section ('content')
+
 <div class="notificacionAddCart">
+
     <p>Este artículo se a añadido al carrito con éxito. De click en "Ver carrito" para ver más detalles </p>
     <div class="buttonVerCarro">
         <a href="/cart">
@@ -7,7 +10,6 @@
         </a>
     </div>
 </div>
-
 <!-- inner page banner -->
 <div id="inner_banner" class="section inner_banner_section">
     <div class="container">
@@ -46,48 +48,6 @@
                         <div class="product-heading">
                             <h2>{{$producto->nombre}}</h2>
                         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <button  href="{{ route('cart-add',['id' => $producto->id,'cantidad'=>3]) }}" type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
-                     </form>
-                  </div>
-                  <a href="/cart"><button type="button" class="btn sqaure_bt">Ver carrito</button></a>
-                  <div class="share-post">
-                     <a href="#" class="share-text">Compartir</a>
-                     <ul class="social_icons">
-                           @foreach(session('redes') as $item)
-                           <li><a class="{{$item->icono}}" href="{{$item->url}}" title="{{$item->nombre}}" target="_blank"></a></li>
-                           @endforeach
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="full">
-                     <div class="tab_bar_section">
-                        <ul class="nav nav-tabs" role="tablist">
-                           <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#description">Descripción</a> </li>
-                           <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#galeriaProducto">Galería de imágenes</a> </li>
-                           
-                        </ul>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                           <div id="description" class="tab-pane active">
-                              <div class="product_desc">
-                                 <p>{{$producto->descripcionlarga}}
-                                 </p>
-                              </div>
-                           </div>
-                           <div id="galeriaProducto" class="tab-pane fade">
-                              <div class="product_review">
-                                 <div class="commant-text row">
-=======
-=======
->>>>>>> a70ac0fcdb1cbb7950aea3275e2aaf10818c8606
-=======
->>>>>>> a70ac0fcdb1cbb7950aea3275e2aaf10818c8606
                         <div class="detail-contant">
                             <p>{{$producto->descripcioncorta}}<br>
                                 <span class="stock">{{$producto->stock}} in stock</span>
@@ -96,7 +56,9 @@
                                 <div class="quantity">
                                     <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                                 </div>
-                                <button href="cart" type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
+                                <a href="{{ route('cart-add',['id' => $producto->id,'cantidad'=> 1 ])}}" >
+                                <button type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
+                                </a>
                             </form>
                         </div>
                         <a href="/cart"><button type="button" class="btn sqaure_bt">Ver carrito</button></a>
@@ -119,24 +81,6 @@
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#description">Descripción</a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#galeriaProducto">Galería de imágenes</a> </li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                                </ul>
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div id="description" class="tab-pane active">
-                                        <div class="product_desc">
-                                            <p>{{$producto->descripcionlarga}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div id="galeriaProducto" class="tab-pane fade">
-                                        <div class="product_review">
-                                            <div class="commant-text row">
->>>>>>> a70ac0fcdb1cbb7950aea3275e2aaf10818c8606
-
-=======
 
                                 </ul>
                                 <!-- Tab panes -->
@@ -151,23 +95,6 @@
                                         <div class="product_review">
                                             <div class="commant-text row">
 
->>>>>>> a70ac0fcdb1cbb7950aea3275e2aaf10818c8606
-=======
-
-                                </ul>
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div id="description" class="tab-pane active">
-                                        <div class="product_desc">
-                                            <p>{{$producto->descripcionlarga}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div id="galeriaProducto" class="tab-pane fade">
-                                        <div class="product_review">
-                                            <div class="commant-text row">
-
->>>>>>> a70ac0fcdb1cbb7950aea3275e2aaf10818c8606
                                                 @foreach($galeria as $item)
                                                 <div class="col-md-3">
                                                     <figure>
@@ -298,6 +225,7 @@
 <script type="text/javascript" src="{{ asset('js/hizoom.js') }}">
 </script>
 <script>
+    
     $('.hi1').hiZoom({
         width: 500,
         position: 'right'

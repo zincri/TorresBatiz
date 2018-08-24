@@ -17,12 +17,11 @@ class InicioController extends Controller
        
         if(\Session::has('cart')){
             session()->forget('cart');
-            dd("se elimino");
-        } 
+            } 
         
         if(\Session::has('cart')){
-            dd("aun existe");
-        } 
+            session()->flush();
+            } 
         
 
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
