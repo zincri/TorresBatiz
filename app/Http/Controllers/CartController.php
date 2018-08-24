@@ -69,8 +69,15 @@ class CartController extends Controller
         //
     }
 
+    public function add($id, $cantidad)
     {
         $a=DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
+        $a->cantidad=$cantidad;
+        $cart=\Session::get('cart');
+        $cart[$id]= $a;
+
+        \Session::put('cart',$cart);
+        return redirect()->route('cart-show');
     }
 
     /**
