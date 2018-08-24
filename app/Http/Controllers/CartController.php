@@ -9,6 +9,7 @@ class CartController extends Controller
     public function __construct()
     {
         if(!\Session::has('cart')) \Session::put('cart',array());
+        
     }
     /**
      * Display a listing of the resource.
