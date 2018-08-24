@@ -91,7 +91,7 @@ class ConsumiblesController extends Controller
         }
         else
         {
-            return "fue null";
+            return "Problemas en base de datos";
         } 
         
     }

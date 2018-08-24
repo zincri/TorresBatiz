@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Http\Requests\SolicitudContactoRequest;
 use DB;
@@ -48,7 +48,48 @@ class ContactoController extends Controller
     public function store(SolicitudContactoRequest $request)
     {
         //
-        echo "si paso";
+        $opcion=3;
+        $nombre=$request->get('nombre');
+        $asunto=$request->get('asunto');
+        
+        $telefono=$request->get('telefono');
+        $email=$request->get('email');
+        $blanconegro=1;
+        
+        $color=1;
+        
+        $volumen=1;
+        $mensaje=$request->get('mensaje');
+        $modelo="ninguno";
+        $usuario=2;
+        
+        
+        
+        $sql_solicitud = "call sp_setSolicitud
+        (
+            '".$opcion."',
+            '".$nombre."',
+            '".$asunto."',
+            '".$telefono."',
+            '".$email."',
+            '".$blanconegro."',
+            '".$color."',
+            '".$volumen."',
+            '".$mensaje."',
+            '".$modelo."',
+            '".$usuario."'
+            
+        )";
+        $datos_solicitud = DB::select($sql_solicitud,array(1,10));
+
+        if($datos_solicitud != null)
+        {
+            return Redirect::to('/contacto');
+        }
+        else
+        {
+            return "Problemas en base de datos";
+        }  
         
     }
 

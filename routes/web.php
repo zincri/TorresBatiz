@@ -10,6 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('product/{id}', function($id){
+    //return DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
+    $a=DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
+    //dd($a);
+    return redirect()->route('cart-add',$a);
+});
+
 Route::resource('/','InicioController');
 Route::resource('/nosotros','NosotrosController');
 Route::resource('/productos','ProductosController');
@@ -21,5 +28,18 @@ Route::resource('/sucursales','SucursalesController');
 Route::resource('/contacto','ContactoController');
 Route::resource('/cart','CartController');
 Route::resource('/productostodos','productosTodosController');
-Route::resource('/productostodosdetalle{id}','ProductosTodosDetalleController');
 
+Route::get('productostodosdetalle/{id}',[
+    'as' => 'producto-detalle',
+    'uses' => 'ProductosTodosDetalleController@Show'
+]);
+
+Route::get('cart/show',[
+'as' => 'cart-show',
+'uses' => 'CartController@Show'
+]);
+
+Route::get('cart/add/{id}',[
+    'as' => 'cart-add',
+    'uses' => 'CartController@add'
+]);

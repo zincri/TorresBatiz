@@ -14,27 +14,27 @@
  <meta name="description" content="">
  <meta name="author" content="">
  <!-- circle Animation css -->
- <link rel="stylesheet" href="css/animation.css">
+ <link rel="stylesheet" href="{{ asset('css/animation.css') }}">
  <!-- site icons -->
  <link rel="icon" href="images/favicon.ico" type="image/gif" />
  <!-- bootstrap css -->
- <link rel="stylesheet" href="css/bootstrap.min.css" />
+ <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
  <!-- Site css -->
- <link rel="stylesheet" href="css/style.css" />
+ <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
  <!-- responsive css -->
- <link rel="stylesheet" href="css/responsive.css" />
+ <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
  <!-- colors css -->
- <link rel="stylesheet" href="css/colors1.css" />
+ <link rel="stylesheet" href="{{ asset('css/colors1.css') }}" />
  <!-- custom css -->
- <link rel="stylesheet" href="css/custom.css" />
+ <link rel="stylesheet" href="{{ asset('css/custom.css') }}" />
  <!-- wow Animation css -->
- <link rel="stylesheet" href="css/animate.css" />
+ <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
  <!-- zoom effect -->
- <link rel='stylesheet' href='css/hizoom.css'>
+ <link rel='stylesheet' href="{{ asset('css/hizoom.css') }}">
  <!-- revolution slider css -->
- <link rel="stylesheet" type="text/css" href="css/revolution/css/settings.css" />
- <link rel="stylesheet" type="text/css" href="css/revolution/css/layers.css" />
- <link rel="stylesheet" type="text/css" href="css/revolution/css/navigation.css" />
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/revolution/css/settings.css') }}" />
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/revolution/css/layers.css') }}" />
+ <link rel="stylesheet" type="text/css" href="{{ asset('css/revolution/css/navigation.css') }}" />
  <!-- Smartsupp Live Chat script -->
  <script type="text/javascript">
   var _smartsupp = _smartsupp || {};
@@ -49,7 +49,7 @@
 </head>
 <body id="default_theme" class="home_1 shopping-cart">
  <!-- loader -->
- <div class="bg_load"> <img class="loader_animation" src="images/logoTorres.png" alt="#" /> </div>
+ <div class="bg_load"> <img class="loader_animation" src="{{asset('images/logoTorres.png')}}" alt="#" /> </div>
  <!-- end loader -->
  <!-- header -->
  <header id="default_header" class="header_style_1">
@@ -94,7 +94,7 @@
   <div class="row">
    <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12">
     <!-- logo start -->
-    <div class="logo"><a href="/"><img src="images/logos/logo.svg" alt="logo" /></a></div>
+    <div class="logo"><a href="/"><img src="{{asset('images/logos/logo.svg')}}" alt="logo" /></a></div>
     <!-- logo end -->
   </div>
   <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12">
@@ -233,26 +233,26 @@
 </footer>
 <!-- end footer -->
 <!-- js section -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- menu js -->
-<script src="js/menumaker.js"></script>
+<script src="{{ asset('js/menumaker.js')}}"></script>
 <!-- wow animation -->
-<script src="js/wow.js"></script>
+<script src="{{ asset('js/wow.js') }}"></script>
 <!-- custom js -->
-<script src="js/custom.js"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
 <!-- revolution js files -->
-<script src="css/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="css/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="css/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="{{ asset('css/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+<script src="{{ asset('css/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
 <!-- map js -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ"></script>
    <!--script>
@@ -264,14 +264,14 @@
 
     <!-- google map js -->
     @stack('script')
-    <script src="js/custom.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/TimelineMax.min.js"></script>
-    <script src="js/ScrollMagic.js"></script>
-    <script src="js/DrawSVGPlugin.min.js"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
+    <script src="{{ asset('js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('js/TimelineMax.min.js') }}"></script>
+    <script src="{{ asset('js/ScrollMagic.js') }}"></script>
+    <script src="{{ asset('js/DrawSVGPlugin.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script src="js/layoutAnimate.js"></script>
-    <script type="text/javascript" src="js/media.js"></script>
+    <script src="{{ asset('js/layoutAnimate.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/media.js') }}"></script>
     @stack('zoomScript_js')
     @stack('validacion')
     @stack('validacionconsumibles')

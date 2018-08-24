@@ -58,9 +58,23 @@ class ProductosTodosDetalleController extends Controller
      */
     public function show($id)
     {
-        //
-        //return view('navbar.productostodosdetalle');
+        $productos = DB::table('tbl_productogeneral')->where('activo','=',1)->get();
+        $producto = DB::table('tbl_producto')->where('id','=',$id)->where('activo','=',1)->first();
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        $galeria = DB::table('tbl_galeria')->where('activo','=',1)->where('idproducto','=',$id)->get();
+        
+        return view('navbar.productostodosdetalle',["informaciongeneral"=>$informaciongeneral,
+                                                "marcas"=>$marcas,
+                                                "videos"=>$videos,
+                                                "producto"=>$producto,
+                                                "galeria"=>$galeria,
+                                                "productos"=>$productos]);
     }
+
+
+    
 
     /**
      * Show the form for editing the specified resource.

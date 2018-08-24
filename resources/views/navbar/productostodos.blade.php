@@ -30,7 +30,7 @@
             <div class="row productosList">
               @foreach($productos as $item)
                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-                  <a href="/productostodosdetalle{{$item->id}}">
+                  <a href="{{ route('producto-detalle',$item->id) }}">
                      <div class="product_list">
                         <div class="product_img"> <img class="img-responsive" src="{{$item->imagen}}" alt=""> </div>
                         <div class="product_detail_btm">

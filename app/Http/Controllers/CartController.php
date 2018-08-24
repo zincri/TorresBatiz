@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class CartController extends Controller
 {
+    public function __construct()
+    {
+        if(!\Session::has('cart')) \Session::put('cart',array());
+    }
     /**
      * Display a listing of the resource.
      *
@@ -46,6 +50,7 @@ class CartController extends Controller
     public function show($id)
     {
         //
+        return \Session::get('cart');
     }
 
     /**
@@ -57,6 +62,13 @@ class CartController extends Controller
     public function edit($id)
     {
         //
+    }
+
+    public function add($id)
+    {
+        $a=DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
+    
+        dd($a);
     }
 
     /**

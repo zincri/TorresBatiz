@@ -41,7 +41,7 @@
                <div class="col-lg-6 col-md-12">
                   <div class="product_detail_feature_img hizoom hi2">
                      <div class="hizoom hi2">
-                      <img class="imagenProductoDescripcion imagenGrandeDescripcion" src="images/layout_img/2.jpg" alt="#" />
+                      <img class="imagenProductoDescripcion imagenGrandeDescripcion" src="{{asset('images/layout_img/2.jpg')}}" alt="#" />
                     </div>
                    </div>
                 </div>
