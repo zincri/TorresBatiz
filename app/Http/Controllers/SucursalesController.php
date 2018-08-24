@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use DB;
 
 class SucursalesController extends Controller
 {
@@ -14,7 +17,14 @@ class SucursalesController extends Controller
     public function index()
     {
         //
-        return view('navbar.sucursales');
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        $video=$videos->first();
+        return view('navbar.sucursales',["informaciongeneral"=>$informaciongeneral,
+                                            "marcas"=>$marcas,
+                                          "videos"=>$videos,
+                                          "video"=>$video]);
     }
 
     /**
