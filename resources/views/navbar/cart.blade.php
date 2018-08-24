@@ -1,5 +1,4 @@
-@extends ('layouts.master') 
-@section ('content')
+@extends ('layouts.master') @section ('content')
 <div class="notificacionAddCart" style="background-color: #f89c35;">
     <p style="color: #fff; text-align: center;">Usted ha enviado su solicitud de cotización. Torres Batiz se comunicará con usted posteriormente.</p>
 </div>
@@ -102,8 +101,7 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
 
                                     <div class="form_section formularioArrendatario">
-                                        {!! Form::open(array('url' => 'cart','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!} 
-                                        {{Form::token()}}
+                                        {!! Form::open(array('url' => 'cart','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!} {{Form::token()}}
                                         <div class="row formularioArrendatario">
 
 
@@ -229,9 +227,9 @@
                         <div class="call_icon"> <img src="images/layout_img/phone_icon.png" alt="#" /> </div>
                         <div class="inner_cont">
                             <h2>Si tiene alguna duda, contáctenos</h2>
-                            <p>Puede comunicarse con nosotros al teléfono <strong>961 613 5390</strong>. O llene una solicitud dando click en Contáctenos</p>
+                            <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
                         </div>
-                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact.html">Contáctenos</a> </div>
+                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="/contacto">Contáctenos</a> </div>
                     </div>
                 </div>
             </div>
@@ -246,11 +244,9 @@
             <div class="col-md-12">
                 <div class="full">
                     <ul class="brand_list">
-                        <li><img class="img-responsive2" src="images/layout_img/marca1.png" alt="#" /></li>
-                        <li><img class="img-responsive2" src="images/layout_img/marca2.png" alt="#" /></li>
-                        <li><img class="img-responsive2" src="images/layout_img/marca3.png" alt="#" /></li>
-                        <li><img class="img-responsive2" src="images/layout_img/marca4.png" alt="#" /></li>
-
+                        @foreach($marcas as $item)
+                        <li><img class="img-responsive2" src="{{$item->imagen}}" alt="#" /></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

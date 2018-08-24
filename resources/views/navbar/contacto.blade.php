@@ -147,6 +147,7 @@
 </div>
 <!-- end section -->
 <!-- section -->
+<!-- section -->
 <div class="section">
     <div class="container">
         <div class="row">
@@ -156,9 +157,9 @@
                         <div class="call_icon"> <img src="images/layout_img/phone_icon.png" alt="#" /> </div>
                         <div class="inner_cont">
                             <h2>Si tiene alguna duda, contáctenos</h2>
-                            <p>Puede comunicarse con nosotros al teléfono <strong>961 613 5390</strong>. O llene una solicitud dando click en Contáctenos</p>
+                            <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
                         </div>
-                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="contact.html">Contáctenos</a> </div>
+                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="/contacto">Contáctenos</a> </div>
                     </div>
                 </div>
             </div>
@@ -173,11 +174,9 @@
             <div class="col-md-12">
                 <div class="full">
                     <ul class="brand_list">
-                        <li><img class="img-responsive2" src="images/layout_img/marca1.png" alt="#" /></li>
-                        <li><img class="img-responsive2" src="images/layout_img/marca2.png" alt="#" /></li>
-                        <li><img class="img-responsive2" src="images/layout_img/marca3.png" alt="#" /></li>
-                        <li><img class="img-responsive2" src="images/layout_img/marca4.png" alt="#" /></li>
-
+                        @foreach($marcas as $item)
+                        <li><img class="img-responsive2" src="{{$item->imagen}}" alt="#" /></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -185,7 +184,6 @@
     </div>
 </div>
 <!-- End Model search bar -->
-
 @endsection @push('validacioncontacto')
 <script type="text/javascript" src="{{asset('js/mapa_inicio.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/validarcontacto.js')}}"></script>
