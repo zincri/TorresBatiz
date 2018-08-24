@@ -9,7 +9,7 @@ class CartController extends Controller
     public function __construct()
     {
         if(!\Session::has('cart')) \Session::put('cart',array());
-        
+
     }
     /**
      * Display a listing of the resource.
@@ -56,7 +56,7 @@ class CartController extends Controller
     public function show($id)
     {
         //
-        return \Session::get('cart');
+        dd(\Session::get('cart'));
     }
 
     /**

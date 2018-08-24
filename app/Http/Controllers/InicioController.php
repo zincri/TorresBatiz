@@ -6,10 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 class InicioController extends Controller
 {
-    public function __construct(){
-        
-        if(\Session::has('cart')) dd(\Session::get('cart'));
-    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +14,17 @@ class InicioController extends Controller
      */
     public function index()
     {
-        //
+       
+        if(\Session::has('cart')){
+            session()->forget('cart');
+            dd("se elimino");
+        } 
+        
+        if(\Session::has('cart')){
+            dd("aun existe");
+        } 
+        
+
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $sucursales = DB::table('tbl_sucursal')->where('activo','=',1)->get();
         $servicios = DB::table('tbl_serviciosinformacion')->where('activo','=',1)->get();
@@ -39,6 +46,7 @@ class InicioController extends Controller
                                      "proyectosrealizados"=>$proyectosrealizados,
                                      "videos"=>$videos,
                                      "slider"=>$slider]);
+                                    
     }
 
     /**
