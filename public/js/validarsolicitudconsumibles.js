@@ -7,11 +7,10 @@ function validar() {
     /**Validacion nombre */
     document.getElementById('nombre').addEventListener('input', function() {
         campo = event.target;
-        valido = document.getElementById('nombreOK');
 
-        nombreRegex = /[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+/i;
+        nombreRegex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ. ´'.]+$/i;
 
-        if (nombreRegex.test(campo.value) && campo.value.length < 50) {
+        if (nombreRegex.test(campo.value) && campo.value.length < 49) {
             $(".nombreGroup").addClass("inputValido");
             $(".nombreGroup").removeClass("inputInvalido");
             bn = true;
@@ -21,13 +20,36 @@ function validar() {
             bn = false;
         }
     });
+    $("input[name='nombre']").bind('keypress', function(event) {
+        var eventCode = !event.charCode ? event.which : event.charCode;
+        if ((eventCode >= 37 && eventCode <= 40) || eventCode == 8 || eventCode == 9 || eventCode == 46) { // Left  / Right Arrow, Backspace, Delete keys
+            return;
+        }
+        var regex = new RegExp("^[a-zA-ZñÑáéíóúÁÉÍÓÚ. ´'.]+$");
+        var key = String.fromCharCode(eventCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+            $(".nombreGroup").addClass("inputInvalido");
+            setTimeout(function() {
+                $(".nombreGroup").removeClass("inputInvalido");
+                bn = false;
+            }, 1000);
+
+            return false;
+        } else {
+            $(".nombreGroup").addClass("inputValido");
+            $(".nombreGroup").removeClass("inputInvalido");
+            bn = true;
+
+        }
+    });
 
     /**Validacion modelo */
     document.getElementById('modelo').addEventListener('input', function() {
         campo = event.target;
         valido = document.getElementById('modeloOK');
 
-        nombreRegex = /[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+/i;
+        nombreRegex = /[-a-zA-Z0-9]/i;
 
         if (nombreRegex.test(campo.value) && campo.value.length < 99) {
             $(".modeloGroup").addClass("inputValido");
@@ -39,13 +61,35 @@ function validar() {
             bmod = false;
         }
     });
+    $("input[name='modelo']").bind('keypress', function(event) {
+        var eventCode = !event.charCode ? event.which : event.charCode;
+        if ((eventCode >= 37 && eventCode <= 40) || eventCode == 8 || eventCode == 9 || eventCode == 46) { // Left  / Right Arrow, Backspace, Delete keys
+            return;
+        }
+        var regex = new RegExp("[-a-zA-Z0-9]");
+        var key = String.fromCharCode(eventCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+            $(".modeloGroup").addClass("inputInvalido");
+            setTimeout(function() {
+                $(".modeloGroup").removeClass("inputInvalido");
+                bn = false;
+            }, 1000);
+
+            return false;
+        } else {
+            $(".modeloGroup").addClass("inputValido");
+            $(".modeloGroup").removeClass("inputInvalido");
+            bn = true;
+
+        }
+    });
 
     /** Validacion mensaje */
     document.getElementById('mensaje').addEventListener('input', function() {
         campo = event.target;
-        valido = document.getElementById('mensajeOK');
 
-        mensajeRegex = /[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+/i;
+        mensajeRegex = /[-a-zA-Z0-9@:%._\+~#=]/i;
 
         if (mensajeRegex.test(campo.value) && campo.value.length < 1499) {
             $(".mensajeGroup").addClass("inputValido");
@@ -57,6 +101,7 @@ function validar() {
             bm = false;
         }
     });
+
 
 
     /**Validacion telefono */
@@ -76,6 +121,30 @@ function validar() {
             bt = false;
         }
     });
+    $("input[name='telefono']").bind('keypress', function(event) {
+        var eventCode = !event.charCode ? event.which : event.charCode;
+        if ((eventCode >= 37 && eventCode <= 40) || eventCode == 8 || eventCode == 9 || eventCode == 46) { // Left  / Right Arrow, Backspace, Delete keys
+            return;
+        }
+        var regex = new RegExp("^([0-9])*$");
+        var key = String.fromCharCode(eventCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+            $(".telefonoGroup").addClass("inputInvalido");
+            setTimeout(function() {
+                $(".telefonoGroup").removeClass("inputInvalido");
+                bn = false;
+            }, 1000);
+
+            return false;
+        } else {
+            $(".telefonoGroup").addClass("inputValido");
+            $(".telefonoGroup").removeClass("inputInvalido");
+            bn = true;
+
+        }
+    });
+
 
     /* Validacion email*/
     document.getElementById('email').addEventListener('input', function() {

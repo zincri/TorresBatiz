@@ -17,7 +17,12 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view ('navbar.cart');
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        return view('navbar.cart',["informaciongeneral"=>$informaciongeneral,
+                                            "marcas"=>$marcas,
+                                            "videos"=>$videos]);
     }
 
     /**
