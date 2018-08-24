@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use DB;
 class InicioController extends Controller
 {
+    public function __construct(){
+        
+        if(\Session::has('cart')) dd(\Session::get('cart'));
+    }
     /**
      * Display a listing of the resource.
      *

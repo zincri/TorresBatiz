@@ -11,9 +11,7 @@
 |
 */
 Route::get('product/{id}', function($id){
-    //return DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
     $a=DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
-    //dd($a);
     return redirect()->route('cart-add',$a);
 });
 
@@ -39,7 +37,7 @@ Route::get('cart/show',[
 'uses' => 'CartController@Show'
 ]);
 
-Route::get('cart/add/{id}',[
+Route::get('cart/add/{id}/{cantidad}',[
     'as' => 'cart-add',
     'uses' => 'CartController@add'
 ]);

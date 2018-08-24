@@ -1,37 +1,36 @@
-@extends ('layouts.master')
-
-@section ('content')
+@extends ('layouts.master') @section ('content')
 <!-- inner page banner -->
 <div id="inner_banner" class="section inner_banner_section">
-      <div class="container">
-         <div class="row">
+    <div class="container">
+        <div class="row">
             <div class="col-md-12">
-               <div class="full">
-                  <div class="title-holder">
-                     <div class="title-holder-cell text-left">
-                        <h1 class="page-title">Arrendamiento</h1>
-                        <ol class="breadcrumb">
-                           <li><a href="/">Inicio</a></li>
-                           <li class="active">Arrendamiento</li>
-                        </ol>
-                     </div>
-                  </div>
-               </div>
+                <div class="full">
+                    <div class="title-holder">
+                        <div class="title-holder-cell text-left">
+                            <h1 class="page-title">Arrendamiento</h1>
+                            <ol class="breadcrumb">
+                                <li><a href="/">Inicio</a></li>
+                                <li class="active">Arrendamiento</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-   <!-- end inner page banner -->
-   <!-- section -->
-   <div class="section padding_layout_1">
-      <div class="container">
-         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left">
+        </div>
+    </div>
+</div>
+<!-- end inner page banner -->
+<!-- section -->
+<div class="section padding_layout_1">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left">
             <div class="row">
-               <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0; overflow: visible">
-                  <div class="full">
-                     <div class="service_img"> <!-- <img class="img-responsive" src="images/torresimages/Eqp-MP-6055-40.jpg" alt="#"> --> 
-                        <figure id="imagenMultifuncional">
-                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 974.33 487.34"><defs><style>.cls-1,.cls-12,.cls-4{fill:none;}.cls-2{fill:#4bb597;}.cls-3{font-size:20px;}.cls-3,.cls-9{font-family:MicrosoftSansSerif, Microsoft Sans Serif;}.cls-4{stroke:#3d995e;stroke-linecap:round;stroke-width:2px;stroke-dasharray:1 6;}.cls-10,.cls-11,.cls-12,.cls-4,.cls-8{stroke-miterlimit:10;}.cls-5{fill:#237a40;}.cls-6{clip-path:url(#clip-path);}.cls-7{fill:#4bb56e;}.cls-8{fill:#211915;}.cls-12,.cls-8{stroke:#211915;}.cls-9{font-size:12px;fill:#fff;}.cls-10{fill:#020201;}.cls-10,.cls-11{stroke:#020302;}.cls-11{fill:#020302;}</style><clipPath id="clip-path"><rect class="cls-1" x="420.3" y="213.26" width="146.46" height="207.37"/></clipPath></defs><title>Animate</title><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1">
+                <div class="col-md-12 service_blog margin_bottom_50" style="margin-top: 0; overflow: visible">
+                    <div class="full">
+                        <div class="service_img">
+                            <!-- <img class="img-responsive" src="images/torresimages/Eqp-MP-6055-40.jpg" alt="#"> -->
+                            <figure id="imagenMultifuncional">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 974.33 487.34"><defs><style>.cls-1,.cls-12,.cls-4{fill:none;}.cls-2{fill:#4bb597;}.cls-3{font-size:20px;}.cls-3,.cls-9{font-family:MicrosoftSansSerif, Microsoft Sans Serif;}.cls-4{stroke:#3d995e;stroke-linecap:round;stroke-width:2px;stroke-dasharray:1 6;}.cls-10,.cls-11,.cls-12,.cls-4,.cls-8{stroke-miterlimit:10;}.cls-5{fill:#237a40;}.cls-6{clip-path:url(#clip-path);}.cls-7{fill:#4bb56e;}.cls-8{fill:#211915;}.cls-12,.cls-8{stroke:#211915;}.cls-9{font-size:12px;fill:#fff;}.cls-10{fill:#020201;}.cls-10,.cls-11{stroke:#020302;}.cls-11{fill:#020302;}</style><clipPath id="clip-path"><rect class="cls-1" x="420.3" y="213.26" width="146.46" height="207.37"/></clipPath></defs><title>Animate</title><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1">
 
                               <rect class="cls-2 cuadroMonitoreo" x="129.03" y="353.08" width="127.61" height="43.17" rx="10" ry="10"/><rect class="cls-2 cuadroTotalgreen" x="866" y="361.26" width="108.33" height="43.17" rx="10" ry="10"/>
                               <rect class="cls-2 cuadroFacilidad" x="842.33" y="162.47" width="127.67" height="51" rx="10" ry="10"/>
@@ -64,210 +63,203 @@
 
                               <path class="cls-12 amigable5" d="M770.33,329.92v55m0,0h92"/><text class="cls-9 palabraTotalgreen" transform="translate(877.74 378.92)">Amigable con el<tspan x="0" y="14.4">medio ambiente</tspan></text></g></g></svg>
 
-                           </figure>
+                            </figure>
                         </div>
                         <div class="service_cont">
-                           <h3 class="service_head"><a href="#">Tenemos una Solución para cada una de tus necesidades</a></h3>
-                           <p>Somos distribuidores autorizados de la marca Ricoh<br>
+                            <h3 class="service_head"><a href="#">Tenemos una Solución para cada una de tus necesidades</a></h3>
+                            <p>Somos distribuidores autorizados de la marca Ricoh<br> Olvídate del mantenimiento del equipo, Torres Batiz se encarga de brindarte el soporte, asesoría y consumibles necesarios en sitio.<br> Contamos con personal certificado
+                                para acesorarte en los equipos multifuncionales de acuerdo a tus necesidades
+                            </p>
 
-                              Olvídate del mantenimiento del equipo, Torres Batiz se encarga de brindarte el soporte, asesoría y consumibles necesarios en sitio.<br>
+                            <div class="row">
+                                <!--FORMULARIO-->
+                                <div class="bt_cont col-md-8">
 
-                              Contamos con personal certificado para acesorarte en los equipos multifuncionales de acuerdo a tus necesidades
-                           </p>
+                                    <div class="formularioArrendatario">
+                                        <p class="tituloFormulario">SOLICITUD DE ARRENDAMIENTO</p>
+                                        <p class="descArrendamiento">Si usted desea obtener más información sobre nuestros planes de arrendamientos, porfavor llene el siguiente formulario.</p>
 
-                           <div class="row">
-                           <!--FORMULARIO-->
-                           <div class="bt_cont col-md-8">
+                                        {!! Form::open(array('url' => 'arrendamiento','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!} {{Form::token()}}
+                                        <div class="groupForm">
+                                            <label for="nombre">Nombre:</label>
+                                            <div class="input-group nombreGroup">
+                                                <input type="text" id="nombre" name="nombre" max="48" min="1" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
+                                                <span id="nombreOK" style="color:red" class="help-block"></span>
+                                            </div>
 
-                              <div class="formularioArrendatario">
-                                 <p class="tituloFormulario">SOLICITUD DE ARRENDAMIENTO</p>
-                                 <p class="descArrendamiento">Si usted desea obtener más información sobre nuestros planes de arrendamientos, porfavor llene el siguiente formulario.</p>
-                                 
-                                 {!! Form::open(array('url' => 'arrendamiento','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
-                                 {{Form::token()}}
-                                    <div class="groupForm">
-                                       <label for="nombre">Nombre:</label>
-                                       <div class="input-group nombreGroup">
-                                        <input type="text" id="nombre" name="nombre" max="48" min="1" placeholder="Ingrese su nombre aquí. (Campo obligatorio)">
-                                        <span id="nombreOK" style="color:red" class="help-block"></span>
-                                       </div>
-                                       
-                                    </div>
-                                    <div class="groupForm">
-                                      <div class="input-group empresaGroup">
-                                        <label for="nombreempresa">Empresa:</label>
-                                        <input type="text" name="nombreempresa" max="40" placeholder="Ingrese el nombre de su empresa. (Campo opcional)">
-                                       </div>
-                                    </div>
-                                    <div class="groupForm">
-                                      <div class="input-group telefonoGroup">
-                                       <label for="telefono">Teléfono:</label>
-                                        <input  type="text" id="telefono" name="telefono" max="20" placeholder="Ingrese su número telefónico (Campo obligatorio)">
-                                        <span id="telefonoOK" style="color:red" class="help-block"></span>
-                                       </div>
-                                    </div>
-                                    <div class="groupForm">
-                                      <div class="input-group correoGroup">
-                                       <label for="email">Correo electrónico:</label>
-                                        <input  type="email"  id="email" name="email" max="48" placeholder="ejemplo@dominio.com (Campo obligatorio)">
-                                        <span id="emailOK" style="color:red" class="help-block"></span>
-                                       </div>
-                                            
-                                      
-                                    </div>
-                                    <div class="groupInputs">
-                                       <p>Usted desea incluir:</p>
-                                       <div class="groupFormRadio">
-                                          <p class="titleInput">Incluir Blanco y negro</p>
-                                          <input id="fotocopiadora" type="checkbox" name="fotocopiadora">
-                                       </div>
-                                       <div class="groupFormRadio">
-                                          <p class="titleInput">Incluir Color</p>
-                                          <input checked id="Impresora" type="checkbox" name="Impresora">
-                                       </div>
-                                       <div class="grupoFormularioVolumen">
-                                          <p class="titleInput">Volumen</p>
-                                          <div class="input-group volumenGroup">
-                                            <input id="volumen" max="7" type="text" name="volumen" placeholder="Ingrese volumen">
-                                            <span id="volumenOK" style="color:red" class="help-block"></span>
-                                          </div>
-                                       
-                                       </div>
-                                    </div>
-                                    <div class="groupInputs">
-                                       <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted. (Campo obligatorio)</p>
-                                       <div class="input-group ">
-                                         <div class="input-group mensajeGroup">
-                                          <textarea id="mensaje" name="mensaje"  placeholder="Ingrese su mensaje aquí"></textarea>
-                                          <span id="mensajeOK" style="color:red" class="help-block"></span>
                                         </div>
-                                       </div>
-                                    </div>
-                                    <button type="submit">Enviar formulario</button>
-                                    {!! Form::close() !!}
-                                  
-                              </div>
-                           </div>
-                           <!--FIN FORMULARIO-->
-                           <!--- SECCION NOTICIAS -->
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
-                              <div class="side_bar">
-                                  <div class="side_bar_blog">
-                                    <h4>Noticias recientes</h4>
-                                    <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis<br><br> 
-                                        asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit
-                                    </p>
-                                    <p class="enlaceBlog"><a href="blog_detail.html" >Ver más</a></p>
-                                  </div>
-                                    <div class="side_bar_blog">
-                                      <h4>Vídeos Destacados</h4>
-                                      <div class="recent_post">
-                                          <ul>
-                                            <li>
-                                                <p class="post_head"><a href="#">RICOH</a></p>
-                                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                            </li>
-                                          </ul>
-                                      </div>
+                                        <div class="groupForm">
+                                            <div class="input-group empresaGroup">
+                                                <label for="nombreempresa">Empresa:</label>
+                                                <input type="text" name="nombreempresa" max="40" placeholder="Ingrese el nombre de su empresa. (Campo opcional)">
+                                            </div>
+                                        </div>
+                                        <div class="groupForm">
+                                            <div class="input-group telefonoGroup">
+                                                <label for="telefono">Teléfono:</label>
+                                                <input type="text" id="telefono" name="telefono" max="20" placeholder="Ingrese su número telefónico (Campo obligatorio)">
+                                                <span id="telefonoOK" style="color:red" class="help-block"></span>
+                                            </div>
+                                        </div>
+                                        <div class="groupForm">
+                                            <div class="input-group correoGroup">
+                                                <label for="email">Correo electrónico:</label>
+                                                <input type="email" id="email" name="email" max="48" placeholder="ejemplo@dominio.com (Campo obligatorio)">
+                                                <span id="emailOK" style="color:red" class="help-block"></span>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="groupInputs">
+                                            <p>Usted desea incluir:</p>
+                                            <div class="groupFormRadio">
+                                                <p class="titleInput">Incluir Blanco y negro</p>
+                                                <input id="fotocopiadora" type="checkbox" name="fotocopiadora">
+                                            </div>
+                                            <div class="groupFormRadio">
+                                                <p class="titleInput">Incluir Color</p>
+                                                <input checked id="Impresora" type="checkbox" name="Impresora">
+                                            </div>
+                                            <div class="grupoFormularioVolumen">
+                                                <p class="titleInput">Volumen</p>
+                                                <div class="input-group volumenGroup">
+                                                    <input id="volumen" max="7" type="text" name="volumen" placeholder="Ingrese volumen">
+                                                    <span id="volumenOK" style="color:red" class="help-block"></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="groupInputs">
+                                            <p class="descArrendamiento">Porfavor, mándenos un mensaje especificando su necesidad y nosotros nos comunicaremos posteriormente con usted. (Campo obligatorio)</p>
+                                            <div class="input-group ">
+                                                <div class="input-group mensajeGroup">
+                                                    <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje aquí"></textarea>
+                                                    <span id="mensajeOK" style="color:red" class="help-block"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit">Enviar formulario</button> {!! Form::close() !!}
+
                                     </div>
                                 </div>
-                              </div>
+                                <!--FIN FORMULARIO-->
+                                <!--- SECCION NOTICIAS -->
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                                    <div class="side_bar">
+                                        <div class="side_bar_blog">
+                                            <h4>Noticias recientes</h4>
+                                            <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis<br><br> asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam
+                                                omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit
+                                            </p>
+                                            <p class="enlaceBlog"><a href="blog_detail.html">Ver más</a></p>
+                                        </div>
+                                        <div class="side_bar_blog">
+                                            <h4>Vídeos Destacados</h4>
+                                            <div class="recent_post">
+                                                <ul>
+                                                    <li>
+                                                        <p class="post_head"><a href="#">RICOH</a></p>
+                                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/cw12x2r1UwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          <!--- SECCION NOTICIAS -->
+                            <!--- SECCION NOTICIAS -->
                         </div>
-                     </div>
-                  </div>
-                  
-               </div>
+                    </div>
+                </div>
+
             </div>
-         </div>
-      </div>
-      <!-- end section -->
-    
-    <!-- section -->
-    <div class="section padding_layout_1 testmonial_section white_fonts">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="full">
-                     <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
+        </div>
+    </div>
+</div>
+<!-- end section -->
+
+<!-- section -->
+<div class="section padding_layout_1 testmonial_section white_fonts">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="full">
+                    <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ul class="carousel-indicators">
-                           <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
-                           @foreach($videos as $item)
+                            <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
+                            @foreach($videos as $item)
                             <li data-target="#testimonial_slider" data-slide-to="{{$item->id}}"></li>
-                           @endforeach
-                           <!-- <li data-target="#testimonial_slider" data-slide-to="1"></li>
+                            @endforeach
+                            <!-- <li data-target="#testimonial_slider" data-slide-to="1"></li>
                            <li data-target="#testimonial_slider" data-slide-to="2"></li> -->
                         </ul>
                         <!-- The slideshow -->
                         <div class="carousel-inner">
-                           <div class="carousel-item active">
-                              <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                              </div>
-                           </div>
-                           @foreach($videos as $item)
-                           <div class="carousel-item">
-                              <div class="testimonial-container">
-                                 <iframe width="100%" height="315" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                 <div class="testimonial-content">
-                                 </div>
-                              </div>
-                           </div>
-                           @endforeach
-                           
+                            <div class="carousel-item active">
+                                <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            @foreach($videos as $item)
+                            <div class="carousel-item">
+                                <div class="testimonial-container">
+                                    <iframe width="100%" height="315" src="{{$item->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    <div class="testimonial-content">
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+
                         </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-5">
-                  <div class="full"> </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <!-- end section -->
-      <!-- section -->
-      <div class="section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="full">
-                     <div class="contact_us_section">
+            <div class="col-sm-5">
+                <div class="full"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section -->
+<!-- section -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="contact_us_section">
                         <div class="call_icon"> <img src="images/layout_img/phone_icon.png" alt="#" /> </div>
                         <div class="inner_cont">
-                           <h2>Si tiene alguna duda, contáctenos</h2>
-                           <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
+                            <h2>Si tiene alguna duda, contáctenos</h2>
+                            <p>Puede comunicarse con nosotros al teléfono <strong>{{$informaciongeneral->telefono}}</strong>. O llene una solicitud dando click en Contáctenos</p>
                         </div>
                         <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="/contacto">Contáctenos</a> </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <!-- end section -->
-      <!-- section -->
-      <div class="section padding_layout_1" style="padding: 50px 0;">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="full">
-                     <ul class="brand_list">
+        </div>
+    </div>
+</div>
+<!-- end section -->
+<!-- section -->
+<div class="section padding_layout_1" style="padding: 50px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <ul class="brand_list">
                         @foreach($marcas as $item)
                         <li><img class="img-responsive2" src="{{$item->imagen}}" alt="#" /></li>
                         @endforeach
-                     </ul>
-                  </div>
-               </div>
+                    </ul>
+                </div>
             </div>
-         </div>
-      </div>
-      <!-- end section -->
-   
-   
-@endsection
-@push('validacion')
+        </div>
+    </div>
+</div>
+<!-- end section -->
+
+
+@endsection @push('validacion')
 <script type="text/javascript" src="{{ asset('js/validarsolicitud.js') }}"></script>
 @endpush
