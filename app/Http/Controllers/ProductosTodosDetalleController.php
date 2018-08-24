@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
+use App\Http\Requests\SolicitudArrendamientoRequest;
 use DB;
 
 class ProductosTodosDetalleController extends Controller
