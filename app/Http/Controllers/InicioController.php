@@ -14,7 +14,7 @@ class InicioController extends Controller
      */
     public function index()
     {
-       
+       /* Olvidar carrito
         if(\Session::has('cart')){
             session()->forget('cart');
             } 
@@ -22,7 +22,7 @@ class InicioController extends Controller
         if(\Session::has('cart')){
             session()->flush();
             } 
-        
+        */
 
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $sucursales = DB::table('tbl_sucursal')->where('activo','=',1)->get();

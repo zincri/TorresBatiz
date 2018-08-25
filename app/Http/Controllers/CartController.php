@@ -19,12 +19,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
-        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
-        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
-        return view('navbar.cart',["informaciongeneral"=>$informaciongeneral,
-                                            "marcas"=>$marcas,
-                                            "videos"=>$videos]);
+        
     }
 
     /**
@@ -54,10 +49,15 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         //
-        dd(\Session::get('cart'));
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        return view('navbar.cart',["informaciongeneral"=>$informaciongeneral,
+                                            "marcas"=>$marcas,
+                                            "videos"=>$videos]);
         
     }
 
@@ -74,20 +74,45 @@ class CartController extends Controller
 
     public function add($id, $cantidad)
     {
-        //$var = Request::input('quantity');
-        //Input::get('quantity');
-        dd($var);
-        /*
+        
+        $flag=false;
         $a=DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
-        $a->cantidad=$cantidad;
+        
         $cart=\Session::get('cart');
-        $cart[$id]= $a;
-
-        \Session::put('cart',$cart);
-        return redirect()->route('cart-show');
-        */
+        
+        $entid=(int)$id;
+        foreach($cart as $item){
+            $entero=(int)$item->id;
+            if($entero == $entid) {
+                $flag=true;
+                break;
+            }
+        }
+        if($flag==true){
+            $cantidadnueva=(int)$cart[$id]->cantidad;
+            $cantidadA=(int)$cantidad;
+            $cantidadnueva=$cantidadnueva+$cantidadA;
+            $cart[$id]->cantidad=$cantidadnueva;
+        }
+        else {
+            $a->cantidad=$cantidad;
+            $cart[$id]=$a;
+            \Session::put('cart',$cart);
+        }
+        
+        return redirect()->route('producto-detalle',['producto' => $id]);
+        
     }
 
+    public function delete($id)
+    {
+        
+        $cart=\Session::get('cart');
+        unset($cart[$id]);
+        \Session::put('cart',$cart);
+        return redirect()->route('cart-show');
+        
+    }
     /**
      * Update the specified resource in storage.
      *

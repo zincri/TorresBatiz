@@ -42,16 +42,16 @@
                                 <tr>
                                     <td class="col-sm-8 col-md-6">
                                         <div class="media">
-                                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/layout_img/1.jpg" alt="#"></a>
+                                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{ asset($item->imagen) }}" alt="#"></a>
                                             <div class="media-body">
-                                                <h4 class="media-heading"><a href="#">Product One</a></h4>
+                                                <h4 class="media-heading"><a href="#">{{$item->nombre}}</a></h4>
                                                 <span>Status: </span><span class="text-success">In Stock</span>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="text">
+                                    <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="{{$item->cantidad}}" type="text">
                                     </td>
-                                    <td class="col-sm-1 col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
+                                    <td class="col-sm-1 col-md-1"><a href="{{ route('cart-delete',$item->id)}}" ><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

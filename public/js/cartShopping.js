@@ -9,10 +9,25 @@ $(".addToCart").click(() => {
 
     $(".shoppingCartItem span").text(compras += 1);
     
-    var cantidad=$('input[name="quantity"]').val();
-    console.log(cantidad);
+    
 
 });
+
+
+var hrefa=document.getElementById('hrefa');
+document.getElementById('quantity').addEventListener('input', function() {
+    campo = event.target;
+    var cantidad=campo.value;
+    var cadena = hrefa.href;
+    cadena=cadena.substring(0,cadena.length - 1);
+    cadena=cadena+cantidad;
+    hrefa.setAttribute("href",cadena);
+    
+});
+
+
+
+
 
 // btnEnviarCotizacion
 $(".btnEnviarCotizacion").click(() => {
