@@ -23,6 +23,10 @@ class InicioController extends Controller
             session()->flush();
             } 
         */
+        /*if(!\Session::has('numbercart')){
+            \Session::put('numbercart',0);
+        }*/
+        //if(!\Session::has('cart')) \Session::put('cart',array());
 
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $sucursales = DB::table('tbl_sucursal')->where('activo','=',1)->get();

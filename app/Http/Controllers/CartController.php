@@ -113,6 +113,14 @@ class CartController extends Controller
         return redirect()->route('cart-show');
         
     }
+
+    public function vaciar()
+    {
+        
+        \Session::forget('cart');
+        return redirect()->route('cart-show');
+    }
+
     /**
      * Update the specified resource in storage.
      *

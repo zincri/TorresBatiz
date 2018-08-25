@@ -1,4 +1,5 @@
-@extends ('layouts.master') @section ('content')
+@extends ('layouts.master') 
+@section ('content')
 <div class="notificacionAddCart" style="background-color: #f89c35;">
     <p style="color: #fff; text-align: center;">Usted ha enviado su solicitud de cotización. Torres Batiz se comunicará con usted posteriormente.</p>
 </div>
@@ -28,7 +29,16 @@
         <div class="row">
             <form action="/inicio">
                 <div class="col-sm-12 col-md-12">
+               
                     <div class="product-table">
+                    
+                    @if( count(\Session::get('cart')) != 0 )
+                    
+                    <p>
+                        <a href="{{ route('cart-thrash') }}" class="btn btn-danger">
+                            Vaciar carrito
+                        </a> </p>
+
                         <table class="table">
                             <thead>
                                 <tr>
@@ -37,6 +47,7 @@
                                     <th> </th>
                                 </tr>
                             </thead>
+                            
                             <tbody>
                                 @foreach( \Session::get('cart') as $item)
                                 <tr>
@@ -49,19 +60,27 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="{{$item->cantidad}}" type="text">
+                                    <td class="col-sm-1 col-md-1" style="text-align: center"><input id="quantity" id="name" class="form-control" value="{{$item->cantidad}}" type="text">
                                     </td>
                                     <td class="col-sm-1 col-md-1"><a href="{{ route('cart-delete',$item->id)}}" ><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></a></td>
                                 </tr>
                                 @endforeach
+
+                                
                             </tbody>
+                            
                         </table>
+                    @else
+                    <div class="alert alert-warning">
+                        <strong>Warning!</strong> NO HAY ELEMENTOS EN EL CARRITO :(
+                    </div>
+                    @endif
                         <div class="row">
                             <div class="full">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
 
                                     <div class="form_section formularioArrendatario">
-                                        {!! Form::open(array('url' => 'cart','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!} {{Form::token()}}
+                                        {!! Form::open(array('url' => 'cart', 'autocomplete' => 'off' , 'method'=>'POST', 'onsubmit'=>'return validarsend();')) !!} {{Form::token()}}
                                         <div class="row formularioArrendatario">
 
 
@@ -111,7 +130,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                @if( count(\Session::get('cart')) != 0 )
+                                                <br>
                                                 <button type="submit">Enviar formulario</button>
+                                                @else
+                                                <br>
+                                                <div class="alert alert-warning">
+                                                    <strong>Warning!</strong> AGREGUE ELEMENTOS PARA ENVIAR EL FORMULARIO 
+                                                </div>
+
+                                                @endif
+                                                
 
                                             </div>
 
