@@ -36,65 +36,31 @@
         <div class="row-container">
             <div class="bd-example bd-example-tabs">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
+                
+                    @foreach($sucursales as $key => $item)
                     <li class="nav-item">
-                        <a class="nav-link active show" id="tux-tab" data-toggle="tab" href="#tux" role="tab" aria-controls="home" aria-selected="true">Tuxtla Gutierrez</a>
+                        <a class="nav-link {{ $key==0 ? 'active show' : ''}}" id="sucursal{{ $item->id }}" data-toggle="tab" href="#sucursal{{ $item->id }}" role="tab" aria-controls="home" aria-selected="{{$key==0 ? 'true' : 'false'}}">{{$item->nombre}}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="sancris-tab" data-toggle="tab" href="#sancris" role="tab" aria-controls="profile" aria-selected="false">San Cristobal de las Casas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" id="salinacrz-tab" data-toggle="tab" href="#salinacrz" role="tab" aria-controls="contact" aria-selected="false">Salina Cruz</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="villahermosa-tab" data-toggle="tab" href="#villa" role="tab" aria-controls="contact" aria-selected="false">Villahermosa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="oaxaca2-tab" data-toggle="tab" href="#oax2" role="tab" aria-controls="contact" aria-selected="false">Oaxaca - Av. Belisario Dominguez</a>
-                    </li>
+                    @endforeach
+                    
+                   
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade active show" id="tux" role="tabpanel" aria-labelledby="tux-tab">
+                    @foreach($sucursales as $key => $item)
+
+                   
+                    <div class="tab-pane fade {{ $key==0 ? 'active show' : ''}}" id="sucursal{{ $item->id }}" role="tabpanel" aria-labelledby="sucursal{{ $item->id }}-tab">
                         <div class="mapcontainer">
                             <div class="contend">
                                 <div class="service_blog sucursal">
                                     <div class="service_img">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.4075072818064!2d-93.12213028576723!3d16.756389425107756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd8f2fc007a3b%3A0x7800672f44a9edbe!2s5a+Pte.+Nte.+342%2C+Guadalupe%2C+29000+Guadalupe%2C+Chis.!5e0!3m2!1ses-419!2smx!4v1531370965106"
-                                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                        <iframe src="{{$item->urlgooglemaps}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </div>
                                     <div class="service_head">
-                                        <h5><a href="#">Tuxtla Gutiérrez, Chiapas
-                        5ta Poniente Norte #342</a></h5>
+                                        <h5><a href="#">{{$item->direccion}}</a></h5>
                                         <h6>
                                             <ul class="torresList">
-                                                <li>961-613-5390</li>
-                                                <li>961-612-3294</li>
-                                                <li>961-613-8467</li>
-                                                <li>961-613-4095</li>
-                                                <li>961-613-4132</li>
-                                                <li>961-613-4184</li>
-                                            </ul>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="sancris" role="tabpanel" aria-labelledby="sancris-tab">
-                        <div class="mapcontainer">
-                            <div class="contend">
-                                <div class="service_blog sucursal">
-                                    <div class="service_img">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.7942502214537!2d-92.63977118576753!3d16.73711482563948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed453deddc54ef%3A0xc005a787659c385b!2sPromotora+Comercial+Torres+B%C3%A1tiz!5e0!3m2!1ses-419!2smx!4v1531372096425"
-                                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="service_head">
-                                        <h5><a href="#">San Cristobal de las Casas,
-                        Calle Guadalupe Victoria #3 Colonia Centro</a></h5>
-                                        <h6>
-                                            <ul class="torresList">
-                                                <li>967-116-0576</li>
-                                                <li>967-116-1013</li>
+                                                <li>{{$item->telefono}}</li>
                                             </ul>
                                         </h6>
                                     </div>
@@ -103,69 +69,9 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="salinacrz" role="tabpanel" aria-labelledby="salinacrz-tab">
-                        <div class="mapcontainer">
-                            <div class="contend">
-                                <div class="service_blog sucursal">
-                                    <div class="service_img">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.9752452172215!2d-96.72179808576307!3d17.07386351626703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c7222524081069%3A0x4be2fc1097aef4fd!2sTorres+Batiz!5e0!3m2!1ses-419!2smx!4v1531372035164"
-                                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="service_head">
-                                        <h5><a href="#">Salina Cruz, Oaxaca
-                        Calle obrero, colonia Barrio Espinal, Salina Cruz Oaxaca c.p. 70600</a></h5>
-                                        <h6>
-                                            <ul class="torresList">
-                                                <li>971-133-0256</li>
-                                            </ul>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="villa" role="tabpanel" aria-labelledby="villahermosa-tab">
-                        <div class="mapcontainer">
-                            <div class="contend">
-                                <div class="service_blog sucursal">
-                                    <div class="service_img">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.651859158011!2d-92.93219968575025!3d17.994927089736173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd82491f766f1%3A0x74edfd127e1ea9c9!2sTorres+Batiz+Del+Golfo%2C+S.A.+De+C.V.!5e0!3m2!1ses-419!2smx!4v1531372266374"
-                                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="service_head">
-                                        <h5><a href="#">Villahermosa, Tabasco, Av. Gregorio Méndez No.1510 Planta Baja Col. Florida CP. 86040</a></h5>
-                                        <h6>
-                                            <ul class="torresList">
-                                                <li>01-993-312-5744</li>
-                                                <li>01-993-131-0472</li>
-                                            </ul>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="oax2" role="tabpanel" aria-labelledby="oaxaca2-tab">
-                        <div class="mapcontainer">
-                            <div class="contend">
-                                <div class="service_blog sucursal">
-                                    <div class="service_img">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.955641757133!2d-96.71541708576295!3d17.074822316240088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c7222e426b63cb%3A0xa20135b5cd965562!2sAv+Belisario+Dom%C3%ADnguez+608%2C+Reforma%2C+68050+Oaxaca%2C+Oax.!5e0!3m2!1ses-419!2smx!4v1531372213666"
-                                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="service_head">
-                                        <h5><a href="#">Belisario Domínguez núm. 608-E, col. Reforma</a></h5>
-                                        <h6>
-                                            <ul class="torresList">
-                                                <li>01-951-515-7746</li>
-                                                <li>01-951-232-6006</li>
-                                            </ul>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                    
+                   
                 </div>
             </div>
         </div>
@@ -191,7 +97,8 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="testimonial-container"><iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <div class="testimonial-container">
+                                    <iframe width="100%" height="315" src="{{$informaciongeneral->videoprincipal}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                 </div>
                             </div>
                             @foreach($videos as $item)
@@ -254,3 +161,9 @@
 <!-- End Model search bar -->
 
 @endsection
+
+@push('tabs_function')
+<script>
+
+</script>
+@endpush

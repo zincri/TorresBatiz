@@ -276,6 +276,7 @@
     @stack('validacion')
     @stack('validacionconsumibles')
     @stack('validacioncontacto')
+    @stack('tabs_function')
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
     -->
     <!-- end google map js -->
