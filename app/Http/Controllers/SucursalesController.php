@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-use App\Http\Requests;
+
 use DB;
 
 class SucursalesController extends Controller
@@ -49,7 +49,8 @@ class SucursalesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        
     }
 
     /**

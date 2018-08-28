@@ -77,7 +77,7 @@
       @endforeach
       <!--Controlar que no se desborde de redes sociales -->
       <li class="shoppingCartItem">
-        <a href="/cart"><i class="fa fa-shopping-cart"></i><span>2</span></a>
+        <a href="{{ route('cart-show') }}"><i class="fa fa-shopping-cart"></i><span >2</span></a>
       </li>
     </ul>
   </div>

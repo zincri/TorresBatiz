@@ -1,6 +1,6 @@
 var compras = 0;
 $(".addToCart").click(() => {
-    $(".addToCart").prop("disabled", true);
+    //$(".addToCart").prop("disabled", true);
     $(".notificacionAddCart").css("top", "1%");
     setTimeout(() => {
         $(".notificacionAddCart").css("top", "-35%");
@@ -8,6 +8,42 @@ $(".addToCart").click(() => {
     $(".shoppingCartItem span").css("visibility", "visible");
 
     $(".shoppingCartItem span").text(compras += 1);
+    
+    
+
+});
+
+
+var hrefa=document.getElementById('hrefa');
+if(document.getElementById('quantity')){
+document.getElementById('quantity').addEventListener('input', function() {
+    var id=$(this).data('id');
+    campo = event.target;
+    var cantidad=campo.value;
+    if(cantidad=="" || cantidad==0 || cantidad==null){
+        cantidad=1;
+    }
+    var cadena = hrefa.href;
+    cadena=cadena.substring(0,cadena.length - 1);
+    cadena=cadena+cantidad;
+    hrefa.setAttribute("href",cadena);    
+});
+}
+
+
+$(".aquiestalaclase").on('click',function(e){
+    e.preventDefault();
+
+    var id = $(this).data('id');
+    var href = $(this).data('href');
+    var cantidad = $("#product_"+id).val();
+    if(cantidad=="" || cantidad==0 || cantidad==null){
+        cantidad=1;
+    }
+    
+    href=href.substring(0,href.length - 1);
+    href=href+cantidad;
+    window.location.href = href; 
 });
 
 // btnEnviarCotizacion

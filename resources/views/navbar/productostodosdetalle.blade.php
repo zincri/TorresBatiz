@@ -1,5 +1,8 @@
-@extends ('layouts.master') @section ('content')
+@extends ('layouts.master') 
+@section ('content')
+
 <div class="notificacionAddCart">
+
     <p>Este artículo se a añadido al carrito con éxito. De click en "Ver carrito" para ver más detalles </p>
     <div class="buttonVerCarro">
         <a href="/cart">
@@ -7,7 +10,6 @@
         </a>
     </div>
 </div>
-
 <!-- inner page banner -->
 <div id="inner_banner" class="section inner_banner_section">
     <div class="container">
@@ -50,14 +52,17 @@
                             <p>{{$producto->descripcioncorta}}<br>
                                 <span class="stock">{{$producto->stock}} in stock</span>
                             </p>
-                            <form class="cart" method="post" action=>
+                            <form class="cart" method="post" action="" >
                                 <div class="quantity">
-                                    <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
+                                    <input id="quantity" step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                                 </div>
+                                <a href="{{ route('cart-add',['id' => $producto->id,'cantidad'=> 1 ])}}"
+                                   id="hrefa" name="hrefa" >
                                 <button type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
+                                </a>
                             </form>
                         </div>
-                        <a href="/cart"><button type="button" class="btn sqaure_bt">Ver carrito</button></a>
+                        <a href="{{ route('cart-show') }}"><button type="button" class="btn sqaure_bt">Ver carrito</button></a>
                         <div class="share-post">
                             <a href="#" class="share-text">Compartir</a>
                             <ul class="social_icons">
@@ -222,6 +227,7 @@
 <script type="text/javascript" src="{{ asset('js/hizoom.js') }}">
 </script>
 <script>
+    
     $('.hi1').hiZoom({
         width: 500,
         position: 'right'

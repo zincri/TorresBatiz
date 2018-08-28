@@ -1,4 +1,5 @@
-@extends ('layouts.master') @section ('content')
+@extends ('layouts.master') 
+@section ('content')
 <div class="notificacionAddCart" style="background-color: #f89c35;">
     <p style="color: #fff; text-align: center;">Usted ha enviado su solicitud de cotización. Torres Batiz se comunicará con usted posteriormente.</p>
 </div>
@@ -12,7 +13,7 @@
                         <div class="title-holder-cell text-left">
                             <h1 class="page-title" style="margin-right: 10%">Productos seleccionados</h1>
                             <ol class="breadcrumb">
-                                <li><a href="index.html">Inicio</a></li>
+                                <li><a href="/">Inicio</a></li>
                                 <li class="active">Productos seleccionados</li>
                             </ol>
                         </div>
@@ -26,84 +27,85 @@
 <div class="section padding_layout_1 Shopping_cart_section">
     <div class="container">
         <div class="row">
-            <form action="/inicio">
+            <!-- aqui empezaba el form que quite --zincri -->
                 <div class="col-sm-12 col-md-12">
+               
                     <div class="product-table">
+                    
+                    @if( count(\Session::get('cart')) != 0 )
+                    
+                    <p>
+                        <a href="{{ route('cart-thrash') }}" class="btn btn-danger">
+                            Vaciar carrito
+                        </a> </p>
+
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>Producto</th>
                                     <th>Cantidad</th>
-                                    <th> </th>
                                 </tr>
                             </thead>
+                            
                             <tbody>
+                                @foreach( \Session::get('cart') as $item)
                                 <tr>
                                     <td class="col-sm-8 col-md-6">
                                         <div class="media">
-                                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/layout_img/1.jpg" alt="#"></a>
+                                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{ asset($item->imagen) }}" alt="#"></a>
                                             <div class="media-body">
-                                                <h4 class="media-heading"><a href="#">Product One</a></h4>
+                                                <h4 class="media-heading"><a href="#">{{$item->nombre}}</a></h4>
                                                 <span>Status: </span><span class="text-success">In Stock</span>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="text">
-                                    </td>
-                                    <td class="col-sm-1 col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-6">
-                                        <div class="media">
-                                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/layout_img/2.jpg" alt="#"></a>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><a href="#">Product Two</a></h4>
-                                                <span>Status: </span><span class="text-danger">Out Stock</span>
-                                            </div>
+                                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                                        <div class="quantity">
+                                            <input
+                                              
+                                              step="1"
+                                              min="1" max="5" 
+                                              id="product_{{ $item->id }}"
+                                              name="product_{{ $item->id }}"
+                                              value="{{$item->cantidad}}"
+                                              title="Qty"
+                                              class="input-text qty text"
+                                              size="4"
+                                              type="number">
                                         </div>
                                     </td>
-                                    <td class="col-md-1" style="text-align: center"><input class="form-control" value="2" type="text">
+
+                                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                                        <a
+                                            href="#";
+                                            data-href="{{ route('cart-refresh',['id' => $item->id,'cantidad'=> 1 ])}}" 
+                                            data-id="{{$item->id}}"
+                                            class="aquiestalaclase">
+                                            <button type="button" class="bt_main"><i class="fa fa-refresh"></i></button></a>
                                     </td>
-                                    <td class="col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
+
+                                    <td class="col-sm-1 col-md-1"><a href="{{ route('cart-delete',$item->id)}}" ><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></a></td>
                                 </tr>
-                                <tr>
-                                    <td class="col-sm-8 col-md-6">
-                                        <div class="media">
-                                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/layout_img/3.jpg" alt="#"></a>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><a href="#">Product Three</a></h4>
-                                                <span>Status: </span><span class="text-success">In Stock</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="col-sm-1 col-md-1" style="text-align: center"><input class="form-control" value="3" type="text">
-                                    </td>
-                                    <td class="col-sm-1 col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-6">
-                                        <div class="media">
-                                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/layout_img/4.jpg" alt="#"></a>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><a href="#">Product Four</a></h4>
-                                                <span>Status: </span><span class="text-danger">Out Stock</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="col-md-1" style="text-align: center"><input class="form-control" value="2" type="text">
-                                    </td>
-                                    <td class="col-md-1"><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></td>
-                                </tr>
+                                @endforeach
+
+                                
                             </tbody>
+                            
                         </table>
+                    @else
+                    <div class="alert alert-warning">
+                        <strong>Warning!</strong> NO HAY ELEMENTOS EN EL CARRITO :(
+                    </div>
+                    @endif
                         <div class="row">
                             <div class="full">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
 
                                     <div class="form_section formularioArrendatario">
-                                        {!! Form::open(array('url' => 'cart','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!} {{Form::token()}}
+                                        
                                         <div class="row formularioArrendatario">
-
+                                        {!! Form::open(array('route' => 'cart-form','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
+                                         {{Form::token()}}
 
                                             <div class="col-md-6">
                                                 <div class="groupForm">
@@ -117,7 +119,7 @@
                                                 <div class="groupForm">
                                                     <div class="input-group empresaGroup">
                                                         <label for="empresa">Empresa:</label>
-                                                        <input id="empresa" type="text" name="empresa" max="40" placeholder="Ingrese su empresa. (Campo obligatorio)">
+                                                        <input id="empresa" type="text" name="empresa" max="40" placeholder="Ingrese su empresa. (Campo opcional)">
                                                         <span id="empresaOK" style="color:red" class="help-block"></span>
                                                     </div>
                                                 </div>
@@ -151,15 +153,22 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                @if( count(\Session::get('cart')) != 0 )
+                                                <br>
                                                 <button type="submit">Enviar formulario</button>
+                                                @else
+                                                <br>
+                                                <div class="alert alert-warning">
+                                                    <strong>Warning!</strong> AGREGUE ELEMENTOS PARA ENVIAR EL FORMULARIO 
+                                                </div>
+
+                                                @endif
+                                                
 
                                             </div>
-
+                                            {{!! Form::close() !!}}
                                         </div>
 
-
-
-                                        {!! Form::close() !!}
 
                                     </div>
 
@@ -170,7 +179,8 @@
                     </div>
 
                 </div>
-            </form>
+                <!-- aqui acaba el form que quite --zincri -->
+            
         </div>
     </div>
 </div>
