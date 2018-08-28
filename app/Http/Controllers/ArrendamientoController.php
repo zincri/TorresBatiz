@@ -91,6 +91,7 @@ class ArrendamientoController extends Controller
 
         if($datos_solicitud != null)
         {
+            
             return Redirect::to('/arrendamiento');
         }
         else
