@@ -52,7 +52,7 @@
                             <p>{{$producto->descripcioncorta}}<br>
                                 <span class="stock">{{$producto->stock}} in stock</span>
                             </p>
-                            <form class="cart" method="post" action=>
+                            <form class="cart" method="post" action="" >
                                 <div class="quantity">
                                     <input id="quantity" step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                                 </div>
@@ -222,7 +222,8 @@
     </div>
 </div>
 <!-- End Model search bar -->
-@endsection @push('zoomScript_js')
+@endsection 
+@push('zoomScript_js')
 <script type="text/javascript" src="{{ asset('js/hizoom.js') }}">
 </script>
 <script>

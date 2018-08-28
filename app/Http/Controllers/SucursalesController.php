@@ -21,10 +21,14 @@ class SucursalesController extends Controller
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
         $video=$videos->first();
+        $telefonos = DB::table('tbl_cattelefonos')->where('activo','=',1)->get();
+        $sucursales = DB::table('tbl_sucursal')->where('activo','=',1)->get();
         return view('navbar.sucursales',["informaciongeneral"=>$informaciongeneral,
                                             "marcas"=>$marcas,
                                           "videos"=>$videos,
-                                          "video"=>$video]);
+                                          "video"=>$video,
+                                          "sucursales"=>$sucursales,
+                                          "telefonos"=>$telefonos]);
     }
 
     /**
