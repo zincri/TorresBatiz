@@ -13,7 +13,7 @@
                         <div class="title-holder-cell text-left">
                             <h1 class="page-title" style="margin-right: 10%">Productos seleccionados</h1>
                             <ol class="breadcrumb">
-                                <li><a href="index.html">Inicio</a></li>
+                                <li><a href="/">Inicio</a></li>
                                 <li class="active">Productos seleccionados</li>
                             </ol>
                         </div>
@@ -27,7 +27,7 @@
 <div class="section padding_layout_1 Shopping_cart_section">
     <div class="container">
         <div class="row">
-            <form action="/inicio">
+            <!-- aqui empezaba el form que quite --zincri -->
                 <div class="col-sm-12 col-md-12">
                
                     <div class="product-table">
@@ -44,7 +44,6 @@
                                 <tr>
                                     <th>Producto</th>
                                     <th>Cantidad</th>
-                                    <th> </th>
                                 </tr>
                             </thead>
                             
@@ -60,8 +59,31 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="col-sm-1 col-md-1" style="text-align: center"><input id="quantity" id="name" class="form-control" value="{{$item->cantidad}}" type="text">
+                                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                                        <div class="quantity">
+                                            <input
+                                              
+                                              step="1"
+                                              min="1" max="5" 
+                                              id="product_{{ $item->id }}"
+                                              name="product_{{ $item->id }}"
+                                              value="{{$item->cantidad}}"
+                                              title="Qty"
+                                              class="input-text qty text"
+                                              size="4"
+                                              type="number">
+                                        </div>
                                     </td>
+
+                                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                                        <a
+                                            href="#";
+                                            data-href="{{ route('cart-refresh',['id' => $item->id,'cantidad'=> 1 ])}}" 
+                                            data-id="{{$item->id}}"
+                                            class="aquiestalaclase">
+                                            <button type="button" class="bt_main"><i class="fa fa-refresh"></i></button></a>
+                                    </td>
+
                                     <td class="col-sm-1 col-md-1"><a href="{{ route('cart-delete',$item->id)}}" ><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></a></td>
                                 </tr>
                                 @endforeach
@@ -80,9 +102,10 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
 
                                     <div class="form_section formularioArrendatario">
-                                        {!! Form::open(array('url' => 'cart', 'autocomplete' => 'off' , 'method'=>'POST', 'onsubmit'=>'return validarsend();')) !!} {{Form::token()}}
+                                        
                                         <div class="row formularioArrendatario">
-
+                                        {!! Form::open(array('route' => 'cart-form','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
+                                         {{Form::token()}}
 
                                             <div class="col-md-6">
                                                 <div class="groupForm">
@@ -96,7 +119,7 @@
                                                 <div class="groupForm">
                                                     <div class="input-group empresaGroup">
                                                         <label for="empresa">Empresa:</label>
-                                                        <input id="empresa" type="text" name="empresa" max="40" placeholder="Ingrese su empresa. (Campo obligatorio)">
+                                                        <input id="empresa" type="text" name="empresa" max="40" placeholder="Ingrese su empresa. (Campo opcional)">
                                                         <span id="empresaOK" style="color:red" class="help-block"></span>
                                                     </div>
                                                 </div>
@@ -143,12 +166,9 @@
                                                 
 
                                             </div>
-
+                                            {{!! Form::close() !!}}
                                         </div>
 
-
-
-                                        {!! Form::close() !!}
 
                                     </div>
 
@@ -159,7 +179,8 @@
                     </div>
 
                 </div>
-            </form>
+                <!-- aqui acaba el form que quite --zincri -->
+            
         </div>
     </div>
 </div>

@@ -54,7 +54,7 @@
                             </p>
                             <form class="cart" method="post" action=>
                                 <div class="quantity">
-                                    <input id="quantity" step="1" min="1" max="5" name="quantity" value="{{$producto->cantidad}}" title="Qty" class="input-text qty text" size="4" type="number">
+                                    <input id="quantity" step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                                 </div>
                                 <a href="{{ route('cart-add',['id' => $producto->id,'cantidad'=> 1 ])}}"
                                    id="hrefa" name="hrefa" >

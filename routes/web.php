@@ -24,7 +24,6 @@ Route::resource('/soporte','SoporteController');
 Route::resource('/consumibles','ConsumiblesController');
 Route::resource('/sucursales','SucursalesController');
 Route::resource('/contacto','ContactoController');
-Route::resource('/cart','CartController');
 Route::resource('/productostodos','productosTodosController');
 
 Route::get('productostodosdetalle/{id}',[
@@ -32,14 +31,30 @@ Route::get('productostodosdetalle/{id}',[
     'uses' => 'ProductosTodosDetalleController@Show'
 ]);
 
+
+Route::post('cart/sendform',[
+    'as' => 'cart-form',
+    'uses' => 'CartController@store'
+]);
+
 Route::get('cart/show',[
 'as' => 'cart-show',
-'uses' => 'CartController@Show'
+'uses' => 'CartController@show'
 ]);
+
+Route::get('cart/store',[
+    'as' => 'cart-store',
+    'uses' => 'CartController@store'
+    ]);
 
 Route::get('cart/add/{id}/{cantidad}',[
     'as' => 'cart-add',
     'uses' => 'CartController@add'
+]);
+
+Route::get('cart/refresh/{id}/{cantidad}', [
+    'as' => 'cart-refresh',
+    'uses' => 'CartController@refresh'
 ]);
 
 Route::get('cart/delete/{id}',[

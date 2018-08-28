@@ -1,4 +1,4 @@
-var bn, bt, be, bm;
+var bn, bt, be;
 
 function validar() {
 
@@ -113,7 +113,7 @@ validar();
 
 /*****************************************/
 function validarsend() {
-    if (bn === true && bt === true && be === true && bm === true && bv === true) {
+    if (bn === true && bt === true && be === true ) {
         return true;
 
     } else {
