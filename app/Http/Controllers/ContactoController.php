@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
+use App\Http\Requests\SolicitudContactoRequest;
+use DB;
 
 class ContactoController extends Controller
 {
@@ -15,6 +18,14 @@ class ContactoController extends Controller
     {
         //
         return view('navbar.contacto');
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        return view('navbar.contacto',["informaciongeneral"=>$informaciongeneral,
+                                            "marcas"=>$marcas,
+                                            "videos"=>$videos]);
+        // return view('navbar.contacto');
+        
     }
 
     /**
@@ -34,9 +45,14 @@ class ContactoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+    public function store(SolicitudContactoRequest $request)
     {
         //
+        echo "Hola";
+        
     }
+
+    
 
     /**
      * Display the specified resource.
