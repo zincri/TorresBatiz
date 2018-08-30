@@ -29,8 +29,7 @@
 
                 <div class="full">
                     <div class="main_headingr text_align_center tituloNosotros">
-                        <h1><span>29 años comprometidos con la 
-        calidad y el servicio</span></h1>
+                        <h1><span>29 años comprometidos con la calidad y el servicio</span></h1>
                     </div>
                 </div>
 
