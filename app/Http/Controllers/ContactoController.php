@@ -16,7 +16,6 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        //
         return view('navbar.contacto');
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
