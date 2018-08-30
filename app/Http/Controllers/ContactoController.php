@@ -47,7 +47,6 @@ class ContactoController extends Controller
     public function store(Request $request)
     public function store(SolicitudContactoRequest $request)
     {
-        //
         echo "Hola";
         
     }
