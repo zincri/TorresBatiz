@@ -16,12 +16,31 @@ class productosTodosController extends Controller
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
-        $productos = DB::table('tbl_productogeneral')->where('activo','=',1)->get();
+        
+        return view('navbar.productostodos',["informaciongeneral"=>$informaciongeneral,
+                                                "marcas"=>$marcas,
+                                                "videos"=>$videos]);
+                    
+    }
+    
+    public function showProducts($categoria){
+        if($categoria == 1){
+            $productosByCategoria = DB::table('tbl_producto')->where('activo',"=",1)->paginate(16);
+        }
+        else{
+            $productosByCategoria = DB::table('tbl_producto')->where('idcategoriaproducto',"=",$categoria)->where('activo','=',1)->paginate(16);
+        }
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
         return view('navbar.productostodos',["informaciongeneral"=>$informaciongeneral,
                                                 "marcas"=>$marcas,
                                                 "videos"=>$videos,
-                                                "productos"=>$productos]);
-                    
+                                                "productos"=>$productosByCategoria]);
+
+        
+        // index($productosByCategoria);
+        
     }
 
     /**
@@ -51,9 +70,17 @@ class productosTodosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($categoria)
     {
         //
+        $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
+        $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
+        $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
+        
+        return view('navbar.productostodos',["informaciongeneral"=>$informaciongeneral,
+                                                "marcas"=>$marcas,
+                                                "videos"=>$videos,
+                                                "productos"=>$categoria]);
     }
 
     /**

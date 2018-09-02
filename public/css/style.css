@@ -3232,9 +3232,6 @@ span.skill {
     transition: ease all 0.5s;
 }
 
-.product_list:hover,
-.product_list:focus {}
-
 .product_img {
     overflow: hidden;
 }
@@ -3252,6 +3249,7 @@ span.skill {
 .product_detail_btm h4 {
     margin: 20px 0 5px 0;
     text-align: center;
+    color: #fff;
 }
 
 .product_detail_btm h4 a {
@@ -3646,7 +3644,8 @@ footer ul.social_icons {
     position: relative;
 }
 
-.gross_layout::after {
+
+/* .gross_layout::after {
     position: absolute;
     background: url(../images/layout_img/dark_bg_img.png);
     width: 35%;
@@ -3656,19 +3655,7 @@ footer ul.social_icons {
     top: 0;
     background-size: cover;
     background-position: right;
-}
-
-.gross_layout.right_gross_layout::after {
-    position: absolute;
-    background: url(../images/layout_img/dark_bg_img2.png);
-    width: 35%;
-    height: 100%;
-    left: 0;
-    content: "";
-    top: 0;
-    background-size: cover;
-    background-position: right;
-}
+} */
 
 .gross_layout {
     position: relative;
@@ -4323,7 +4310,7 @@ footer ul.social_icons {
     padding: 0px 20px;
     height: 45px;
     line-height: 45px;
-    margin: 33px 0 0 30px;
+    /* margin: 33px 0 0 30px; */
 }
 
 .shopping-cart table tbody tr.cart-form td {
@@ -4418,7 +4405,7 @@ footer ul.social_icons {
     padding: 0px 20px;
     height: 45px;
     line-height: 45px;
-    margin: 33px 0 0 30px;
+    /* margin: 33px 0 0 30px; */
     background: #039dae;
     transition: ease all 0.5s;
     border: none;
@@ -4471,7 +4458,9 @@ footer ul.social_icons {
     color: #fff;
     font-size: 14px;
     min-width: 148px;
-    float: left;
+    /* float: left; */
+    display: block;
+    margin: auto;
     text-align: center;
     height: 48px;
     border-radius: 5px;
@@ -5029,6 +5018,10 @@ i.fa-shopping-cart:hover {
     right: 0;
     top: 0;
     bottom: 0;
+}
+
+.paginationPart li.active span {
+    color: #fff;
 }
 
 .paginationPart li a {

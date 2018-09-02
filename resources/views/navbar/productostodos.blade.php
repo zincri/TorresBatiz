@@ -26,11 +26,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row productosList">
-                    @foreach($productos as $item)
+                    @foreach($productos as $key => $item)
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-                        <a href="{{ route('producto-detalle',$item->id) }}">
+                        <a href="{{ route('producto-detalle',[$item->id]) }}">
                             <div class="product_list">
-                                <div class="product_img"> <img class="img-responsive" src="{{$item->imagen}}" alt=""> </div>
+                                <div class="product_img"> <img class="img-responsive" src="{{ asset($item->imagen) }}" alt=""> </div>
                                 <div class="product_detail_btm">
                                     <div class="center">
                                         <h4>{{$item->nombre}}</h4>
@@ -44,13 +44,7 @@
 
                 </div>
                 <div class="row paginationPart">
-                    <ul class="pagination">
-                        <li><a href="#">1</a></li>
-                        <li class="active"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                    </ul>
+                    {{ $productos->links() }}
                 </div>
             </div>
         </div>

@@ -2,10 +2,9 @@
 @section ('content')
 
 <div class="notificacionAddCart">
-
-    <p>Este artículo se a añadido al carrito con éxito. De click en "Ver carrito" para ver más detalles </p>
+    <p></p>
     <div class="buttonVerCarro">
-        <a href="/cart">
+        <a href="/cart/show">
             <button type="button">VER CARRITO</button>
         </a>
     </div>
@@ -40,7 +39,7 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="product_detail_feature_img hizoom hi2">
                             <div class="hizoom hi2">
-                                <img class="imagenProductoDescripcion imagenGrandeDescripcion" src="{{asset('images/layout_img/2.jpg')}}" alt="#" />
+                                <img class="imagenProductoDescripcion imagenGrandeDescripcion" src="{{asset($producto->imagen)}}" alt="#" />
                             </div>
                         </div>
                     </div>
@@ -56,7 +55,7 @@
                                 <div class="quantity">
                                     <input id="quantity" step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
                                 </div>
-                                <a href="{{ route('cart-add',['id' => $producto->id,'cantidad'=> 1 ])}}"
+                                <a href="{{ route('cart-add',['id'=>$producto->id, 'cantidad'=>1])}}"
                                    id="hrefa" name="hrefa" >
                                 <button type="button" class="btn sqaure_bt addToCart">Añadir al carrito</button>
                                 </a>
@@ -99,7 +98,7 @@
                                                 @foreach($galeria as $item)
                                                 <div class="col-md-3">
                                                     <figure>
-                                                        <img class="imagenProductoDescripcion" src="{{$item->imagen}}" alt="#" />
+                                                        <img class="imagenProductoDescripcion" src="{{ asset($item->imagen) }}" alt="#" />
                                                     </figure>
                                                 </div>
                                                 @endforeach
@@ -123,17 +122,17 @@
                 <div class="row">
                     @foreach($productos as $item)
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
+                    <a href="/productostodosdetalle/{{$item->id}}">
                         <div class="product_list">
-                            <div class="product_img"> <img class="img-responsive" src="{{$item->imagen}}" alt=""> </div>
+                            <div class="product_img"> <img class="img-responsive" src="{{asset($item->imagen)}}" alt=""> </div>
                             <div class="product_detail_btm">
                                 <div class="center">
-                                    <h4><a href="/productostodosdetalle{{$item->id}}">{{$item->nombre}}</a></h4>
+                                    <h4>{{$item->nombre}}</h4>
                                 </div>
-                                <div class="product_price">
-                                    <p><span class="new_price">Silla 1323</span></p>
-                                </div>
+                                
                             </div>
                         </div>
+                        </a>
                     </div>
                     @endforeach
                 </div>
@@ -238,4 +237,31 @@
     });
 </script>
 <script type="text/javascript" src="{{ asset('js/cartShopping.js') }}"></script>
+<script>
+$(window).load(function(){
+    
+@if(session()->has('message'))
+
+var mensaje = "{{session()->get('message')}}";
+if(mensaje == "success"){
+    var mensajeInfo = `Este artículo se a añadido al carrito con éxito. De click en "Ver carrito" para ver más detalles.`;
+    var btnDisabled = false;   
+}
+else if(mensaje == "error"){
+    var mensajeInfo = `No se ha podido añadir este producto al carrito. Contacte con el administrador.`;
+    var btnDisabled = true; 
+}
+$(".notificacionAddCart").css("top", "1%");
+    $(".notificacionAddCart > p").text(mensajeInfo);
+    $(".notificacionAddCart button").prop("hidden",btnDisabled);
+    setTimeout(() => {
+    $(".notificacionAddCart").css("top", "-35%");
+    }, 10000);
+    
+
+@endif
+
+});
+
+</script>
 @endpush

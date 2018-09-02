@@ -27,7 +27,7 @@
 <div class="section padding_layout_1 Shopping_cart_section">
     <div class="container">
         <div class="row">
-            <!-- aqui empezaba el form que quite --zincri -->
+            <!-- aqui empezaba el form que quite zincri -->
                 <div class="col-sm-12 col-md-12">
                
                     <div class="product-table">
@@ -44,6 +44,8 @@
                                 <tr>
                                     <th>Producto</th>
                                     <th>Cantidad</th>
+                                    <th>Recargar</th>
+                                    <th>Eliminar</th>
                                 </tr>
                             </thead>
                             
@@ -81,10 +83,10 @@
                                             data-href="{{ route('cart-refresh',['id' => $item->id,'cantidad'=> 1 ])}}" 
                                             data-id="{{$item->id}}"
                                             class="aquiestalaclase">
-                                            <button type="button" class="bt_main"><i class="fa fa-refresh"></i></button></a>
+                                            <button type="button" class="bt_main"><i class="fa fa-refresh"></i> Actualizar</button></a>
                                     </td>
 
-                                    <td class="col-sm-1 col-md-1"><a href="{{ route('cart-delete',$item->id)}}" ><button type="button" class="bt_main"><i class="fa fa-trash"></i> Remove</button></a></td>
+                                    <td class="col-sm-1 col-md-1"><a href="{{ route('cart-delete',$item->id)}}" ><button type="button" class="bt_main"><i class="fa fa-trash"></i> Eliminar</button></a></td>
                                 </tr>
                                 @endforeach
 
@@ -102,10 +104,11 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
 
                                     <div class="form_section formularioArrendatario">
-                                        
-                                        <div class="row formularioArrendatario">
                                         {!! Form::open(array('route' => 'cart-form','autocomplete'=>'off','method'=>'POST', 'onsubmit'=>'return validarsend();')) !!}
-                                         {{Form::token()}}
+                                        {{Form::token()}}
+                                        <div class="row formularioArrendatario">
+                                        
+
 
                                             <div class="col-md-6">
                                                 <div class="groupForm">
@@ -166,8 +169,9 @@
                                                 
 
                                             </div>
-                                            {{!! Form::close() !!}}
+                                            
                                         </div>
+                                        {!! Form::close() !!}
 
 
                                     </div>

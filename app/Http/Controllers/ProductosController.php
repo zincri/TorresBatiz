@@ -20,10 +20,12 @@ class ProductosController extends Controller
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
         $video=$videos->first();
+        $categorias = DB::table('tbl_categoriaproducto')->where('activo','=',1)->get();
         return view('navbar.productos',["informaciongeneral"=>$informaciongeneral,
                                             "marcas"=>$marcas,
                                           "videos"=>$videos,
-                                          "video"=>$video]);
+                                          "video"=>$video,
+                                          "categorias"=>$categorias]);
     }
 
     /**

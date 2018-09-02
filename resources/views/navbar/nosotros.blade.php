@@ -1,5 +1,18 @@
 @extends ('layouts.master') @section ('content')
-
+<style>
+    
+.gross_layout.right_gross_layout::after {
+    position: absolute;
+    background: url(../images/layout_img/dark_bg_img2.png) !important;
+    width: 35%;
+    height: 100%;
+    left: 0;
+    content: "";
+    top: 0;
+    background-size: cover;
+    background-position: right;
+}
+</style>
 <div id="inner_banner" class="section inner_banner_section">
     <div class="container">
         <div class="row">

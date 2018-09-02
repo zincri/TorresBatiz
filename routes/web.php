@@ -66,3 +66,11 @@ Route::get('cart/empty/all',[
     'as' => 'cart-thrash',
     'uses' => 'CartController@vaciar'
 ]);
+
+// Categorías routes
+Route::get('productostodos/showProducts/{id}',[
+    'as' => 'send-categoria',
+    'uses' => 'productosTodosController@showProducts'
+]);
+
+// End Categorías routes

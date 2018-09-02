@@ -54,6 +54,20 @@
             s.parentNode.insertBefore(c, s);
         })(document);
     </script>
+    @php
+        $count = 0;
+    @endphp
+    @if(\Session::has('cart'))
+    @php
+        $count = count(\Session::get('cart'));
+    @endphp
+    <style>
+        .shoppingCartItem span{
+            visibility: {{$count>0 ? 'visible' : 'hidden'}} !important;
+        }
+    </style>
+    
+    @endif
 </head>
 
 <body id="default_theme" class="home_1 shopping-cart">
@@ -88,7 +102,7 @@
                                     @endforeach
                                     <!--Controlar que no se desborde de redes sociales -->
                                     <li class="shoppingCartItem">
-                                        <a href="{{ route('cart-show') }}"><i class="fa fa-shopping-cart"></i><span >2</span></a>
+                                        <a href="{{ route('cart-show') }}"><i class="fa fa-shopping-cart"></i><span id="numeroCompras">{{$count}}</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -288,6 +302,7 @@
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
     -->
     <!-- end google map js -->
+   
 </body>
 
 </html>

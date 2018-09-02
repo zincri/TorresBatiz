@@ -145,7 +145,7 @@ class CartController extends Controller
 
     public function add($id, $cantidad)
     {
-        
+        $mensaje = "";
         $flag=false;
         $a=DB::table('tbl_productogeneral')->where('activo','=',1)->where('id','=',$id)->first();
         
@@ -156,7 +156,11 @@ class CartController extends Controller
             $entero=(int)$item->id;
             if($entero == $entid) {
                 $flag=true;
-                break;
+                $mensaje = "success";
+                break;   
+            }
+            else{
+                $mensaje = "error";
             }
         }
         if($flag==true){
@@ -164,14 +168,16 @@ class CartController extends Controller
             $cantidadA=(int)$cantidad;
             $cantidadnueva=$cantidadnueva+$cantidadA;
             $cart[$id]->cantidad=$cantidadnueva;
+            
         }
         else {
             $a->cantidad=$cantidad;
             $cart[$id]=$a;
             \Session::put('cart',$cart);
         }
+        return redirect()->route('producto-detalle',['producto' => $id])->with('message',$mensaje);
         
-        return redirect()->route('producto-detalle',['producto' => $id]);
+        
         
     }
 

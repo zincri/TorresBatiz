@@ -12,10 +12,10 @@ class ProductosTodosDetalleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($id,$categoria)
     {
-        $productos = DB::table('tbl_productogeneral')->where('activo','=',1)->get();
-        $producto = DB::table('tbl_producto')->where('id','=',$id)->where('activo','=',1)->first();
+        $productos = DB::table('tbl_producto')->where('activo','=',1)->where('idcategoriaproducto','=',$categoria)->limit(4)->get();
+        $producto = DB::table('tbl_producto')->where('activo','=',1)->where('id','=',$id)->first();
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
@@ -58,8 +58,13 @@ class ProductosTodosDetalleController extends Controller
      */
     public function show($id)
     {
-        $productos = DB::table('tbl_productogeneral')->where('activo','=',1)->get();
-        $producto = DB::table('tbl_producto')->where('id','=',$id)->where('activo','=',1)->first();
+        
+        $producto = DB::table('tbl_producto')->where('activo','=',1)->where('id','=',$id)->first();
+        
+        $getCategoria = $producto->idcategoriaproducto;
+        $productos = DB::table('tbl_producto')->where('activo','=',1)->where('idcategoriaproducto','=',$getCategoria)->limit(4)->get();
+        
+        
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
