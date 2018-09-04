@@ -34,138 +34,22 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser1.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Todos los productos</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser2.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Almacenaje <br>(locker,gabinetes y estantería)</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser3.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Confortables</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser4.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Control de asistencias (Biométricos y reloj checador)</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser6.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Cajas fuertes</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser4.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Equipos Multimedia y soluciones educativas</a></h5>
-                    </div>
-                </div>
-            </div>
 
+        @foreach($categorias as $item)
             <div class="col-md-4">
+            <a href="{{ route('send-categoria',['id' => $item->id])}}">
                 <div class="service_blog">
                     <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser5.jpg" alt="#">
+                        <img class="img-responsive" src="{{$item->imagen}}" alt="#">
                     </div>
                     <div class="service_head">
-                        <h5><a href="/productostodos">Mobiliario de madera</a></h5>
+                        <h5>{{$item->nombre}}</h5>
                     </div>
                 </div>
+                </a>
             </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser6.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Mobiliario metálico</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser1.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Mobiliario escolar</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser2.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Mesas de juntas</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser3.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Multifuncionales y solución documental</a></h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser5.jpg" alt="#">
-                    </div>
-                    <div class="service_head">
-                        <h5><a href="/productostodos">Recepciones</a></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service_blog">
-                    <div class="service_img">
-                        <img class="img-responsive" src="images/layout_img/ser4.jpg" alt="#">
-                    </div>
-                    <div class="service_head" style="margin-bottom: 3%">
-                        <h5><a href="/productostodos">Sillería</a></h5>
-                    </div>
-                </div>
-            </div>
+        @endforeach
+           
 
         </div>
     </div>

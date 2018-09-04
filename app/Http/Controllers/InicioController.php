@@ -31,7 +31,7 @@ class InicioController extends Controller
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $sucursales = DB::table('tbl_sucursal')->where('activo','=',1)->get();
         $servicios = DB::table('tbl_serviciosinformacion')->where('activo','=',1)->get();
-        $redes = DB::table('tbl_catredessociales')->where('activo','=',1)->get();
+        $redes = DB::table('tbl_catredessociales')->where('activo','=',1)->limit(5)->get();
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $serviciosprincipal = DB::table('tbl_nuestrosservicios')->where('activo','=',1)->get();
         $proyectosrealizados = DB::table('tbl_proyectosrealizados')->where('activo','=',1)->get();
