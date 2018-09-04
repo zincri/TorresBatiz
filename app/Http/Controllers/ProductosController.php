@@ -16,6 +16,8 @@ class ProductosController extends Controller
     public function index()
     {
         //
+        
+        
         $informaciongeneral = DB::table('tbl_informaciongeneral')->first();
         $marcas = DB::table('tbl_catmarcas')->where('activo','=',1)->get();
         $videos = DB::table('tbl_catvideos')->where('activo','=',1)->get();
@@ -26,6 +28,7 @@ class ProductosController extends Controller
                                           "videos"=>$videos,
                                           "video"=>$video,
                                           "categorias"=>$categorias]);
+
     }
 
     /**

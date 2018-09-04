@@ -39,7 +39,7 @@
                 
                     @foreach($sucursales as $key => $item)
                     <li class="nav-item">
-                        <a class="nav-link {{ $key==0 ? 'active show' : ''}}" id="sucursal{{ $item->id }}" data-toggle="tab" href="#sucursal{{ $item->id }}" role="tab" aria-controls="home" aria-selected="{{$key==0 ? 'true' : 'false'}}">{{$item->nombre}}</a>
+                        <a class="nav-link {{ $key==0 ? 'active show' : ''}}" id="sucursal{{ $item->id }}" data-toggle="tab" href="#sucursal_{{$item->id}}" role="tab" aria-controls="home" aria-selected="{{$key==0 ? 'true' : 'false'}}">{{$item->nombre}}</a>
                     </li>
                     @endforeach
                     
@@ -49,7 +49,7 @@
                     @foreach($sucursales as $key => $item)
 
                    
-                    <div class="tab-pane fade {{ $key==0 ? 'active show' : ''}}" id="sucursal{{ $item->id }}" role="tabpanel" aria-labelledby="sucursal{{ $item->id }}-tab">
+                    <div class="tab-pane fade {{ $key==0 ? 'active show' : ''}}" id="sucursal_{{$item->id}}" role="tabpanel" aria-labelledby="sucursal{{ $item->id }}-tab">
                         <div class="mapcontainer">
                             <div class="contend">
                                 <div class="service_blog sucursal">
